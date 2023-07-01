@@ -404,4 +404,85 @@ class ReverseInteger
 }
 
 
+// 11 Check Number is Pallindrom Number or Not
+
+class CheckNumberIsP
+{
+    public static void main(String[] args) {
+
+        int value = 1661;
+        int newValue = 1661;
+        int temp = 0;
+        int div = 0;
+
+
+        while (value!=0)
+        {
+            div = value%10;
+            temp = temp*10+div;
+            value = value/10;
+        }
+
+        if(temp == newValue)
+        {
+            System.out.println("The Number is Palindrome Number");
+        }else
+        {
+            System.out.println("Not a palindrom number");
+        }
+
+
+    }
+}
+
+
+// 12. ArmStrong Number
+
+
+class ArmStrongNumber
+{
+
+
+    public static void main(String[] args) {
+
+
+        int number = 370;
+        int number2 = number;
+        int length = 0;
+        int newNumber=0;
+
+        int arm=0;
+        while (number2!=0)
+        {
+            length = length+1;
+            number2 = number2/10;
+        }
+       while (number!=0) {
+           int multi = 1;
+           int rem = number%10;
+           for (int i = 1; i <= length; i++) {
+
+               multi = multi*rem;
+           }
+           arm = arm+multi;
+           number = number/10;
+       }
+        System.out.println(arm);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+}
+
 
