@@ -375,9 +375,30 @@ class ReverseString
         ReverseString.reverseStringWithoutMethod(value);
 
     }
+}
+
+// Question no : 10 Reverse of Integer Value
+
+
+class ReverseInteger
+{
+
+    public static void main(String[] args) {
+
+        int integerValue = 458744444;
+        String value = String.valueOf(integerValue);
+        for (int i = value.length()-1; i >=0 ; i--) {
+
+            System.out.println(value.charAt(i));
+
+        }
+
+
+        
 
 
 
+    }
 
 
 }
