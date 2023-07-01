@@ -185,3 +185,101 @@ class Solution3
         }
     }
 }
+
+
+// Check Two String with anagrams
+class Anagram {
+
+    static boolean isAnagram(String a, String b) {
+        a = a.toLowerCase();
+        b = b.toLowerCase();
+        char a1[] = a.toCharArray();
+        char b1 [] = b.toCharArray();
+        Arrays.sort(a1);
+        Arrays.sort(b1);
+
+        if(Arrays.equals(a1,b1))
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        String a = scan.next();
+        String b = scan.next();
+        scan.close();
+        boolean ret = isAnagram(a, b);
+        System.out.println( (ret) ? "Anagrams" : "Not Anagrams" );
+    }
+}
+//6.Split String and Print
+
+class SplitStringAndPrint {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String sentence = sc.nextLine();
+        String[] words = splitSentence(sentence);
+
+        System.out.println(words.length);
+        for (String word : words) {
+            System.out.println(word);
+        }
+    }
+
+    public static String[] splitSentence(String sentence) {
+        // Use regular expression to split the sentence
+        String[] words = sentence.split("[^A-Za-z]+");
+
+        return words;
+    }
+}
+// 7. Occurance of Character in String
+
+class OccuranceOfCharacters
+{
+
+
+    public static void main(String[] args) {
+
+        String str = "Ahamdabad";
+        str = str.toLowerCase();
+        char [] charArray = str.toCharArray();
+        Arrays.sort(charArray);
+        char currentChar = charArray[0];
+        int count = 1;
+        for (int i = 1; i <charArray.length; i++) {
+            if(currentChar == charArray[i])
+            {
+                    count++;
+            }else
+            {
+                System.out.println("The Counts of Char is " + currentChar + "times" + count);
+                count = 1;
+                currentChar = charArray[i];
+            }
+
+        }
+        System.out.println("The Counts of Char is " + currentChar + "times" + count);
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+}
