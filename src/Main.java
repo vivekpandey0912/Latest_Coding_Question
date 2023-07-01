@@ -310,3 +310,77 @@ class OccuranceOfInteger
 
 }
 
+// 8. Remove Duplicate Elements from Integer Arraylist
+
+
+class IntegerArrayList
+{
+
+
+    public static void main(String[] args) {
+
+
+        ArrayList <Integer> arrayList = new ArrayList<>();
+        arrayList.add(10);
+        arrayList.add(11);
+        arrayList.add(11);
+        arrayList.add(14);
+        arrayList.add(17);
+        arrayList.add(17);
+        arrayList.add(70);
+
+        HashSet <Integer> integerHashSet = new HashSet<>(arrayList);
+        arrayList.clear();
+        arrayList.addAll(integerHashSet);
+        for (Integer integer: arrayList) {
+
+            System.out.println(integer);
+
+        }
+
+
+
+
+
+    }
+}
+
+//9. How to reverse String
+
+class ReverseString
+{
+    public static void revereStringWithMethod(String str)
+    {
+        StringBuilder stringBuilder = new StringBuilder(str);
+        System.out.println(stringBuilder.reverse());
+
+    }
+    public static void reverseStringWithoutMethod(String str)
+    {
+        String newValue = "";
+        for (int i = str.length()-1; i>=0; i--) {
+
+            newValue  = newValue + str.charAt(i);
+        }
+        System.out.println(newValue);
+
+    }
+
+    public static void main(String[] args) {
+
+        String value = "vivek";
+
+
+        ReverseString.revereStringWithMethod(value);
+        ReverseString.reverseStringWithoutMethod(value);
+
+    }
+
+
+
+
+
+}
+
+
+
