@@ -265,21 +265,48 @@ class OccuranceOfCharacters
         System.out.println("The Counts of Char is " + currentChar + "times" + count);
 
 
+    }
+
+}
+
+// 7. Occurance of Character in Integer in array
+
+class OccuranceOfInteger
+{
 
 
+    public static void main(String[] args) {
 
+        int integerValue = 478982175;
+        String integerLength = String.valueOf(integerValue);
+        char [] integerArray = new char[integerLength.length()];
 
+        for (int i = 0; i <integerLength.length(); i++) {
 
+            integerArray[i] = integerLength.charAt(i);
+            System.out.println(integerArray[i]);
+        }
 
+        Arrays.sort(integerArray);
+        System.out.println(integerArray);
+        char currentChar = integerArray[0];
+        int count = 1;
+        for (int i = 1; i <integerArray.length; i++) {
+            if(currentChar == integerArray[i])
+            {
+                count++;
+            }else
+            {
+                System.out.println("The Counts of Char is " + currentChar + "times" + count);
+                count = 1;
+                currentChar = integerArray[i];
+            }
 
-
-
+        }
+        System.out.println("The Counts of Char is " + currentChar + "times" + count);
 
 
     }
 
-
-
-
-
 }
+
