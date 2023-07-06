@@ -468,15 +468,145 @@ class ArmStrongNumber
            number = number/10;
        }
         System.out.println(arm);
+    }
+}
+
+
+class Practice1
+{
+
+
+    public static void main(String[] args) {
+//
+//        long value1 = 1441L;
+//        long value2 = value1;
+//        long length = 0;
+//        long newNumber = 0L;
+//        while (value1!= 0)
+//        {
+//            long temp = value1%10;
+//            newNumber = newNumber*10+temp;
+//            System.out.println(newNumber);
+//            value1 = value1/10;
+//        }
+//        System.out.println(newNumber);
+//        if(value2== newNumber)
+//        {
+//            System.out.println("This number is Palindrom Number");
+//        }else
+//        {
+//            System.out.println("Not a Palindrom Number");
+//        }
+
+
+
+    int value =  372;
+    int val = 372;
+    int value1 = value;
+    int valueLength = 0;
+    int newValue = 0;
+
+
+    while(value!=0)
+    {
+         int rem = value%10;
+         valueLength++;
+         value = value/10;
+    }
+    while (value1!=0)
+    {
+        int mul = 1;
+        int rem = value1%10;
+        for (int i = 1; i <=valueLength; i++) {
+
+            mul = mul*rem;
+            System.out.println(mul);
+        }
+        newValue = newValue+mul;
+        System.out.println(newValue);
+        value1 = value1/10;
+
+    }
+    if(val==newValue)
+    {
+        System.out.println("This is a arm strong Number");
+    }
+    else
+    {
+        System.out.println("The Is not ");
+    }
+
+
+    }
+}
+
+class CheckNumberIsPrime
+{
+    public static void main(String[] args) {
+        int number = 99;
+        int count = 0;
+
+        for (int i = 2; i <number; i++) {
+            if(number%i==0)
+            {
+//                System.out.println("Not a prime Number");
+                count++;
+            }
+
+        }
+        if(count==0)
+        {
+            System.out.println("is  Prime ");
+        }else
+        {
+            System.out.println("not a Prime");
+        }
 
 
 
 
+    }
+}
 
 
+class FindPrimeNumberInRange
+{
+
+    public static boolean checkNumberIsPrime(int number)
+    {
+            if(number<=1)
+            {
+                return false;
+            }
+                for (int i = 2; i <number ; i++) {
+
+                    if(number%i==0)
+                    {
+                        return false;
+                    }
+                }
+return true;
+    }
+
+    public static void printNumberInRange(int start, int end)
+    {
+        for (int i = start; i<=end; i++) {
+
+            if(checkNumberIsPrime(i))
+            {
+                System.out.println("Number is Prime " + i);
+            }
+//            else {
+//                System.out.println("Not Prime Number" + i);
+//            }
+
+        }
+    }
 
 
+    public static void main(String[] args) {
 
+        printNumberInRange(45,100);
 
 
 
@@ -484,5 +614,75 @@ class ArmStrongNumber
 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
