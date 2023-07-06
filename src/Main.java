@@ -661,9 +661,90 @@ class FindSecondLargest
         return arr[arr.length-2];
     }
 
+}
+
+
+class findIntegerOccurance
+{
+
+    public static void checkValue1(int number)
+    {
+        ArrayList <Integer> integerArrayList = new ArrayList<>();
+
+        while (number!=0)
+        {
+            int rem = number%10;
+            System.out.println(rem);
+            integerArrayList.add(rem);
+            number /= 10;
+        }
+
+        System.out.println(integerArrayList);
+
+        Collections.sort(integerArrayList);
+        int currentValue = integerArrayList.get(0);
+        int count = 1;
+        for (int i = 1; i <integerArrayList.size(); i++) {
+
+            if(currentValue == integerArrayList.get(i))
+            {
+                count++;
+            }else
+            {
+                System.out.println("The Count value is " + count + " " + currentValue);
+                count = 1;
+                currentValue = integerArrayList.get(i);
+            }
+
+        }
+        System.out.println("The Count value is " + count + " " + currentValue);
+
+
+
+    }
+
+
+
+    public static void main(String[] args) {
+
+//        int [] array = {10,11,10,11,15,15,14,54};
+        int value = 4587964;
+        findIntegerOccurance.checkValue1(value);
+
+
+
+
+        String str = String.valueOf(value);
+        char [] charArray = str.toCharArray();
+        Arrays.sort(charArray);
+        char currentValue = charArray[0];
+        int count = 1;
+        for (int i = 1; i <charArray.length; i++) {
+
+            if(currentValue == charArray[i])
+            {
+                count++;
+            }else
+            {
+                System.out.println("The Count value is " + count + " " + currentValue);
+                count = 1;
+                currentValue = charArray[i];
+            }
+
+        }
+        System.out.println("The Count value is " + count + " " + currentValue);
+
+
+
+
+
+
+    }
 
 
 }
+
+
 
 
 
