@@ -612,6 +612,61 @@ return true;
 }
 
 
+class FindSecondLargest
+{
+    public static void secondLargestElementInArray(int [] arr)
+    {
+        Arrays.sort(arr);
+        for (Integer value:arr) {
+            System.out.println(value);
+
+        }
+        System.out.println(arr[arr.length-2]);
+    }
+
+    public static void main(String[] args) {
+
+        int [] arr = {10,15,658,1,25,145,15,20};
+//        secondLargestElementInArray(arr);
+        System.out.println("findNumber(arr) = " + findNumber(arr));
+
+    }
+
+    public static int findNumber(int [] arr)
+    {
+
+
+        for (int i = 0; i <arr.length; i++) {
+
+            for (int j = 0; j < arr.length-1; j++) {
+
+                if(arr[j]>arr[j+1])
+                {
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+
+            }
+
+        }
+
+        for (Integer value:arr) {
+
+            System.out.println(value);
+        }
+
+        System.out.println(arr[arr.length-2]);
+
+        return arr[arr.length-2];
+    }
+
+
+
+}
+
+
+
 
 
 
