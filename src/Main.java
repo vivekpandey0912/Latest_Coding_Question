@@ -608,10 +608,6 @@ return true;
 
         printNumberInRange(45,100);
 
-
-
-
-
     }
 }
 
