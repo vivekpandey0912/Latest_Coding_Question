@@ -735,14 +735,78 @@ class findIntegerOccurance
         System.out.println("The Count value is " + count + " " + currentValue);
 
 
-
-
-
-
     }
 
 
 }
+
+class FindOccuranceOfNumber
+{
+
+
+    public static void main(String[] args) {
+
+
+
+        int value = 45845555;
+
+        Map<Integer, Integer> integerIntegerMap = new HashMap<>();
+
+        while (value!=0)
+        {
+
+            int rem = value%10;
+            integerIntegerMap.put(rem,integerIntegerMap.getOrDefault(rem,0)+1);
+            value /=10;
+        }
+
+        var entries = integerIntegerMap.entrySet();
+
+        for (var entry:entries)
+        {
+            System.out.println(entry.getKey() + " Value" + entry.getValue());
+        }
+
+
+
+    }
+}
+
+class FindOccuranceChar
+{
+
+
+    public static void main(String[] args) {
+
+
+
+        String str = "Ahamdabad";
+
+        str = str.toLowerCase();
+        Map<Character, Integer> integerIntegerMap = new HashMap<>();
+        int count=0;
+        for (int i = 0; i <str.length(); i++) {
+
+            char a = str.charAt(i);
+            integerIntegerMap.put(a,integerIntegerMap.getOrDefault(a,count)+1);
+
+        }
+
+
+        var entries = integerIntegerMap.entrySet();
+
+        for (var entry:entries)
+        {
+            System.out.println(entry.getKey() + " Value" + entry.getValue());
+        }
+
+
+
+    }
+}
+
+
+
 
 
 
