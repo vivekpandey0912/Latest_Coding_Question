@@ -7,6 +7,7 @@ public class Main {
         System.out.println("Hello world!");
     }
 }
+
 // Return day as String
 class Result {
 
@@ -24,7 +25,7 @@ class Result {
 
     public static String findDay(int month, int day, int year) {
 
-        LocalDate localDate = LocalDate.of(year,month,day);
+        LocalDate localDate = LocalDate.of(year, month, day);
         return localDate.getDayOfWeek().name();
 
 
@@ -48,7 +49,7 @@ class Solution {
         double payment = scanner.nextDouble();
         scanner.close();
         String us = NumberFormat.getCurrencyInstance(Locale.US).format(payment);
-        String india = NumberFormat.getCurrencyInstance(new Locale("en","in")).format(payment);
+        String india = NumberFormat.getCurrencyInstance(new Locale("en", "in")).format(payment);
         String china = NumberFormat.getCurrencyInstance(Locale.CHINA).format(payment);
         String france = NumberFormat.getCurrencyInstance(Locale.FRANCE).format(payment);
         System.out.println("US: " + us);
@@ -90,11 +91,11 @@ class Checker implements Comparator<Player> {
     }
 }
 
-class Player{
+class Player {
     String name;
     int score;
 
-    Player(String name, int score){
+    Player(String name, int score) {
         this.name = name;
         this.score = score;
     }
@@ -109,13 +110,13 @@ class Solution2 {
         Player[] player = new Player[n];
         Checker checker = new Checker();
 
-        for(int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             player[i] = new Player(scan.next(), scan.nextInt());
         }
         scan.close();
 
         Arrays.sort(player, checker);
-        for(int i = 0; i < player.length; i++){
+        for (int i = 0; i < player.length; i++) {
             System.out.printf("%s %s\n", player[i].name, player[i].score);
         }
     }
@@ -124,36 +125,39 @@ class Solution2 {
 
 // Write a program to sort with comparator if cgpa is same then compare with name if name is
 // then compare with id
-class Student{
-    private int id;
-    private String fname;
-    private double cgpa;
+class Student {
+    private final int id;
+    private final String fname;
+    private final double cgpa;
+
     public Student(int id, String fname, double cgpa) {
         super();
         this.id = id;
         this.fname = fname;
         this.cgpa = cgpa;
     }
+
     public int getId() {
         return id;
     }
+
     public String getFname() {
         return fname;
     }
+
     public double getCgpa() {
         return cgpa;
     }
 }
 
 //Complete the code
-class Solution3
-{
-    public static void main(String[] args){
+class Solution3 {
+    public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int testCases = Integer.parseInt(in.nextLine());
 
         List<Student> studentList = new ArrayList<Student>();
-        while(testCases>0){
+        while (testCases > 0) {
             int id = in.nextInt();
             String fname = in.next();
             double cgpa = in.nextDouble();
@@ -163,24 +167,20 @@ class Solution3
 
             testCases--;
         }
-        Collections.sort(studentList, new Comparator<Student>()
-        {
-            public int compare(Student a, Student b)
-            {
-                if(a.getCgpa()==b.getCgpa())
-                {
-                    if(a.getFname().equals(b.getFname()))
-                    {
-                        return a.getId()-b.getId();
-                    }else{
+        Collections.sort(studentList, new Comparator<Student>() {
+            public int compare(Student a, Student b) {
+                if (a.getCgpa() == b.getCgpa()) {
+                    if (a.getFname().equals(b.getFname())) {
+                        return a.getId() - b.getId();
+                    } else {
                         return a.getFname().compareTo(b.getFname());
                     }
                 }
-                return (int) (b.getCgpa()*1000 - a.getCgpa()*1000);
+                return (int) (b.getCgpa() * 1000 - a.getCgpa() * 1000);
             }
         });
 
-        for(Student st: studentList){
+        for (Student st : studentList) {
             System.out.println(st.getFname());
         }
     }
@@ -193,16 +193,12 @@ class Anagram {
     static boolean isAnagram(String a, String b) {
         a = a.toLowerCase();
         b = b.toLowerCase();
-        char a1[] = a.toCharArray();
-        char b1 [] = b.toCharArray();
+        char[] a1 = a.toCharArray();
+        char[] b1 = b.toCharArray();
         Arrays.sort(a1);
         Arrays.sort(b1);
 
-        if(Arrays.equals(a1,b1))
-        {
-            return true;
-        }
-        return false;
+        return Arrays.equals(a1, b1);
     }
 
     public static void main(String[] args) {
@@ -212,7 +208,7 @@ class Anagram {
         String b = scan.next();
         scan.close();
         boolean ret = isAnagram(a, b);
-        System.out.println( (ret) ? "Anagrams" : "Not Anagrams" );
+        System.out.println((ret) ? "Anagrams" : "Not Anagrams");
     }
 }
 //6.Split String and Print
@@ -238,24 +234,21 @@ class SplitStringAndPrint {
 }
 // 7. Occurance of Character in String
 
-class OccuranceOfCharacters
-{
+class OccuranceOfCharacters {
 
 
     public static void main(String[] args) {
 
         String str = "Ahamdabad";
         str = str.toLowerCase();
-        char [] charArray = str.toCharArray();
+        char[] charArray = str.toCharArray();
         Arrays.sort(charArray);
         char currentChar = charArray[0];
         int count = 1;
-        for (int i = 1; i <charArray.length; i++) {
-            if(currentChar == charArray[i])
-            {
-                    count++;
-            }else
-            {
+        for (int i = 1; i < charArray.length; i++) {
+            if (currentChar == charArray[i]) {
+                count++;
+            } else {
                 System.out.println("The Counts of Char is " + currentChar + "times" + count);
                 count = 1;
                 currentChar = charArray[i];
@@ -271,17 +264,16 @@ class OccuranceOfCharacters
 
 // 7. Occurance of Character in Integer in array
 
-class OccuranceOfInteger
-{
+class OccuranceOfInteger {
 
 
     public static void main(String[] args) {
 
         int integerValue = 478982175;
         String integerLength = String.valueOf(integerValue);
-        char [] integerArray = new char[integerLength.length()];
+        char[] integerArray = new char[integerLength.length()];
 
-        for (int i = 0; i <integerLength.length(); i++) {
+        for (int i = 0; i < integerLength.length(); i++) {
 
             integerArray[i] = integerLength.charAt(i);
             System.out.println(integerArray[i]);
@@ -291,12 +283,10 @@ class OccuranceOfInteger
         System.out.println(integerArray);
         char currentChar = integerArray[0];
         int count = 1;
-        for (int i = 1; i <integerArray.length; i++) {
-            if(currentChar == integerArray[i])
-            {
+        for (int i = 1; i < integerArray.length; i++) {
+            if (currentChar == integerArray[i]) {
                 count++;
-            }else
-            {
+            } else {
                 System.out.println("The Counts of Char is " + currentChar + "times" + count);
                 count = 1;
                 currentChar = integerArray[i];
@@ -313,14 +303,13 @@ class OccuranceOfInteger
 // 8. Remove Duplicate Elements from Integer Arraylist
 
 
-class IntegerArrayList
-{
+class IntegerArrayList {
 
 
     public static void main(String[] args) {
 
 
-        ArrayList <Integer> arrayList = new ArrayList<>();
+        ArrayList<Integer> arrayList = new ArrayList<>();
         arrayList.add(10);
         arrayList.add(11);
         arrayList.add(11);
@@ -329,17 +318,14 @@ class IntegerArrayList
         arrayList.add(17);
         arrayList.add(70);
 
-        HashSet <Integer> integerHashSet = new HashSet<>(arrayList);
+        HashSet<Integer> integerHashSet = new HashSet<>(arrayList);
         arrayList.clear();
         arrayList.addAll(integerHashSet);
-        for (Integer integer: arrayList) {
+        for (Integer integer : arrayList) {
 
             System.out.println(integer);
 
         }
-
-
-
 
 
     }
@@ -347,20 +333,18 @@ class IntegerArrayList
 
 //9. How to reverse String
 
-class ReverseString
-{
-    public static void revereStringWithMethod(String str)
-    {
+class ReverseString {
+    public static void revereStringWithMethod(String str) {
         StringBuilder stringBuilder = new StringBuilder(str);
         System.out.println(stringBuilder.reverse());
 
     }
-    public static void reverseStringWithoutMethod(String str)
-    {
-        String newValue = "";
-        for (int i = str.length()-1; i>=0; i--) {
 
-            newValue  = newValue + str.charAt(i);
+    public static void reverseStringWithoutMethod(String str) {
+        String newValue = "";
+        for (int i = str.length() - 1; i >= 0; i--) {
+
+            newValue = newValue + str.charAt(i);
         }
         System.out.println(newValue);
 
@@ -380,22 +364,17 @@ class ReverseString
 // Question no : 10 Reverse of Integer Value
 
 
-class ReverseInteger
-{
+class ReverseInteger {
 
     public static void main(String[] args) {
 
         int integerValue = 458744444;
         String value = String.valueOf(integerValue);
-        for (int i = value.length()-1; i >=0 ; i--) {
+        for (int i = value.length() - 1; i >= 0; i--) {
 
             System.out.println(value.charAt(i));
 
         }
-
-
-
-
 
 
     }
@@ -406,8 +385,7 @@ class ReverseInteger
 
 // 11 Check Number is Pallindrom Number or Not
 
-class CheckNumberIsP
-{
+class CheckNumberIsP {
     public static void main(String[] args) {
 
         int value = 1661;
@@ -416,18 +394,15 @@ class CheckNumberIsP
         int div = 0;
 
 
-        while (value!=0)
-        {
-            div = value%10;
-            temp = temp*10+div;
-            value = value/10;
+        while (value != 0) {
+            div = value % 10;
+            temp = temp * 10 + div;
+            value = value / 10;
         }
 
-        if(temp == newValue)
-        {
+        if (temp == newValue) {
             System.out.println("The Number is Palindrome Number");
-        }else
-        {
+        } else {
             System.out.println("Not a palindrom number");
         }
 
@@ -439,8 +414,7 @@ class CheckNumberIsP
 // 12. ArmStrong Number
 
 
-class ArmStrongNumber
-{
+class ArmStrongNumber {
 
 
     public static void main(String[] args) {
@@ -449,31 +423,29 @@ class ArmStrongNumber
         int number = 370;
         int number2 = number;
         int length = 0;
-        int newNumber=0;
+        int newNumber = 0;
 
-        int arm=0;
-        while (number2!=0)
-        {
-            length = length+1;
-            number2 = number2/10;
+        int arm = 0;
+        while (number2 != 0) {
+            length = length + 1;
+            number2 = number2 / 10;
         }
-       while (number!=0) {
-           int multi = 1;
-           int rem = number%10;
-           for (int i = 1; i <= length; i++) {
+        while (number != 0) {
+            int multi = 1;
+            int rem = number % 10;
+            for (int i = 1; i <= length; i++) {
 
-               multi = multi*rem;
-           }
-           arm = arm+multi;
-           number = number/10;
-       }
+                multi = multi * rem;
+            }
+            arm = arm + multi;
+            number = number / 10;
+        }
         System.out.println(arm);
     }
 }
 
 
-class Practice1
-{
+class Practice1 {
 
 
     public static void main(String[] args) {
@@ -499,101 +471,83 @@ class Practice1
 //        }
 
 
+        int value = 372;
+        int val = 372;
+        int value1 = value;
+        int valueLength = 0;
+        int newValue = 0;
 
-    int value =  372;
-    int val = 372;
-    int value1 = value;
-    int valueLength = 0;
-    int newValue = 0;
 
-
-    while(value!=0)
-    {
-         int rem = value%10;
-         valueLength++;
-         value = value/10;
-    }
-    while (value1!=0)
-    {
-        int mul = 1;
-        int rem = value1%10;
-        for (int i = 1; i <=valueLength; i++) {
-
-            mul = mul*rem;
-            System.out.println(mul);
+        while (value != 0) {
+            int rem = value % 10;
+            valueLength++;
+            value = value / 10;
         }
-        newValue = newValue+mul;
-        System.out.println(newValue);
-        value1 = value1/10;
+        while (value1 != 0) {
+            int mul = 1;
+            int rem = value1 % 10;
+            for (int i = 1; i <= valueLength; i++) {
 
-    }
-    if(val==newValue)
-    {
-        System.out.println("This is a arm strong Number");
-    }
-    else
-    {
-        System.out.println("The Is not ");
-    }
+                mul = mul * rem;
+                System.out.println(mul);
+            }
+            newValue = newValue + mul;
+            System.out.println(newValue);
+            value1 = value1 / 10;
+
+        }
+        if (val == newValue) {
+            System.out.println("This is a arm strong Number");
+        } else {
+            System.out.println("The Is not ");
+        }
 
 
     }
 }
 
-class CheckNumberIsPrime
-{
+class CheckNumberIsPrime {
     public static void main(String[] args) {
         int number = 99;
         int count = 0;
 
-        for (int i = 2; i <number; i++) {
-            if(number%i==0)
-            {
+        for (int i = 2; i < number; i++) {
+            if (number % i == 0) {
 //                System.out.println("Not a prime Number");
                 count++;
             }
 
         }
-        if(count==0)
-        {
+        if (count == 0) {
             System.out.println("is  Prime ");
-        }else
-        {
+        } else {
             System.out.println("not a Prime");
         }
-
-
 
 
     }
 }
 
 
-class FindPrimeNumberInRange
-{
+class FindPrimeNumberInRange {
 
-    public static boolean checkNumberIsPrime(int number)
-    {
-            if(number<=1)
-            {
+    public static boolean checkNumberIsPrime(int number) {
+        if (number <= 1) {
+            return false;
+        }
+        for (int i = 2; i < number; i++) {
+
+            if (number % i == 0) {
                 return false;
             }
-                for (int i = 2; i <number ; i++) {
-
-                    if(number%i==0)
-                    {
-                        return false;
-                    }
-                }
-return true;
+        }
+        return true;
     }
 
-    public static void printNumberInRange(int start, int end)
-    {
-        for (int i = start; i<=end; i++) {
+    public static void printNumberInRange(int start, int end) {
+        for (int i = start; i <= end; i++) {
 
-            if(checkNumberIsPrime(i))
-            {
+            if (checkNumberIsPrime(i)) {
                 System.out.println("Number is Prime " + i);
             }
 //            else {
@@ -606,74 +560,67 @@ return true;
 
     public static void main(String[] args) {
 
-        printNumberInRange(45,100);
+        printNumberInRange(45, 100);
 
     }
 }
 
 
-class FindSecondLargest
-{
-    public static void secondLargestElementInArray(int [] arr)
-    {
+class FindSecondLargest {
+    public static void secondLargestElementInArray(int[] arr) {
         Arrays.sort(arr);
-        for (Integer value:arr) {
+        for (Integer value : arr) {
             System.out.println(value);
 
         }
-        System.out.println(arr[arr.length-2]);
+        System.out.println(arr[arr.length - 2]);
     }
 
     public static void main(String[] args) {
 
-        int [] arr = {10,15,658,1,25,145,15,20};
+        int[] arr = {10, 15, 658, 1, 25, 145, 15, 20};
 //        secondLargestElementInArray(arr);
         System.out.println("findNumber(arr) = " + findNumber(arr));
 
     }
 
-    public static int findNumber(int [] arr)
-    {
+    public static int findNumber(int[] arr) {
 
 
-        for (int i = 0; i <arr.length; i++) {
+        for (int i = 0; i < arr.length; i++) {
 
-            for (int j = 0; j < arr.length-1; j++) {
+            for (int j = 0; j < arr.length - 1; j++) {
 
-                if(arr[j]>arr[j+1])
-                {
+                if (arr[j] > arr[j + 1]) {
                     int temp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = temp;
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
                 }
 
             }
 
         }
 
-        for (Integer value:arr) {
+        for (Integer value : arr) {
 
             System.out.println(value);
         }
 
-        System.out.println(arr[arr.length-2]);
+        System.out.println(arr[arr.length - 2]);
 
-        return arr[arr.length-2];
+        return arr[arr.length - 2];
     }
 
 }
 
 
-class findIntegerOccurance
-{
+class findIntegerOccurance {
 
-    public static void checkValue1(int number)
-    {
-        ArrayList <Integer> integerArrayList = new ArrayList<>();
+    public static void checkValue1(int number) {
+        ArrayList<Integer> integerArrayList = new ArrayList<>();
 
-        while (number!=0)
-        {
-            int rem = number%10;
+        while (number != 0) {
+            int rem = number % 10;
             System.out.println(rem);
             integerArrayList.add(rem);
             number /= 10;
@@ -684,13 +631,11 @@ class findIntegerOccurance
         Collections.sort(integerArrayList);
         int currentValue = integerArrayList.get(0);
         int count = 1;
-        for (int i = 1; i <integerArrayList.size(); i++) {
+        for (int i = 1; i < integerArrayList.size(); i++) {
 
-            if(currentValue == integerArrayList.get(i))
-            {
+            if (currentValue == integerArrayList.get(i)) {
                 count++;
-            }else
-            {
+            } else {
                 System.out.println("The Count value is " + count + " " + currentValue);
                 count = 1;
                 currentValue = integerArrayList.get(i);
@@ -700,9 +645,7 @@ class findIntegerOccurance
         System.out.println("The Count value is " + count + " " + currentValue);
 
 
-
     }
-
 
 
     public static void main(String[] args) {
@@ -712,20 +655,16 @@ class findIntegerOccurance
         findIntegerOccurance.checkValue1(value);
 
 
-
-
         String str = String.valueOf(value);
-        char [] charArray = str.toCharArray();
+        char[] charArray = str.toCharArray();
         Arrays.sort(charArray);
         char currentValue = charArray[0];
         int count = 1;
-        for (int i = 1; i <charArray.length; i++) {
+        for (int i = 1; i < charArray.length; i++) {
 
-            if(currentValue == charArray[i])
-            {
+            if (currentValue == charArray[i]) {
                 count++;
-            }else
-            {
+            } else {
                 System.out.println("The Count value is " + count + " " + currentValue);
                 count = 1;
                 currentValue = charArray[i];
@@ -740,73 +679,63 @@ class findIntegerOccurance
 
 }
 
-class FindOccuranceOfNumber
-{
+class FindOccuranceOfNumber {
 
 
     public static void main(String[] args) {
-
 
 
         int value = 45845555;
 
         Map<Integer, Integer> integerIntegerMap = new HashMap<>();
 
-        while (value!=0)
-        {
+        while (value != 0) {
 
-            int rem = value%10;
-            integerIntegerMap.put(rem,integerIntegerMap.getOrDefault(rem,0)+1);
-            value /=10;
+            int rem = value % 10;
+            integerIntegerMap.put(rem, integerIntegerMap.getOrDefault(rem, 0) + 1);
+            value /= 10;
         }
 
         var entries = integerIntegerMap.entrySet();
 
-        for (var entry:entries)
-        {
+        for (var entry : entries) {
             System.out.println(entry.getKey() + " Value" + entry.getValue());
         }
-
 
 
     }
 }
 
-class FindOccuranceChar
-{
+class FindOccuranceChar {
 
 
     public static void main(String[] args) {
-
 
 
         String str = "Ahamdabad";
 
         str = str.toLowerCase();
         Map<Character, Integer> integerIntegerMap = new HashMap<>();
-        int count=0;
-        for (int i = 0; i <str.length(); i++) {
+        int count = 0;
+        for (int i = 0; i < str.length(); i++) {
 
             char a = str.charAt(i);
-            integerIntegerMap.put(a,integerIntegerMap.getOrDefault(a,count)+1);
+            integerIntegerMap.put(a, integerIntegerMap.getOrDefault(a, count) + 1);
 
         }
 
 
         var entries = integerIntegerMap.entrySet();
 
-        for (var entry:entries)
-        {
+        for (var entry : entries) {
             System.out.println(entry.getKey() + " Value" + entry.getValue());
         }
-
 
 
     }
 }
 
-class FactorialProgram
-{
+class FactorialProgram {
 
 
     public static void main(String[] args) {
@@ -815,9 +744,9 @@ class FactorialProgram
         int fact = 1;
         int newValue = 1;
 
-        for (int i = value; i>0; i--) {
+        for (int i = value; i > 0; i--) {
 
-            fact = fact*i;
+            fact = fact * i;
 
         }
         System.out.println(fact);
@@ -836,43 +765,36 @@ class FactorialProgram
 
 
         System.out.println("Without Third Variable");
-         a= a+b;
-         b = a-b;
-         a = a-b;
+        a = a + b;
+        b = a - b;
+        a = a - b;
 
         System.out.println("After Sweeping" + a + " " + b);
 
     }
 }
 
-class FindMissingNumbers
-{
-
-
-
+class FindMissingNumbers {
 
 
     public static void main(String[] args) {
 
 
-        int [] array = {1,2,3,4,6,9,10};
+        int[] array = {1, 2, 3, 4, 6, 9, 10};
         int count = 1;
-        for (int i = 0; i <array.length; i++) {
+        for (int i = 0; i < array.length; i++) {
 
-            if(array[i]==count)
-            {
+            if (array[i] == count) {
 //                System.out.println(array[i]);
 //                System.out.println(count);
                 count++;
-            }else
-            {
+            } else {
                 System.out.println("Number is Missing" + count);
                 count++;
                 i--;
             }
 
         }
-
 
 
     }
@@ -900,10 +822,6 @@ class Singleton1 {
         return instance;
     }
 
-    public void someMethod() {
-        // Method implementation
-    }
-
     public static void main(String[] args) {
 
         Singleton1 obj1 = Singleton1.getInstance();
@@ -912,29 +830,75 @@ class Singleton1 {
         System.out.println(obj2.hashCode());
 
 
+    }
+
+    public void someMethod() {
+        // Method implementation
+    }
+}
+
+class LambdaExpression {
+
+
+    public static void main(String[] args) {
+
+
+        List<Integer> integerArrays = Arrays.asList(10, 15, 30, 50, 70, 10);
+
+
+        integerArrays.stream().filter(i -> i % 2 == 0).forEach(a -> System.out.println(a));
+
 
     }
 }
 
-class LambdaExpression
+
+class StringManipulation
 {
 
+    public static void main(String[] args) {
 
-public static void main(String[]args){
+        String name = "rajeevpandey";
+        name = name.toLowerCase();
+        char [] arrayChar =  name.toCharArray();
+        char [] newCharArray = new char[arrayChar.length];
+
+        for (int i = 0; i <arrayChar.length; i++) {
+
+            if(arrayChar[i]>= 'a' &&  arrayChar[i]<='x')
+            {
+                newCharArray[i] = (char) (arrayChar[i] + 2);
+
+            }else if (arrayChar[i] == 'y')
+            {
+                newCharArray[i] = 'a';
+            }
+            else if (arrayChar[i] == 'z')
+            {
+                newCharArray[i] = 'b';
+            }else
+            {
+                newCharArray[i] = newCharArray[i];
+            }
 
 
 
-    List <Integer> integerArrays = Arrays.asList(10, 15, 30, 50, 70, 10);
+        }
 
 
-    integerArrays.stream().filter(i -> i%2==0).forEach(a -> System.out.println(a));
+        for (Character ch:newCharArray) {
+            System.out.println(ch);
+
+        }
 
 
 
 
 
+    }
+}
 
-        }}
+
 
 
 
