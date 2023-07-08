@@ -805,6 +805,122 @@ class FindOccuranceChar
     }
 }
 
+class FactorialProgram
+{
+
+
+    public static void main(String[] args) {
+
+        int value = 5;
+        int fact = 1;
+        int newValue = 1;
+
+        for (int i = value; i>0; i--) {
+
+            fact = fact*i;
+
+        }
+        System.out.println(fact);
+
+
+        int a = 10;
+        int b = 20;
+        System.out.println("Before Sweeping ");
+        System.out.println(a + " " + b);
+//        int c = a;
+//        a = b;
+//        b = c;
+//        System.out.println(a);
+//        System.out.println(b);
+//        System.out.println("After Sweeping" + a + " " + b);
+
+
+        System.out.println("Without Third Variable");
+         a= a+b;
+         b = a-b;
+         a = a-b;
+
+        System.out.println("After Sweeping" + a + " " + b);
+
+    }
+}
+
+class FindMissingNumbers
+{
+
+
+
+
+
+    public static void main(String[] args) {
+
+
+        int [] array = {1,2,3,4,6,9,10};
+        int count = 1;
+        for (int i = 0; i <array.length; i++) {
+
+            if(array[i]==count)
+            {
+//                System.out.println(array[i]);
+//                System.out.println(count);
+                count++;
+            }else
+            {
+                System.out.println("Number is Missing" + count);
+                count++;
+                i--;
+            }
+
+        }
+
+
+
+    }
+}
+
+
+class Singleton1 {
+    private static Singleton1 instance;
+    private String name;
+
+    public Singleton1(String name) {
+        this.name = name;
+    }
+
+    // Private constructor to prevent instantiation from outside the class
+    private Singleton1() {
+
+    }
+
+    public static Singleton1 getInstance() {
+        // Create the instance if it doesn't exist
+        if (instance == null) {
+            instance = new Singleton1();
+        }
+        return instance;
+    }
+
+    public void someMethod() {
+        // Method implementation
+    }
+
+    public static void main(String[] args) {
+
+        Singleton1 obj1 = Singleton1.getInstance();
+        Singleton1 obj2 = Singleton1.getInstance();
+        System.out.println(obj1.hashCode());
+        System.out.println(obj2.hashCode());
+
+
+
+    }
+}
+
+
+
+
+
+
 
 
 
