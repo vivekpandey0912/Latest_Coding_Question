@@ -916,6 +916,29 @@ class Singleton1 {
     }
 }
 
+class LambdaExpression
+{
+
+
+public static void main(String[]args){
+
+
+
+    List <Integer> integerArrays = Arrays.asList(10, 15, 30, 50, 70, 10);
+
+
+    integerArrays.stream().filter(i -> i%2==0).forEach(a -> System.out.println(a));
+
+
+
+
+
+
+        }}
+
+
+
+
 
 
 
