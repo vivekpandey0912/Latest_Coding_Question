@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.util.*;
@@ -900,7 +901,36 @@ class StringManipulation
 
 
 
+class AccuraciesCharacterWithMap
+{
+    public static void main(String[] args) {
 
+
+        String name = "ShivaPandey";
+        name  = name.toLowerCase();
+        char [] array = name.toCharArray();
+        Arrays.sort(array);
+        int count = 0;
+
+        Map <Character, Integer> characterIntegerMap = new HashMap<>();
+        for (int i = 0; i <array.length ; i++) {
+
+            characterIntegerMap.put(array[i],characterIntegerMap.getOrDefault(array[i],count)+1);
+        }
+
+        var entries = characterIntegerMap.entrySet();
+
+        for (var entry:entries) {
+
+            System.out.println("Total count Character " + entry.getKey()  + "Total count of Character " + entry.getValue());
+
+        }
+
+
+
+
+    }
+}
 
 
 
