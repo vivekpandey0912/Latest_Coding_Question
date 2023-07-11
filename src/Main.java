@@ -933,6 +933,125 @@ class AccuraciesCharacterWithMap
 }
 
 
+class ArmStrongNumbers
+{
+
+
+    public static void main(String[] args) {
+
+
+
+        int value = 370;
+        int value1 = value;
+        int value2 = value;
+        int length = 0;
+        int newValue = 0;
+
+        while (value1!=0)
+        {
+            length = length+1;
+            value1 /= 10;
+        }
+        System.out.println(length);
+
+        while (value2!=0)
+        {
+            int mul = 1;
+            int rem = value2%10;
+            System.out.println(rem);
+
+            for (int i = 1; i <=length ; i++) {
+
+                mul = mul*rem;
+                System.out.println(mul);
+
+            }
+            value2 /=10;
+            newValue = newValue + mul;
+
+        }
+
+        if(value == newValue)
+        {
+            System.out.println("Number is Arm Strong number");
+        }else
+        {
+            System.out.println("Not Arm Strong Number");
+        }
+
+
+
+
+
+    }
+}
+
+
+class PalindromNumbers
+{
+
+
+    public static void main(String[] args) {
+
+        int value = 1451;
+        int value1 = value;
+        int value2 = value;
+        int newValue = 0;
+
+
+        while (value!=0)
+        {
+            int rem = value%10;
+            newValue = newValue*10+rem;
+            value /= 10;
+        }
+        if(newValue ==  value2)
+        {
+            System.out.println("The Number is Palindrom Numbers");
+        }else
+        {
+            System.out.println("The Number is Not Palindrom Number");
+        }
+
+    }
+}
+
+class LinerSearch
+{
+
+    public static void linearSearch(int [] array, int number)
+    {
+
+        for (int i = 0; i <array.length ; i++) {
+
+            if(array[i] == number)
+            {
+                System.out.println("The Number is Available in Array");
+            }
+        }
+
+
+    }
+
+
+    public static void main(String[] args) {
+
+
+        int [] array = {10,20,30,40,40,50,60};
+
+        LinerSearch.linearSearch(array,2);
+
+
+
+
+
+
+
+
+
+    }
+}
+
 
 
 
