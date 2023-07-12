@@ -1146,10 +1146,19 @@ class PrintTotalCharInJava
         details = details.toLowerCase();
         details = details.replaceAll("[^a-z]","");
         System.out.println(details);
+        char [] details1 = details.toCharArray();
+        int count = 0;
+        int count1 = 0;
 
 
+        for (int i = 0; i <details1.length; i++) {
+                count = count+1;
+                count1 += 1;
 
+        }
 
+        System.out.println("count = " + count);
+        System.out.println("count1 = " + count1);
 
 
     }
