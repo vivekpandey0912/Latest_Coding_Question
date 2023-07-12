@@ -1134,8 +1134,27 @@ class AddCharWithAdjacent
 
 
 
-
 }
+
+class PrintTotalCharInJava
+{
+
+
+    public static void main(String[] args) {
+
+        String details = "My name is Vivek Kumar Pandey";
+        details = details.toLowerCase();
+        details = details.replaceAll("[^a-z]","");
+        System.out.println(details);
+
+
+
+
+
+
+    }
+}
+
 
 
 
