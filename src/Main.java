@@ -1086,6 +1086,34 @@ class BinarySearch {
     }
 }
 
+class AddCharWithAdjacent
+{
+
+
+    public static void main(String[] args) {
+
+        String name = "Vivek kumar pandey";
+        name = name.toLowerCase();
+        name = name.replaceAll("[^a-z]","");
+        System.out.println(name);
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+}
 
 
 
