@@ -1092,11 +1092,33 @@ class AddCharWithAdjacent
 
     public static void main(String[] args) {
 
-        String name = "Vivek kumar pandey";
-        name = name.toLowerCase();
-        name = name.replaceAll("[^a-z]","");
-        System.out.println(name);
+        String nameArray = "Vivek kumar pandey";
+        nameArray = nameArray.toLowerCase();
+        nameArray = nameArray.replaceAll("[^a-z]","");
+        System.out.println(nameArray);
+        char [] nameArray1 = nameArray.toCharArray();
+        char  [] newArray = new char[nameArray1.length];
 
+
+
+        for (int i = 0; i <nameArray1.length; i++) {
+            if(nameArray1[i]>='a' ||  nameArray1[i]<='x')
+            {
+                newArray[i] =  (char) (nameArray1[i]+2);
+            } else {
+                     if(nameArray1[i]=='y')
+                     {
+                         newArray[i] =  (char) (nameArray1[i]+2);
+                     }else
+                     {
+                        newArray[i] = newArray[i];
+                     }
+
+            }
+        }
+
+
+        System.out.println(newArray);
 
 
 
