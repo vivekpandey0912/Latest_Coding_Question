@@ -1,4 +1,3 @@
-import java.lang.reflect.Array;
 import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.util.*;
@@ -854,91 +853,75 @@ class LambdaExpression {
 }
 
 
-class StringManipulation
-{
+class StringManipulation {
 
     public static void main(String[] args) {
 
         String name = "rajeevpandey";
         name = name.toLowerCase();
-        char [] arrayChar =  name.toCharArray();
-        char [] newCharArray = new char[arrayChar.length];
+        char[] arrayChar = name.toCharArray();
+        char[] newCharArray = new char[arrayChar.length];
 
-        for (int i = 0; i <arrayChar.length; i++) {
+        for (int i = 0; i < arrayChar.length; i++) {
 
-            if(arrayChar[i]>= 'a' &&  arrayChar[i]<='x')
-            {
+            if (arrayChar[i] >= 'a' && arrayChar[i] <= 'x') {
                 newCharArray[i] = (char) (arrayChar[i] + 2);
 
-            }else if (arrayChar[i] == 'y')
-            {
+            } else if (arrayChar[i] == 'y') {
                 newCharArray[i] = 'a';
-            }
-            else if (arrayChar[i] == 'z')
-            {
+            } else if (arrayChar[i] == 'z') {
                 newCharArray[i] = 'b';
-            }else
-            {
+            } else {
                 newCharArray[i] = newCharArray[i];
             }
-
 
 
         }
 
 
-        for (Character ch:newCharArray) {
+        for (Character ch : newCharArray) {
             System.out.println(ch);
 
         }
 
 
-
-
-
     }
 }
 
 
-
-class AccuraciesCharacterWithMap
-{
+class AccuraciesCharacterWithMap {
     public static void main(String[] args) {
 
 
         String name = "ShivaPandey";
-        name  = name.toLowerCase();
-        char [] array = name.toCharArray();
+        name = name.toLowerCase();
+        char[] array = name.toCharArray();
         Arrays.sort(array);
         int count = 0;
 
-        Map <Character, Integer> characterIntegerMap = new HashMap<>();
-        for (int i = 0; i <array.length ; i++) {
+        Map<Character, Integer> characterIntegerMap = new HashMap<>();
+        for (int i = 0; i < array.length; i++) {
 
-            characterIntegerMap.put(array[i],characterIntegerMap.getOrDefault(array[i],count)+1);
+            characterIntegerMap.put(array[i], characterIntegerMap.getOrDefault(array[i], count) + 1);
         }
 
         var entries = characterIntegerMap.entrySet();
 
-        for (var entry:entries) {
+        for (var entry : entries) {
 
-            System.out.println("Total count Character " + entry.getKey()  + "Total count of Character " + entry.getValue());
+            System.out.println("Total count Character " + entry.getKey() + "Total count of Character " + entry.getValue());
 
         }
-
-
 
 
     }
 }
 
 
-class ArmStrongNumbers
-{
+class ArmStrongNumbers {
 
 
     public static void main(String[] args) {
-
 
 
         int value = 370;
@@ -947,48 +930,40 @@ class ArmStrongNumbers
         int length = 0;
         int newValue = 0;
 
-        while (value1!=0)
-        {
-            length = length+1;
+        while (value1 != 0) {
+            length = length + 1;
             value1 /= 10;
         }
         System.out.println(length);
 
-        while (value2!=0)
-        {
+        while (value2 != 0) {
             int mul = 1;
-            int rem = value2%10;
+            int rem = value2 % 10;
             System.out.println(rem);
 
-            for (int i = 1; i <=length ; i++) {
+            for (int i = 1; i <= length; i++) {
 
-                mul = mul*rem;
+                mul = mul * rem;
                 System.out.println(mul);
 
             }
-            value2 /=10;
+            value2 /= 10;
             newValue = newValue + mul;
 
         }
 
-        if(value == newValue)
-        {
+        if (value == newValue) {
             System.out.println("Number is Arm Strong number");
-        }else
-        {
+        } else {
             System.out.println("Not Arm Strong Number");
         }
-
-
-
 
 
     }
 }
 
 
-class PalindromNumbers
-{
+class PalindromNumbers {
 
 
     public static void main(String[] args) {
@@ -999,33 +974,27 @@ class PalindromNumbers
         int newValue = 0;
 
 
-        while (value!=0)
-        {
-            int rem = value%10;
-            newValue = newValue*10+rem;
+        while (value != 0) {
+            int rem = value % 10;
+            newValue = newValue * 10 + rem;
             value /= 10;
         }
-        if(newValue ==  value2)
-        {
+        if (newValue == value2) {
             System.out.println("The Number is Palindrom Numbers");
-        }else
-        {
+        } else {
             System.out.println("The Number is Not Palindrom Number");
         }
 
     }
 }
 
-class LinerSearch
-{
+class LinerSearch {
 
-    public static void linearSearch(int [] array, int number)
-    {
+    public static void linearSearch(int[] array, int number) {
 
-        for (int i = 0; i <array.length ; i++) {
+        for (int i = 0; i < array.length; i++) {
 
-            if(array[i] == number)
-            {
+            if (array[i] == number) {
                 System.out.println("The Number is Available in Array");
             }
         }
@@ -1037,16 +1006,9 @@ class LinerSearch
     public static void main(String[] args) {
 
 
-        int [] array = {10,20,30,40,40,50,60};
+        int[] array = {10, 20, 30, 40, 40, 50, 60};
 
-        LinerSearch.linearSearch(array,2);
-
-
-
-
-
-
-
+        LinerSearch.linearSearch(array, 2);
 
 
     }
@@ -1086,33 +1048,28 @@ class BinarySearch {
     }
 }
 
-class AddCharWithAdjacent
-{
+class AddCharWithAdjacent {
 
 
     public static void main(String[] args) {
 
         String nameArray = "Vivek kumar pandey";
         nameArray = nameArray.toLowerCase();
-        nameArray = nameArray.replaceAll("[^a-z]","");
+        nameArray = nameArray.replaceAll("[^a-z]", "");
         System.out.println(nameArray);
-        char [] nameArray1 = nameArray.toCharArray();
-        char  [] newArray = new char[nameArray1.length];
+        char[] nameArray1 = nameArray.toCharArray();
+        char[] newArray = new char[nameArray1.length];
 
 
-
-        for (int i = 0; i <nameArray1.length; i++) {
-            if(nameArray1[i]>='a' ||  nameArray1[i]<='x')
-            {
-                newArray[i] =  (char) (nameArray1[i]+2);
+        for (int i = 0; i < nameArray1.length; i++) {
+            if (nameArray1[i] >= 'a' || nameArray1[i] <= 'x') {
+                newArray[i] = (char) (nameArray1[i] + 2);
             } else {
-                     if(nameArray1[i]=='y')
-                     {
-                         newArray[i] =  (char) (nameArray1[i]+2);
-                     }else
-                     {
-                        newArray[i] = newArray[i];
-                     }
+                if (nameArray1[i] == 'y') {
+                    newArray[i] = (char) (nameArray1[i] + 2);
+                } else {
+                    newArray[i] = newArray[i];
+                }
 
             }
         }
@@ -1121,39 +1078,28 @@ class AddCharWithAdjacent
         System.out.println(newArray);
 
 
-
-
-
-
-
-
-
-
     }
-
-
 
 
 }
 
-class PrintTotalCharInJava
-{
+class PrintTotalCharInJava {
 
 
     public static void main(String[] args) {
 
         String details = "My name is Vivek Kumar Pandey";
         details = details.toLowerCase();
-        details = details.replaceAll("[^a-z]","");
+        details = details.replaceAll("[^a-z]", "");
         System.out.println(details);
-        char [] details1 = details.toCharArray();
+        char[] details1 = details.toCharArray();
         int count = 0;
         int count1 = 0;
 
 
-        for (int i = 0; i <details1.length; i++) {
-                count = count+1;
-                count1 += 1;
+        for (int i = 0; i < details1.length; i++) {
+            count = count + 1;
+            count1 += 1;
 
         }
 
@@ -1167,17 +1113,14 @@ class PrintTotalCharInJava
 class InterviewBit {
 
     // Function to display all permutations of the string str
-    public static void printAllPer(String str, String str2)
-    {
+    public static void printAllPer(String str, String str2) {
         // check if string is empty or null
-        if (str.length() == 0)
-        {
+        if (str.length() == 0) {
             System.out.print(str2 + " ");
             return;
         }
 
-        for (int i = 0; i < str.length(); i++)
-        {
+        for (int i = 0; i < str.length(); i++) {
             // ith character of str
             char ch = str.charAt(i);
             // Rest of the string after excluding
@@ -1187,19 +1130,37 @@ class InterviewBit {
             printAllPer(str3, str2 + ch);
         }
     }
+
     // Driver code
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         String s = "cat";
         printAllPer(s, "");
     }
 }
 
 
+class CreateSingltoneClass {
 
-public CreateSingltonClass
-{
+    private static CreateSingltoneClass singleInstance = null;
 
+    private CreateSingltoneClass() {
+
+    }
+
+    public static CreateSingltoneClass getInstance() {
+        if (singleInstance == null)
+            singleInstance = new CreateSingltoneClass();
+
+            return singleInstance;
+    }
+
+    public static void main(String[] args) {
+
+        CreateSingltoneClass obj1 = getInstance();
+        System.out.println(obj1.hashCode());
+
+
+    }
 
 
 }
