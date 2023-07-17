@@ -1353,7 +1353,53 @@ class Occurance
 }
 
 
+class RangeOfPrimeNumber
+{
 
+    public static boolean primeNumber(int number)
+    {
+        if(number<=1)
+        {
+            return false;
+        }
+        for (int i = 2; i <number; i++) {
+
+            if(number%i==0)
+            {
+                return false;
+            }
+
+        }
+        return true;
+    }
+
+
+
+
+
+
+    public static void main(String[] args) {
+
+        System.out.println("Please Enter start and End Number for find series");
+
+        int start = 10;
+        int end = 20;
+        int sum = 0;
+
+        for (int i = start; i <end; i++) {
+
+            if(RangeOfPrimeNumber.primeNumber(i))
+            {
+                System.out.println("Number is Prime --- " +i);
+                sum = sum+i;
+            }
+
+        }
+        System.out.println("sum = " + sum);
+
+
+    }
+}
 
 
 
