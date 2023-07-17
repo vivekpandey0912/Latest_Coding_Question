@@ -1057,6 +1057,7 @@ class AddCharWithAdjacent {
         nameArray = nameArray.toLowerCase();
         nameArray = nameArray.replaceAll("[^a-z]", "");
         System.out.println(nameArray);
+        System.out.println(nameArray);
         char[] nameArray1 = nameArray.toCharArray();
         char[] newArray = new char[nameArray1.length];
 
@@ -1064,15 +1065,20 @@ class AddCharWithAdjacent {
         for (int i = 0; i < nameArray1.length; i++) {
             if (nameArray1[i] >= 'a' || nameArray1[i] <= 'x') {
                 newArray[i] = (char) (nameArray1[i] + 2);
-            } else {
-                if (nameArray1[i] == 'y') {
-                    newArray[i] = (char) (nameArray1[i] + 2);
-                } else {
+            } else if (nameArray1[i] == 'y') {
+                    newArray[i] = 'a';
+                }
+
+                else if (nameArray1[i] == 'z') {
+                        newArray[i] = 'b';
+                    }
+
+
+                else {
                     newArray[i] = newArray[i];
                 }
 
             }
-        }
 
 
         System.out.println(newArray);
@@ -1166,6 +1172,194 @@ class CreateSingltoneClass {
 
 
 }
+
+class FindArmStrongNumber
+{
+
+
+    public static void main(String[] args) {
+
+        int value = 371;
+        int value1 = value;
+        int value2 = value;
+        int length = 0;
+        int newValue = 0;
+
+        while (value!=0)
+        {
+            length= length+1;
+            value /= 10;
+
+        }
+
+
+        while (value1!=0)
+        {
+            int rem = value1%10;
+            int mul = 1;
+            for (int i = 1; i <=length; i++) {
+
+                mul = mul*rem;
+                System.out.println(mul);
+            }
+            newValue = mul+newValue;
+            value1 = value1/10;
+            System.out.println(newValue);
+
+        }
+
+        System.out.println(value2);
+        System.out.println(newValue);
+
+
+        if(value2==newValue )
+        {
+            System.out.println("the is ArmStrong Number");
+        }else
+        {
+            System.out.println("Not ArmStrong Number");
+        }
+
+
+
+
+
+
+    }
+
+}
+
+
+class PalindromNumber
+{
+
+
+    public static void main(String[] args) {
+
+        int value = 1241;
+
+        int value1 = value;
+        int newValue = 0;
+
+        while (value!=0)
+        {
+            int rem = value%10;
+            newValue = newValue*10+rem;
+            value /= 10;
+        }
+        if(value1== newValue)
+        {
+            System.out.println("Palindrom number ");
+        }else
+        {
+            System.out.println("Not Palindrom Number");
+        }
+
+
+
+
+    }
+}
+
+
+class CheckStringIsAnagram
+{
+
+
+    public static void main(String[] args) {
+
+
+        String str1 = "silent";
+        String str2 = "listens";
+        char [] str1Array = str1.toCharArray();
+        char [] str2Array = str2.toCharArray();
+        Arrays.sort(str1Array);
+        Arrays.sort(str2Array);
+        System.out.println(str1Array);
+        System.out.println(str2Array);
+        if(Arrays.equals(str1Array, str2Array))
+        {
+            System.out.println("The String is anagram");
+        }else
+        {
+            System.out.println("The Number is Not Anagram");
+        }
+
+
+
+    }
+}
+
+class Occurance
+{
+    public static void WithMap(String name)
+    {
+         Map<Character,Integer> characterIntegerMap = new HashMap<>();
+         int count = 0;
+
+        for (int i = 0; i <name.length(); i++) {
+
+            characterIntegerMap.put(name.charAt(i),characterIntegerMap.getOrDefault(name.charAt(i),count)+1);
+
+        }
+
+
+    }
+
+
+
+    public static void main(String[] args) {
+
+        String name  = "Aman Tiwari";
+        name = name.toLowerCase();
+        name = name.replaceAll("[^a-z]","");
+        System.out.println(name);
+        int count = 1;
+        char [] nameArray = name.toCharArray();
+        Arrays.sort(nameArray);
+        char currentChar = nameArray[0];
+        for (int i = 1; i <nameArray.length; i++) {
+
+            if(nameArray[i] == currentChar)
+            {
+                count++;
+            }
+            else
+            {
+                System.out.println("The char is " + currentChar + "Times is : - " + count);
+                count=1;
+                currentChar = nameArray[i];
+            }
+
+        }
+        System.out.println("The char is " + currentChar + "Times is : - " + count);
+
+
+
+
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
