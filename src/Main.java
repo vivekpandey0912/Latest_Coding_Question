@@ -1293,12 +1293,22 @@ class Occurance
 {
     public static void WithMap(String name)
     {
+        name = name.toLowerCase();
+        name = name.replaceAll("[^a-z]","");
+        Map<Character, Integer> integerIntegerMap = new HashMap<>();
+        int count = 0;
          Map<Character,Integer> characterIntegerMap = new HashMap<>();
-         int count = 0;
 
         for (int i = 0; i <name.length(); i++) {
 
             characterIntegerMap.put(name.charAt(i),characterIntegerMap.getOrDefault(name.charAt(i),count)+1);
+
+        }
+
+        var entries = characterIntegerMap.entrySet();
+        for (var entry:entries) {
+
+            System.out.println(entry.getKey() + "times of char" + entry.getValue());
 
         }
 
@@ -1310,29 +1320,31 @@ class Occurance
     public static void main(String[] args) {
 
         String name  = "Aman Tiwari";
-        name = name.toLowerCase();
-        name = name.replaceAll("[^a-z]","");
-        System.out.println(name);
-        int count = 1;
-        char [] nameArray = name.toCharArray();
-        Arrays.sort(nameArray);
-        char currentChar = nameArray[0];
-        for (int i = 1; i <nameArray.length; i++) {
 
-            if(nameArray[i] == currentChar)
-            {
-                count++;
-            }
-            else
-            {
-                System.out.println("The char is " + currentChar + "Times is : - " + count);
-                count=1;
-                currentChar = nameArray[i];
-            }
-
-        }
-        System.out.println("The char is " + currentChar + "Times is : - " + count);
-
+        WithMap(name);
+//        name = name.toLowerCase();
+//        name = name.replaceAll("[^a-z]","");
+//        System.out.println(name);
+//        int count = 1;
+//        char [] nameArray = name.toCharArray();
+//        Arrays.sort(nameArray);
+//        char currentChar = nameArray[0];
+//        for (int i = 1; i <nameArray.length; i++) {
+//
+//            if(nameArray[i] == currentChar)
+//            {
+//                count++;
+//            }
+//            else
+//            {
+//                System.out.println("The char is " + currentChar + "Times is : - " + count);
+//                count=1;
+//                currentChar = nameArray[i];
+//            }
+//
+//        }
+//        System.out.println("The char is " + currentChar + "Times is : - " + count);
+//
 
 
 
