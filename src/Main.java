@@ -1400,6 +1400,14 @@ class RangeOfPrimeNumber
 
     }
 }
+class CheckStringIsPalindrom
+{
+
+
+    public static void main(String[] args) {
+
+    }
+}
 
 
 
