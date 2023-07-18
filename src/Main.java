@@ -1524,6 +1524,20 @@ class RemoveDuplicateElementFormArray
     public static void main(String[] args) {
 
 
+        HashSet<Integer> hashSet = new HashSet<>();
+
+        int [] arr = {10,55,55,10,55,11,12,12,10,11,12};
+
+        for (Integer value:arr) {
+
+            hashSet.add(value);
+        }
+        for (Integer value:hashSet) {
+            System.out.println("The Non duplicate Value in the Array " + value);
+        }
+
+
+
 
 
 
