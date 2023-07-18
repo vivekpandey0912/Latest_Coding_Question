@@ -1429,6 +1429,29 @@ class CheckStringIsPalindrom
 
 
 
+    }
+}
+
+class FibonacciSeries
+{
+    public static void main(String[] args) {
+
+        int number = 10;
+
+        int a = 0;
+        int b = 1;
+        int c = 0;
+        System.out.println(a);
+        System.out.println(b);
+
+        for (int i = 0; i <8; i++) {
+
+            c = a+b;
+            System.out.println("This is" + i + "Number " + c);
+            a=b;
+            b = c;
+        }
+
 
 
     }
