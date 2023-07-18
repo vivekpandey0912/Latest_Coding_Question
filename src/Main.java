@@ -1586,6 +1586,39 @@ class CheckStringAreAnagram
 
     }
 }
+class CountVowelsAndConsonants
+{
+
+
+
+
+    public static void main(String[] args) {
+
+        int vowelCount = 0;
+        int consonantCount = 0;
+
+
+
+        String str = "Ahamadabadjklmnopqrst";
+        str = str.toLowerCase();
+        for (int i = 0; i <str.length(); i++) {
+            if(str.charAt(i) == 'a' || str.charAt(i) == 'e' ||str.charAt(i) == 'i'||str.charAt(i) == 'o'||str.charAt(i) == 'u')
+            {
+                vowelCount +=1;
+            }else
+            {
+                consonantCount +=1;
+            }
+
+        }
+        System.out.println("vowelCount = " + vowelCount);
+        System.out.println("consonantCount = " + consonantCount);
+
+
+    }
+}
+
+
 
 
 
