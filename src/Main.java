@@ -1538,13 +1538,33 @@ class RemoveDuplicateElementFormArray
 
 
 
+    }
+}
+
+class FindMinimumAndMaxNumber
+{
+
+    public static void main(String[] args) {
 
 
 
+        int [] array = {45,10,45,6,44,15};
+        Arrays.sort(array);
+        System.out.println("The Minimum number is " + array[0]);
+        System.out.println("The Maximum number is " + array[array.length-1]);
+        for (Integer values:array) {
+            System.out.println(values);
+
+        }
+
+    }
+}
+
+class CheckStringAreAnagram
+{
 
 
-
-
+    public static void main(String[] args) {
 
 
 
@@ -1554,6 +1574,208 @@ class RemoveDuplicateElementFormArray
 
 
 
+
+
+//        2. Write a program to check if a number is prime.
+//
+//        3. Write a program to find the factorial of a number.
+//
+//        4. Write a program to reverse a string.
+//
+//        5. Write a program to check if a string is a palindrome.
+//
+//        6. Write a program to find the Fibonacci series up to a given number.
+//
+//        7. Write a program to sort an array of integers in ascending order.
+//
+//        8. Write a program to remove duplicates from an array.
+//
+//        9. Write a program to find the maximum and minimum numbers in an array.
+//
+//        10. Write a program to check if two strings are anagrams.
+//
+//        11. Write a program to find the largest and smallest elements in an array.
+//
+//        12. Write a program to count the number of vowels and consonants in a string.
+//
+//        13. Write a program to reverse a number.
+//
+//        14. Write a program to check if a number is an Armstrong number.
+//
+//        15. Write a program to find the second largest number in an array.
+//
+//        16. Write a program to remove a specific element from an array.
+//
+//        17. Write a program to find the common elements between two arrays.
+//
+//        18. Write a program to find the sum of all elements in an array.
+//
+//        19. Write a program to check if a string contains only digits.
+//
+//        20. Write a program to find the duplicate characters in a string.
+//
+//        21. Write a program to check if a number is a perfect square.
+//
+//        22. Write a program to find the length of the longest increasing subarray in an array.
+//
+//        23. Write a program to find the GCD (Greatest Common Divisor) of two numbers.
+//
+//        24. Write a program to find the LCM (Least Common Multiple) of two numbers.
+//
+//        25. Write a program to rotate an array to the right by a given number of steps.
+//
+//        26. Write a program to count the frequency of each element in an array.
+//
+//        27. Write a program to find the missing number in an array of consecutive numbers.
+//
+//        28. Write a program to find the sum of digits of a number.
+//
+//        29. Write a program to check if a string is a valid palindrome ignoring non-alphanumeric characters.
+//
+//        30. Write a program to check if a number is a perfect number.
+//
+//        31. Write a program to find the median of an array.
+//
+//        32. Write a program to find the power of a number using recursion.
+//
+//        33. Write a program to find the number of occurrences of a character in a string.
+//
+//        34. Write a program to check if a string is a valid parentheses expression.
+//
+//        35. Write a program to sort an array of strings in alphabetical order.
+//
+//        36. Write a program to find the first non-repeated character in a string.
+//
+//        37. Write a program to find the sum of all even numbers in an array.
+//
+//        38. Write a program to find the number of prime numbers in a given range.
+//
+//        39. Write a program to find the intersection of two arrays.
+//
+//        40. Write a program to find the union of two arrays.
+//
+//        41. Write a program to check if a number is a palindrome.
+//
+//        42. Write a program to reverse the words in a sentence.
+//
+//        43. Write a program to check if a string is a valid email address.
+//
+//        44. Write a program to find the common characters between two strings.
+//
+//        45. Write a program to remove all whitespace characters from a string.
+//
+//        46. Write a program to find the length of the longest palindrome substring in a string.
+//
+//        47. Write a program to find the sum of the digits of a factorial number.
+//
+//        48. Write a program to remove all duplicates from a string.
+//
+//        49. Write a program to find the sum of the diagonal elements in a matrix.
+//
+//        50. Write a program to find the transpose of a matrix.
+//
+//        51. Write a program to find the number of trailing zeros in a factorial number.
+//
+//        52. Write a program to check if a number is a strong number.
+//
+//        53. Write a program to find the square root of a number using Newton's method.
+//
+//        54. Write a program to find the common elements between multiple arrays.
+//
+//        55. Write a program to check if a string is a valid IP address.
+//
+//        56. Write a program to find the sum of all prime numbers in a given range.
+//
+//        57. Write a program to count the number of words in a string.
+//
+//        58. Write a program to find the number of even and odd numbers in an array.
+//
+//        59. Write a program to check if a number is a perfect power.
+//
+//        60. Write a program to find the sum of the digits raised to the power of their position in a number.
+//
+//        61. Write a program to find the largest prime factor of a number.
+//
+//        62. Write a program to convert a binary number to decimal.
+//
+//        63. Write a program to find the length of the longest common prefix in an array of strings.
+//
+//        64. Write a program to find the sum of the squares of the digits of a number.
+//
+//        65. Write a program to find the sum of the series: 1 + 1/2 + 1/3 + ... + 1/n.
+//
+//        66. Write a program to check if a number is a palindrome in binary representation.
+//
+//        67. Write a program to reverse the order of words in a sentence.
+//
+//        68. Write a program to find the number of trailing zeros in the factorial of a number.
+//
+//        69. Write a program to find the number of occurrences of each character in a string.
+//
+//        70. Write a program to check if a string is a valid URL.
+//
+//        71. Write a program to find the sum of the product of corresponding elements in two arrays.
+//
+//        72. Write a program to find the sum of all odd digits in a number.
+//
+//        73. Write a program to find the sum of all numbers below a given number that are divisible by 3 or 5.
+//
+//        74. Write a program to find the number of ways to climb a staircase with n steps, given that you can climb either 1 or 2 steps at a time.
+//
+//        75. Write a program to check if a number is a strong palindrome.
+//
+//        76. Write a program to find the sum of all amicable numbers below a given number.
+//
+//        77. Write a program to check if a string is a valid ISBN number.
+//
+//        78. Write a program to find the number of occurrences of each word in a sentence.
+//
+//        79. Write a program to find the sum of all square numbers below a given number.
+//
+//        80. Write a program to check if a string is a valid XML tag.
+//
+//        81. Write a program to find the number of trailing zeros in the binary representation of a number.
+//
+//        82. Write a program to find the sum of all numbers that can be formed using the digits of a given number.
+//
+//        83. Write a program to find the sum of all amicable numbers below a given limit.
+//
+//        84. Write a program to check if a number is a Harshad number.
+//
+//        85. Write a program to find the sum of all odd Fibonacci numbers below a given number.
+//
+//        86. Write a program to check if a string is a valid JSON object.
+//
+//        87. Write a program to find the number of trailing zeros in the hexadecimal representation of a number.
+//
+//        88. Write a program to find the sum of all prime numbers below a given number.
+//
+//        89. Write a program to check if a number is a happy number.
+//
+//        90. Write a program to find the sum of all happy numbers below a given number.
+//
+//        91. Write a program to check if a string is a valid credit card number.
+//
+//        92. Write a program
+//
+//        to find the number of trailing zeros in the octal representation of a number.
+//
+//        93. Write a program to find the sum of the digits in the factorial of a number.
+//
+//        94. Write a program to check if a number is a narcissistic number.
+//
+//        95. Write a program to find the number of trailing zeros in the factorial of a number using a recursive approach.
+//
+//        96. Write a program to check if a string is a valid palindrome using a stack.
+//
+//        97. Write a program to find the number of trailing zeros in the binary representation of a number using bitwise operations.
+//
+//        98. Write a program to check if a number is a Kaprekar number.
+//
+//        99. Write a program to find the sum of the digits in a given number until it becomes a single-digit number.
+//
+//        100. Write a program to check if a string is a valid Roman numeral.
+//
 
 
 
