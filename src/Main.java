@@ -1406,6 +1406,31 @@ class CheckStringIsPalindrom
 
     public static void main(String[] args) {
 
+        String value = "Anna";
+        value = value.toLowerCase();
+        String value1 = value;
+        String newString = "";
+
+        for (int i = value.length()-1; i>=0; i--) {
+
+            newString = newString + value.charAt(i);
+            System.out.println(newString);
+
+        }
+
+        if(value1.equals(newString))
+        {
+            System.out.println("String is Palindrom");
+        }else
+        {
+            System.out.println("String is not Palindrom"
+            );
+        }
+
+
+
+
+
     }
 }
 
