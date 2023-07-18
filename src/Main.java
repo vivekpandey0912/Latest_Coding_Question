@@ -1567,6 +1567,22 @@ class CheckStringAreAnagram
     public static void main(String[] args) {
 
 
+        String str1 = "silent";
+        String str2 = "listen";
+
+        char [] str1Array = str1.toCharArray();
+        char [] str2Array = str2.toCharArray();
+        Arrays.sort(str1Array);
+        Arrays.sort(str2Array);
+        if(Arrays.equals(str1Array,str1Array))
+        {
+            System.out.println("The String are Anagram");
+        }else
+        {
+            System.out.println("Not anagram ");
+        }
+
+
 
     }
 }
