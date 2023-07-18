@@ -1515,10 +1515,26 @@ class SortingOfIntegers
         }
 
 
+    }
+
+}
+class RemoveDuplicateElementFormArray
+{
+
+    public static void main(String[] args) {
+
+
+
+
+
+
+
+
+
+
 
 
     }
-
 }
 
 
