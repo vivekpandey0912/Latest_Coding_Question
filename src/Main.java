@@ -1457,6 +1457,32 @@ class FibonacciSeries
     }
 }
 
+class FibonacciSeriesWithRange
+{
+    public static void main(String[] args) {
+
+        System.out.println("Enter First Value and last value");
+
+        int number = 10;
+        int lastValue = 20;
+        int number2 = number;
+        int number3 = 0;
+        System.out.println(number2);
+        System.out.println(number);
+
+        for (int i = 0; i <lastValue; i++) {
+
+           number3 = number2+number;
+            System.out.println("This is" + i + "Number " + number3);
+            number=number2;
+            number2 = number3;
+        }
+
+
+
+    }
+}
+
 
 
 
