@@ -1761,6 +1761,22 @@ class SumOfAllElementInArray
 {
 
 
+    public static void main(String[] args) {
+
+
+
+        int sum = 0;
+        int[] array1 = {1, 2, 3, 4, 5};
+
+        for (Integer value:array1) {
+
+            sum = sum+value;
+
+        }
+        System.out.println("sum = " + sum);
+
+    }
+
 }
 
 
