@@ -1775,7 +1775,6 @@ class SumOfAllElementInArray
         }
         System.out.println("sum = " + sum);
 
-
     }
 
 }
