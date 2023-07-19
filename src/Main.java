@@ -1695,10 +1695,15 @@ class findSecondLargestNumber
         withoutMethod(array1);
 
 
-
-
     }
 }
+
+class CommonElementBetweenTwoArray
+{
+
+}
+
+
 
 
 
