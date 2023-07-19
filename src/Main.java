@@ -29,6 +29,13 @@ class Result {
         return localDate.getDayOfWeek().name();
 
 
+
+    }
+
+    public static void main(String[] args) {
+
+        System.out.println("findDay(6,23,2021) = " + findDay(6, 23, 2021));
+
     }
 
 }
@@ -1625,11 +1632,23 @@ class RemoveSpecificElementFromArray
     public static void main(String[] args) {
 
 
+        int [] array = {10,15,40,65,70,12};
+        int [] array1 = new int[array.length-1];
+        int removeElement = 10;
+        int newIndex = 0;
 
+        for (int i = 0; i <array.length; i++) {
 
+            if(array[i] != removeElement)
+            {
+                array1[newIndex] = array[i];
+                newIndex++;
+            }
+        }
+        for (Integer value: array1) {
+            System.out.println(value);
 
-
-
+        }
     }
 
 }
