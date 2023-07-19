@@ -1618,6 +1618,27 @@ class CountVowelsAndConsonants
     }
 }
 
+class RemoveSpecificElementFromArray
+{
+
+
+    public static void main(String[] args) {
+
+
+
+
+
+
+
+    }
+
+}
+
+
+
+
+
+
 
 
 
