@@ -1662,8 +1662,23 @@ class findSecondLargestNumber
         System.out.println(array[array.length-2]);
     }
     public static void withoutMethod(int [] array)
-
     {
+        for (int i = 0; i <array.length; i++) {
+
+            for (int j = 0; j <array.length-i-1; j++) {
+
+                if(array[j]>array[j+1])
+                {
+                    int temp = array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = temp;
+                }
+
+            }
+        }
+
+        System.out.println(array[array.length-2]);
+
 
 
 
@@ -1672,7 +1687,12 @@ class findSecondLargestNumber
     public static void main(String[] args) {
 
 
+        int [] array = {10,15,40,65,70,12};
+        withMethod(array);
 
+
+        int [] array1 = {10,15,40,65,70,12};
+        withoutMethod(array1);
 
 
 
