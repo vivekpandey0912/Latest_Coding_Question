@@ -1653,6 +1653,34 @@ class RemoveSpecificElementFromArray
 
 }
 
+class findSecondLargestNumber
+{
+
+    public static void withMethod(int [] array)
+    {
+        Arrays.sort(array);
+        System.out.println(array[array.length-2]);
+    }
+    public static void withoutMethod(int [] array)
+
+    {
+
+
+
+    }
+
+    public static void main(String[] args) {
+
+
+
+
+
+
+
+    }
+}
+
+
 
 
 
