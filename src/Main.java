@@ -1757,6 +1757,12 @@ class ReverseNumber
 
     }
 }
+class SumOfAllElementInArray
+{
+
+
+}
+
 
 
 
