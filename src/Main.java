@@ -1778,6 +1778,45 @@ class SumOfAllElementInArray
     }
 
 }
+class CheckStringContainsOneDigit
+{
+
+
+    public static void main(String[] args) {
+
+
+        String str = "VivekPandey";
+//        str = "v";
+        int count = 0;
+
+        for (int i = 0; i <str.length(); i++) {
+
+            count++;
+
+        }
+
+        if(count ==1)
+        {
+            System.out.println("There is only one Char in The String");
+        }else
+        {
+            System.out.println("There is more than one Char in the String");
+        }
+
+
+      if(str.length()==1)
+      {
+          System.out.println("There is only one Char in The String");
+
+      }else
+      {
+          System.out.println("There is more than one Char in the String");
+
+      }
+
+
+    }
+}
 
 
 
