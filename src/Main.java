@@ -1698,10 +1698,44 @@ class findSecondLargestNumber
     }
 }
 
-class CommonElementBetweenTwoArray
-{
 
+class MatchingElementsInArrays {
+
+    public static void main(String[] args) {
+        int[] array1 = {1, 2, 3, 4, 5};
+        int[] array2 = {3, 4, 5, 6, 7};
+
+        int[] matchingElements = findMatchingElements(array1, array2);
+
+        System.out.print("Matching elements: ");
+        for (int element : matchingElements) {
+            System.out.print(element + " ");
+        }
+    }
+
+    public static int[] findMatchingElements(int[] array1, int[] array2) {
+        HashSet<Integer> set = new HashSet<>();
+        for (int element : array1) {
+            set.add(element);
+        }
+
+        int[] matchingElements = new int[array1.length];
+        int count = 0;
+
+        for (int element : array2) {
+            if (set.contains(element)) {
+                matchingElements[count++] = element;
+            }
+        }
+
+        // Trim the matchingElements array to remove unused elements
+        int[] result = new int[count];
+        System.arraycopy(matchingElements, 0, result, 0, count);
+
+        return result;
+    }
 }
+
 
 
 
