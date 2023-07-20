@@ -1822,7 +1822,34 @@ class FindDuplicateCharInString
 }
 
 
+class CheckNumberIsPerfectSquire
+{
 
+    public static void main(String[] args) {
+
+
+        System.out.println("Enter value");
+        Scanner sc = new Scanner(System.in);
+        int value = sc.nextInt();
+        int sqrtNumber = (int) Math.sqrt(value);
+
+        if(value>0)
+        {
+            if(value == sqrtNumber*sqrtNumber)
+            {
+                System.out.println("The Number is Perfect Squire");
+            }else
+            {
+                System.out.println("number is Not perfect Squire");
+            }
+        }else
+        {
+            System.out.println("Enter Value greater Than 0");
+        }
+
+
+    }
+}
 
 
 
