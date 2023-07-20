@@ -29,7 +29,6 @@ class Result {
         return localDate.getDayOfWeek().name();
 
 
-
     }
 
     public static void main(String[] args) {
@@ -1073,26 +1072,20 @@ class AddCharWithAdjacent {
             if (nameArray1[i] >= 'a' && nameArray1[i] <= 'x') {
                 newArray[i] = (char) (nameArray1[i] + 2);
             } else if (nameArray1[i] == 'y') {
-                    newArray[i] = 'a';
-                }
-                else if (nameArray1[i] == 'z') {
-                        newArray[i] = 'b';
-                    }
-
-
-                else {
-                    newArray[i] = newArray[i];
-                }
-
+                newArray[i] = 'a';
+            } else if (nameArray1[i] == 'z') {
+                newArray[i] = 'b';
+            } else {
+                newArray[i] = newArray[i];
             }
+
+        }
 
 
         System.out.println(newArray);
 
 
     }
-
-
 
 
 }
@@ -1165,7 +1158,7 @@ class CreateSingltoneClass {
         if (singleInstance == null)
             singleInstance = new CreateSingltoneClass();
 
-            return singleInstance;
+        return singleInstance;
     }
 
     public static void main(String[] args) {
@@ -1179,8 +1172,7 @@ class CreateSingltoneClass {
 
 }
 
-class FindArmStrongNumber
-{
+class FindArmStrongNumber {
 
 
     public static void main(String[] args) {
@@ -1191,25 +1183,23 @@ class FindArmStrongNumber
         int length = 0;
         int newValue = 0;
 
-        while (value!=0)
-        {
-            length= length+1;
+        while (value != 0) {
+            length = length + 1;
             value /= 10;
 
         }
 
 
-        while (value1!=0)
-        {
-            int rem = value1%10;
+        while (value1 != 0) {
+            int rem = value1 % 10;
             int mul = 1;
-            for (int i = 1; i <=length; i++) {
+            for (int i = 1; i <= length; i++) {
 
-                mul = mul*rem;
+                mul = mul * rem;
                 System.out.println(mul);
             }
-            newValue = mul+newValue;
-            value1 = value1/10;
+            newValue = mul + newValue;
+            value1 = value1 / 10;
             System.out.println(newValue);
 
         }
@@ -1218,17 +1208,11 @@ class FindArmStrongNumber
         System.out.println(newValue);
 
 
-        if(value2==newValue )
-        {
+        if (value2 == newValue) {
             System.out.println("the is ArmStrong Number");
-        }else
-        {
+        } else {
             System.out.println("Not ArmStrong Number");
         }
-
-
-
-
 
 
     }
@@ -1236,8 +1220,7 @@ class FindArmStrongNumber
 }
 
 
-class PalindromNumber
-{
+class PalindromNumber {
 
 
     public static void main(String[] args) {
@@ -1247,29 +1230,23 @@ class PalindromNumber
         int value1 = value;
         int newValue = 0;
 
-        while (value!=0)
-        {
-            int rem = value%10;
-            newValue = newValue*10+rem;
+        while (value != 0) {
+            int rem = value % 10;
+            newValue = newValue * 10 + rem;
             value /= 10;
         }
-        if(value1== newValue)
-        {
+        if (value1 == newValue) {
             System.out.println("Palindrom number ");
-        }else
-        {
+        } else {
             System.out.println("Not Palindrom Number");
         }
-
-
 
 
     }
 }
 
 
-class CheckStringIsAnagram
-{
+class CheckStringIsAnagram {
 
 
     public static void main(String[] args) {
@@ -1277,43 +1254,38 @@ class CheckStringIsAnagram
 
         String str1 = "silent";
         String str2 = "listens";
-        char [] str1Array = str1.toCharArray();
-        char [] str2Array = str2.toCharArray();
+        char[] str1Array = str1.toCharArray();
+        char[] str2Array = str2.toCharArray();
         Arrays.sort(str1Array);
         Arrays.sort(str2Array);
         System.out.println(str1Array);
         System.out.println(str2Array);
-        if(Arrays.equals(str1Array, str2Array))
-        {
+        if (Arrays.equals(str1Array, str2Array)) {
             System.out.println("The String is anagram");
-        }else
-        {
+        } else {
             System.out.println("The Number is Not Anagram");
         }
-
 
 
     }
 }
 
-class Occurance
-{
-    public static void WithMap(String name)
-    {
+class Occurance {
+    public static void WithMap(String name) {
         name = name.toLowerCase();
-        name = name.replaceAll("[^a-z]","");
+        name = name.replaceAll("[^a-z]", "");
         Map<Character, Integer> integerIntegerMap = new HashMap<>();
         int count = 0;
-         Map<Character,Integer> characterIntegerMap = new HashMap<>();
+        Map<Character, Integer> characterIntegerMap = new HashMap<>();
 
-        for (int i = 0; i <name.length(); i++) {
+        for (int i = 0; i < name.length(); i++) {
 
-            characterIntegerMap.put(name.charAt(i),characterIntegerMap.getOrDefault(name.charAt(i),count)+1);
+            characterIntegerMap.put(name.charAt(i), characterIntegerMap.getOrDefault(name.charAt(i), count) + 1);
 
         }
 
         var entries = characterIntegerMap.entrySet();
-        for (var entry:entries) {
+        for (var entry : entries) {
 
             System.out.println(entry.getKey() + "times of char" + entry.getValue());
 
@@ -1323,10 +1295,9 @@ class Occurance
     }
 
 
-
     public static void main(String[] args) {
 
-        String name  = "Aman Tiwari";
+        String name = "Aman Tiwari";
 
         WithMap(name);
 //        name = name.toLowerCase();
@@ -1354,35 +1325,25 @@ class Occurance
 //
 
 
-
-
     }
 }
 
 
-class RangeOfPrimeNumber
-{
+class RangeOfPrimeNumber {
 
-    public static boolean primeNumber(int number)
-    {
-        if(number<=1)
-        {
+    public static boolean primeNumber(int number) {
+        if (number <= 1) {
             return false;
         }
-        for (int i = 2; i <number; i++) {
+        for (int i = 2; i < number; i++) {
 
-            if(number%i==0)
-            {
+            if (number % i == 0) {
                 return false;
             }
 
         }
         return true;
     }
-
-
-
-
 
 
     public static void main(String[] args) {
@@ -1393,12 +1354,11 @@ class RangeOfPrimeNumber
         int end = 20;
         int sum = 0;
 
-        for (int i = start; i <end; i++) {
+        for (int i = start; i < end; i++) {
 
-            if(RangeOfPrimeNumber.primeNumber(i))
-            {
-                System.out.println("Number is Prime --- " +i);
-                sum = sum+i;
+            if (RangeOfPrimeNumber.primeNumber(i)) {
+                System.out.println("Number is Prime --- " + i);
+                sum = sum + i;
             }
 
         }
@@ -1407,8 +1367,8 @@ class RangeOfPrimeNumber
 
     }
 }
-class CheckStringIsPalindrom
-{
+
+class CheckStringIsPalindrom {
 
 
     public static void main(String[] args) {
@@ -1418,29 +1378,25 @@ class CheckStringIsPalindrom
         String value1 = value;
         String newString = "";
 
-        for (int i = value.length()-1; i>=0; i--) {
+        for (int i = value.length() - 1; i >= 0; i--) {
 
             newString = newString + value.charAt(i);
             System.out.println(newString);
 
         }
 
-        if(value1.equals(newString))
-        {
+        if (value1.equals(newString)) {
             System.out.println("String is Palindrom");
-        }else
-        {
+        } else {
             System.out.println("String is not Palindrom"
             );
         }
 
 
-
     }
 }
 
-class FibonacciSeries
-{
+class FibonacciSeries {
     public static void main(String[] args) {
 
         int number = 10;
@@ -1451,21 +1407,19 @@ class FibonacciSeries
         System.out.println(a);
         System.out.println(b);
 
-        for (int i = 0; i <8; i++) {
+        for (int i = 0; i < 8; i++) {
 
-            c = a+b;
+            c = a + b;
             System.out.println("This is" + i + "Number " + c);
-            a=b;
+            a = b;
             b = c;
         }
-
 
 
     }
 }
 
-class FibonacciSeriesWithRange
-{
+class FibonacciSeriesWithRange {
     public static void main(String[] args) {
 
         System.out.println("Enter First Value and last value");
@@ -1477,45 +1431,42 @@ class FibonacciSeriesWithRange
         System.out.println(number2);
         System.out.println(number);
 
-        for (int i = 0; i <lastValue; i++) {
+        for (int i = 0; i < lastValue; i++) {
 
-           number3 = number2+number;
+            number3 = number2 + number;
             System.out.println("This is" + i + "Number " + number3);
-            number=number2;
+            number = number2;
             number2 = number3;
         }
 
 
-
     }
 }
-class SortingOfIntegers
-{
+
+class SortingOfIntegers {
 
 
     public static void main(String[] args) {
 
 
-        int [] arr = {10,55,45,65,56,78,1,3,5,7};
+        int[] arr = {10, 55, 45, 65, 56, 78, 1, 3, 5, 7};
 
-        for (int i = 0; i <arr.length; i++) {
+        for (int i = 0; i < arr.length; i++) {
 
-            for (int j = 0; j < arr.length-i-1 ; j++) {
+            for (int j = 0; j < arr.length - i - 1; j++) {
 
-                  if(arr[j] > arr[j+1])
-                  {
-                      int temp = arr[j];
-                      arr[j] = arr[j+1];
-                      arr[j+1] = temp;
-                  }
+                if (arr[j] > arr[j + 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
 
             }
 
 
-
         }
 
-        for (Integer value: arr) {
+        for (Integer value : arr) {
 
             System.out.println(value);
 
@@ -1525,41 +1476,38 @@ class SortingOfIntegers
     }
 
 }
-class RemoveDuplicateElementFormArray
-{
+
+class RemoveDuplicateElementFormArray {
 
     public static void main(String[] args) {
 
 
         HashSet<Integer> hashSet = new HashSet<>();
 
-        int [] arr = {10,55,55,10,55,11,12,12,10,11,12};
+        int[] arr = {10, 55, 55, 10, 55, 11, 12, 12, 10, 11, 12};
 
-        for (Integer value:arr) {
+        for (Integer value : arr) {
 
             hashSet.add(value);
         }
-        for (Integer value:hashSet) {
+        for (Integer value : hashSet) {
             System.out.println("The Non duplicate Value in the Array " + value);
         }
-
 
 
     }
 }
 
-class FindMinimumAndMaxNumber
-{
+class FindMinimumAndMaxNumber {
 
     public static void main(String[] args) {
 
 
-
-        int [] array = {45,10,45,6,44,15};
+        int[] array = {45, 10, 45, 6, 44, 15};
         Arrays.sort(array);
         System.out.println("The Minimum number is " + array[0]);
-        System.out.println("The Maximum number is " + array[array.length-1]);
-        for (Integer values:array) {
+        System.out.println("The Maximum number is " + array[array.length - 1]);
+        for (Integer values : array) {
             System.out.println(values);
 
         }
@@ -1567,8 +1515,7 @@ class FindMinimumAndMaxNumber
     }
 }
 
-class CheckStringAreAnagram
-{
+class CheckStringAreAnagram {
 
 
     public static void main(String[] args) {
@@ -1577,26 +1524,21 @@ class CheckStringAreAnagram
         String str1 = "silent";
         String str2 = "listen";
 
-        char [] str1Array = str1.toCharArray();
-        char [] str2Array = str2.toCharArray();
+        char[] str1Array = str1.toCharArray();
+        char[] str2Array = str2.toCharArray();
         Arrays.sort(str1Array);
         Arrays.sort(str2Array);
-        if(Arrays.equals(str1Array,str1Array))
-        {
+        if (Arrays.equals(str1Array, str1Array)) {
             System.out.println("The String are Anagram");
-        }else
-        {
+        } else {
             System.out.println("Not anagram ");
         }
 
 
-
     }
 }
-class CountVowelsAndConsonants
-{
 
-
+class CountVowelsAndConsonants {
 
 
     public static void main(String[] args) {
@@ -1605,16 +1547,13 @@ class CountVowelsAndConsonants
         int consonantCount = 0;
 
 
-
         String str = "Ahamadabadjklmnopqrst";
         str = str.toLowerCase();
-        for (int i = 0; i <str.length(); i++) {
-            if(str.charAt(i) == 'a' || str.charAt(i) == 'e' ||str.charAt(i) == 'i'||str.charAt(i) == 'o'||str.charAt(i) == 'u')
-            {
-                vowelCount +=1;
-            }else
-            {
-                consonantCount +=1;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == 'a' || str.charAt(i) == 'e' || str.charAt(i) == 'i' || str.charAt(i) == 'o' || str.charAt(i) == 'u') {
+                vowelCount += 1;
+            } else {
+                consonantCount += 1;
             }
 
         }
@@ -1625,27 +1564,25 @@ class CountVowelsAndConsonants
     }
 }
 
-class RemoveSpecificElementFromArray
-{
+class RemoveSpecificElementFromArray {
 
 
     public static void main(String[] args) {
 
 
-        int [] array = {10,15,40,65,70,12};
-        int [] array1 = new int[array.length-1];
+        int[] array = {10, 15, 40, 65, 70, 12};
+        int[] array1 = new int[array.length - 1];
         int removeElement = 10;
         int newIndex = 0;
 
-        for (int i = 0; i <array.length; i++) {
+        for (int i = 0; i < array.length; i++) {
 
-            if(array[i] != removeElement)
-            {
+            if (array[i] != removeElement) {
                 array1[newIndex] = array[i];
                 newIndex++;
             }
         }
-        for (Integer value: array1) {
+        for (Integer value : array1) {
             System.out.println(value);
 
         }
@@ -1653,33 +1590,28 @@ class RemoveSpecificElementFromArray
 
 }
 
-class findSecondLargestNumber
-{
+class findSecondLargestNumber {
 
-    public static void withMethod(int [] array)
-    {
+    public static void withMethod(int[] array) {
         Arrays.sort(array);
-        System.out.println(array[array.length-2]);
+        System.out.println(array[array.length - 2]);
     }
-    public static void withoutMethod(int [] array)
-    {
-        for (int i = 0; i <array.length; i++) {
 
-            for (int j = 0; j <array.length-i-1; j++) {
+    public static void withoutMethod(int[] array) {
+        for (int i = 0; i < array.length; i++) {
 
-                if(array[j]>array[j+1])
-                {
+            for (int j = 0; j < array.length - i - 1; j++) {
+
+                if (array[j] > array[j + 1]) {
                     int temp = array[j];
-                    array[j] = array[j+1];
-                    array[j+1] = temp;
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
                 }
 
             }
         }
 
-        System.out.println(array[array.length-2]);
-
-
+        System.out.println(array[array.length - 2]);
 
 
     }
@@ -1687,11 +1619,11 @@ class findSecondLargestNumber
     public static void main(String[] args) {
 
 
-        int [] array = {10,15,40,65,70,12};
+        int[] array = {10, 15, 40, 65, 70, 12};
         withMethod(array);
 
 
-        int [] array1 = {10,15,40,65,70,12};
+        int[] array1 = {10, 15, 40, 65, 70, 12};
         withoutMethod(array1);
 
 
@@ -1737,40 +1669,37 @@ class MatchingElementsInArrays {
 }
 
 
-class ReverseNumber
-{
+class ReverseNumber {
 
     public static void main(String[] args) {
 
 
         Scanner sc = new Scanner(System.in);
-        int number  = sc.nextInt();
+        int number = sc.nextInt();
         int reverseNumber = 0;
-        while (number!=0)
-        {
-            int rem = number%10;
-            reverseNumber = reverseNumber*10+rem;
-            number /=10;
+        while (number != 0) {
+            int rem = number % 10;
+            reverseNumber = reverseNumber * 10 + rem;
+            number /= 10;
         }
         System.out.println("reverseNumber = " + reverseNumber);
 
 
     }
 }
-class SumOfAllElementInArray
-{
+
+class SumOfAllElementInArray {
 
 
     public static void main(String[] args) {
 
 
-
         int sum = 0;
         int[] array1 = {1, 2, 3, 4, 5};
 
-        for (Integer value:array1) {
+        for (Integer value : array1) {
 
-            sum = sum+value;
+            sum = sum + value;
 
         }
         System.out.println("sum = " + sum);
@@ -1778,8 +1707,8 @@ class SumOfAllElementInArray
     }
 
 }
-class CheckStringContainsOneDigit
-{
+
+class CheckStringContainsOneDigit {
 
 
     public static void main(String[] args) {
@@ -1789,44 +1718,66 @@ class CheckStringContainsOneDigit
 //        str = "v";
         int count = 0;
 
-        for (int i = 0; i <str.length(); i++) {
+        for (int i = 0; i < str.length(); i++) {
 
             count++;
 
         }
 
-        if(count ==1)
-        {
+        if (count == 1) {
             System.out.println("There is only one Char in The String");
-        }else
-        {
+        } else {
             System.out.println("There is more than one Char in the String");
         }
 
 
-      if(str.length()==1)
-      {
-          System.out.println("There is only one Char in The String");
+        if (str.length() == 1) {
+            System.out.println("There is only one Char in The String");
 
-      }else
-      {
-          System.out.println("There is more than one Char in the String");
+        } else {
+            System.out.println("There is more than one Char in the String");
 
-      }
+        }
 
 
     }
 }
 
-class CheckStringHaveOnlyDigit
-{
+class CheckStringHaveOnlyDigit {
 
 
+    public static void main(String[] args) {
+
+        int count = 1;
+
+        String value = "12345";
+
+        for (int i = 0; i < value.length(); i++) {
+
+            if (value.charAt(i) == '1' || value.charAt(i) == '2' || value.charAt(i) == '3' ||
+                    value.charAt(i) == '4' || value.charAt(i) == '5' || value.charAt(i) == '6' || value.charAt(i) == '7' || value.charAt(i) == '8' || value.charAt(i) == '9')
+            {
+                continue;
+            }else
+            {
+                    count++;
+                    break;
+            }
+
+        }
+
+        if(count==1)
+        {
+            System.out.println("This String have only digits");
+        }else
+        {
+            System.out.println("This String have String values also ");
+        }
+
+
+    }
 
 }
-
-
-
 
 
 
