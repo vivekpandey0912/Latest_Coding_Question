@@ -1879,7 +1879,7 @@ class LongestIncreasingSubarray {
 class findGCD
 {
 
-    public static void getHCM(int value1, int value2)
+    public static int getHCM(int value1, int value2)
     {
         while (value1%value2!=0)
         {
@@ -1888,7 +1888,7 @@ class findGCD
             value2 = rem;
         }
         int gcd = value2;
-        System.out.println("The GCD is  : "  + gcd);
+        return gcd;
 
     }
     public static void main(String[] args) {
@@ -1898,18 +1898,46 @@ class findGCD
         int value1 = sc.nextInt();
         System.out.println("Enter First Value");
         int value2 = sc.nextInt();
+        int or1 = value1;
+        int or2 = value2;
 
-        findGCD.getHCM(value1,value2);
-
+        int gct = findGCD.getHCM(value1,value2);
+        System.out.println(gct);
+        System.out.println(or1*or2);
+        System.out.println((or1*or2)/gct);
 
 
     }
 
 }
-class LCMCodingQuestion
-{
 
+class LCMMultipleNumbers {
+    public static int findGCD(int num1, int num2) {
+        while (num2 != 0) {
+            int temp = num2;
+            num2 = num1 % num2;
+            num1 = temp;
+        }
+        return num1;
+    }
 
+    public static int findLCM(int num1, int num2) {
+        return (num1 * num2) / findGCD(num1, num2);
+    }
+
+    public static int findLCMMultipleNumbers(int[] numbers) {
+        int lcm = numbers[0];
+        for (int i = 1; i < numbers.length; i++) {
+            lcm = findLCM(lcm, numbers[i]);
+        }
+        return lcm;
+    }
+
+    public static void main(String[] args) {
+        int[] numbers = { 46, 12, 14, 15 };
+        int lcm = findLCMMultipleNumbers(numbers);
+        System.out.println("LCM of the numbers is: " + lcm);
+    }
 }
 
 
