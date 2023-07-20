@@ -1913,24 +1913,30 @@ class findGCD
 
 class LCMMultipleNumbers {
     public static int findGCD(int num1, int num2) {
-        while (num2 != 0) {
-            int temp = num2;
-            num2 = num1 % num2;
-            num1 = temp;
+
+        while (num1%num2!=0)
+        {
+            int rem = num1%num2;
+            num1 = num2;
+            num2 = rem;
         }
-        return num1;
+        int gcd = num2;
+        return gcd;
+
     }
 
     public static int findLCM(int num1, int num2) {
-        return (num1 * num2) / findGCD(num1, num2);
+        return ((num1*num2)/findGCD(num1,num2));
     }
 
     public static int findLCMMultipleNumbers(int[] numbers) {
-        int lcm = numbers[0];
-        for (int i = 1; i < numbers.length; i++) {
-            lcm = findLCM(lcm, numbers[i]);
+        int firstNumber = numbers[0];
+
+        for (int i = 1; i <numbers.length; i++) {
+
+            firstNumber = findLCM(firstNumber,numbers[i]);
         }
-        return lcm;
+        return firstNumber;
     }
 
     public static void main(String[] args) {
@@ -1939,6 +1945,24 @@ class LCMMultipleNumbers {
         System.out.println("LCM of the numbers is: " + lcm);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
