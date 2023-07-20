@@ -1878,15 +1878,9 @@ class LongestIncreasingSubarray {
 
 class findGCD
 {
-    public static void main(String[] args) {
 
-
-        Scanner sc  = new Scanner(System.in);
-        System.out.println("Enter First Value");
-        int value1 = sc.nextInt();
-        System.out.println("Enter First Value");
-        int value2 = sc.nextInt();
-
+    public static void getHCM(int value1, int value2)
+    {
         while (value1%value2!=0)
         {
             int rem = value1%value2;
@@ -1897,6 +1891,24 @@ class findGCD
         System.out.println("The GCD is  : "  + gcd);
 
     }
+    public static void main(String[] args) {
+
+        Scanner sc  = new Scanner(System.in);
+        System.out.println("Enter First Value");
+        int value1 = sc.nextInt();
+        System.out.println("Enter First Value");
+        int value2 = sc.nextInt();
+
+        findGCD.getHCM(value1,value2);
+
+
+
+    }
+
+}
+class LCMCodingQuestion
+{
+
 
 }
 
