@@ -1876,6 +1876,22 @@ class LongestIncreasingSubarray {
     }
 }
 
+class findGCD
+{
+    public static void main(String[] args) {
+
+
+        Scanner sc  = new Scanner(System.in);
+        System.out.println("Enter First Value");
+        int value1 = sc.nextInt();
+        System.out.println("Enter First Value");
+        int value2 = sc.nextInt();
+
+
+    }
+
+}
+
 
 
 
