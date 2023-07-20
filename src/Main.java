@@ -1887,6 +1887,14 @@ class findGCD
         System.out.println("Enter First Value");
         int value2 = sc.nextInt();
 
+        while (value1%value2!=0)
+        {
+            int rem = value1%value2;
+            value1 = value2;
+            value2 = rem;
+        }
+        int gcd = value2;
+        System.out.println("The GCD is  : "  + gcd);
 
     }
 
