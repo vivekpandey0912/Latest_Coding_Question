@@ -1779,6 +1779,49 @@ class CheckStringHaveOnlyDigit {
 
 }
 
+class FindDuplicateCharInString
+{
+
+
+    public static void main(String[] args) {
+
+        String str1 = "Vivek Kumar Pandey";
+        str1 = str1.toLowerCase();
+        str1 = str1.replaceAll("[^a-z]","");
+        char [] strChar = str1.toCharArray();
+        Arrays.sort(strChar);
+        char currentChar = strChar[0];
+        int count = 1;
+        for (int i = 1; i <strChar.length; i++) {
+
+
+            if(strChar[i]==currentChar)
+            {
+                count++;
+            }else
+            {
+                System.out.println("The char : " + currentChar + "times" + count);
+                count= 1;
+                currentChar = strChar[i];
+            }
+
+
+        }
+        System.out.println("The char : " + currentChar + " :  times" + count);
+
+
+
+
+
+
+
+
+
+
+    }
+}
+
+
 
 
 
