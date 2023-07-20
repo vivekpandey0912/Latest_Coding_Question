@@ -1818,6 +1818,15 @@ class CheckStringContainsOneDigit
     }
 }
 
+class CheckStringHaveOnlyDigit
+{
+
+
+
+}
+
+
+
 
 
 
