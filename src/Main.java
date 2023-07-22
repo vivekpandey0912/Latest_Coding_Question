@@ -1995,10 +1995,29 @@ class CountFrequency
         System.out.println(count);
 
 
+    }
+}
+class SumOfAllDigitNumber
+{
 
+
+    public static void main(String[] args) {
+
+
+        int number = 45897444;
+        int sum = 0;
+        while (number!=0)
+        {
+            int rem = number%10;
+            sum = sum+rem;
+            number /=10;
+        }
+        System.out.println("sum of Total Numbers is : = " + sum);
 
 
     }
+
+
 }
 
 
