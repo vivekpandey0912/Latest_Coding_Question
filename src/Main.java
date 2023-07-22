@@ -2020,6 +2020,31 @@ class SumOfAllDigitNumber
 
 }
 
+class MissingNumberInArray {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 5, 6}; // Array of consecutive numbers with one missing number
+        int n = arr.length + 1; // 'n' is the length of the original sequence plus one
+
+        int missingNumber = findMissingNumber(arr, n);
+        System.out.println("The missing number is: " + missingNumber);
+    }
+
+    public static int findMissingNumber(int[] arr, int n) {
+        // Calculate the sum of the first 'n' natural numbers
+        int totalSum = (n * (n + 1)) / 2;
+
+        // Calculate the sum of the elements in the array
+        int arraySum = 0;
+        for (int num : arr) {
+            arraySum += num;
+        }
+
+        // The difference between the total sum and array sum is the missing number
+        return totalSum - arraySum;
+    }
+}
+
+
 
 
 
