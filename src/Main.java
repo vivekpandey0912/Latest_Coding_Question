@@ -1947,7 +1947,39 @@ class LCMMultipleNumbers {
 }
 
 
+class FindLCM
+{
 
+    public static int findGCD(int number1, int number2)
+    {
+        while(number1%number2!=0)
+        {
+            int rem = number1%number2;
+            number1 = number2;
+            number2 = rem;
+        }
+        return number2;
+    }
+
+    public static int findLCM1(int [] array)
+    {
+        int lcm = array[0];
+        for (int i = 1; i <array.length; i++) {
+            lcm = ((lcm*array[i])/findGCD(lcm,array[i]));
+        }
+
+        return lcm;
+    }
+
+
+    public static void main(String[] args) {
+
+        int[] array = { 46, 12, 14, 15 };
+        int value = findLCM1(array);
+        System.out.println(value);
+    }
+
+}
 
 
 
