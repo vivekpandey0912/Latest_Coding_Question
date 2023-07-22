@@ -1980,6 +1980,26 @@ class FindLCM
     }
 
 }
+class CountFrequency
+{
+
+
+    public static void main(String[] args) {
+
+        int [] array = {45,10,15,30,45,87,11};
+        int count = 0;
+        for (Integer value :array) {
+            count++;
+
+        }
+        System.out.println(count);
+
+
+
+
+
+    }
+}
 
 
 
