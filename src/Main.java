@@ -2050,6 +2050,29 @@ class FindSumOfDigit
     public static void main(String[] args) {
 
         int number = 5749774;
+        int count = 0;
+
+        while(number!=0)
+        {
+            int rem = number%10;
+            count = count+rem;
+            number /=10;
+        }
+
+
+        System.out.println("count = " + count);
+
+
+    }
+}
+
+class FindStringPalindrom
+{
+
+    public static void main(String[] args) {
+
+
+
 
 
 
