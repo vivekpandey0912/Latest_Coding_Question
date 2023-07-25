@@ -2043,7 +2043,18 @@ class MissingNumberInArray {
         return totalSum - arraySum;
     }
 }
+class FindSumOfDigit
+{
 
+
+    public static void main(String[] args) {
+
+        int number = 5749774;
+
+
+
+    }
+}
 
 
 
