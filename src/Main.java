@@ -2071,9 +2071,23 @@ class FindStringPalindrom
 
     public static void main(String[] args) {
 
+        String str1 = "civic";
+        String str2 = "civic";
+        String str3 = "";
+
+        for (int i =str2.length()-1; i>=0 ; i--) {
 
 
-
+            str3 = str3 + str2.charAt(i);
+        }
+        System.out.println(str3);
+        if(str1.equals(str3))
+        {
+            System.out.println("The Given String is Palindrome");
+        }else
+        {
+            System.out.println("String is not Palindrome String");
+        }
 
 
     }
