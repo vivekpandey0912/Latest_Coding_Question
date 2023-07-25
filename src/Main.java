@@ -2143,6 +2143,43 @@ class FindRangePrime
     }
 }
 
+class ArmStrong
+{
+
+
+    public static void main(String[] args) {
+
+
+        int number = 240;
+        int number1 = number;
+        int length = 0;
+        int newValue = 0;
+
+        while (number!=0)
+        {
+            length++;
+            number /= 10;
+        }
+
+        while (number1!=0)
+        {
+            int rem = number1%10;
+            int mul = 1;
+
+            for (int i = 0; i <length; i++) {
+                mul = mul*rem;
+
+            }
+            newValue = newValue+mul;
+            number1 /=10;
+        }
+
+        System.out.println("newValue = " + newValue);
+
+
+    }
+}
+
 
 
 
