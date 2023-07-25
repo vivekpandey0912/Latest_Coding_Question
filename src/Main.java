@@ -2093,6 +2093,56 @@ class FindStringPalindrom
     }
 }
 
+class FindRangePrime
+{
+
+    public static boolean checkNumber(int number)
+    {
+
+        if(number<=1)
+        {
+            return false;
+        }
+
+        for (int i = 2; i<number; i++) {
+            if(number%i==0)
+                return false;
+
+        }
+        return true;
+    }
+
+    public static void checkNumberIsPrimeInSeries(int start, int end)
+    {
+
+        int count = 0;
+        for (int i = start; i <end; i++) {
+
+            if(checkNumber(i)) {
+                System.out.println("The Number is in Series" + i);
+                count = count + i;
+            }
+
+        }
+        System.out.println("The Total count of prime number is " + count);
+
+
+
+    }
+
+
+    public static void main(String[] args) {
+        checkNumberIsPrimeInSeries(3,10);
+
+
+
+
+
+
+
+    }
+}
+
 
 
 
