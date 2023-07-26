@@ -2353,6 +2353,42 @@ class SortCharAlphabeticalOrder
 
 
 
+class FindFirstNonDuplicateChar {
+    public static char findFirstNonDuplicate(String str) {
+        str = str.toLowerCase();
+        Map<Character, Integer> charCountMap = new LinkedHashMap<>();
+
+        // Count the occurrences of each character in the string
+        for (char ch : str.toCharArray()) {
+            charCountMap.put(ch, charCountMap.getOrDefault(ch, 0) + 1);
+        }
+
+        // Find the first non-repeated character
+        for (char ch : charCountMap.keySet()) {
+            if (charCountMap.get(ch) == 1) {
+                return ch;
+            }
+        }
+        return '\0';
+    }
+
+    public static void main(String[] args) {
+        String str = "Ahabmdabad";
+        char firstNonDuplicate = findFirstNonDuplicate(str);
+
+        if (firstNonDuplicate != '\0') {
+            System.out.println("The first non-repeated character is: " + firstNonDuplicate);
+        } else {
+            System.out.println("No non-repeated character found in the string.");
+        }
+    }
+}
+
+
+
+
+
+
 
 
 
