@@ -2264,6 +2264,42 @@ class FindPower
 
 
 }
+class FindOccurance
+{
+    public static void findOccurance(String str1)
+    {
+        str1 = str1.toLowerCase();
+        Map <Character, Integer> integerMap = new HashMap<>();
+        int count = 0;
+        for (int i = 0; i <str1.length(); i++) {
+
+            Character ch = str1.charAt(i);
+            integerMap.put(ch,integerMap.getOrDefault(ch,count)+1);
+
+        }
+
+        var entris = integerMap.entrySet();
+        for (var entry:entris) {
+            System.out.println("The Character is  " + entry.getKey() + "The times is coming"
+                    + entry.getValue());
+
+        }
+
+
+    }
+
+
+
+    public static void main(String[] args) {
+
+        String str1 = "Ahamdabad";
+        findOccurance(str1);
+
+
+
+    }
+}
+
 
 
 
