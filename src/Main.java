@@ -2332,6 +2332,24 @@ class FindOccurance
 
     }
 }
+class SortCharAlphabeticalOrder
+{
+
+    public static void main(String[] args) {
+
+        String str = "Ahamdabad";
+        str = str.toLowerCase();
+        char [] charArray = str.toCharArray();
+        Arrays.sort(charArray);
+        String original = new String(charArray);
+//                Arrays.toString(charArray);
+        System.out.println(original);
+
+
+
+
+    }
+}
 
 
 
