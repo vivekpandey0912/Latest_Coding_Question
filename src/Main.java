@@ -2217,6 +2217,33 @@ class FindNumberIsPerfectOrNot
     }
 }
 
+import java.util.Arrays;
+
+public class MedianFinder {
+    public static double findMedian(int[] nums) {
+        Arrays.sort(nums);
+        int n = nums.length;
+
+        if (n % 2 == 0) {
+            // Array length is even, so median is the average of the two middle elements.
+            int mid1 = n / 2;
+            int mid2 = mid1 - 1;
+            return (double) (nums[mid1] + nums[mid2]) / 2.0;
+        } else {
+            // Array length is odd, so median is the middle element.
+            int mid = n / 2;
+            return (double) nums[mid];
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] arr = { 5, 2, 9, 1, 7, 6 };
+        double median = findMedian(arr);
+        System.out.println("Median: " + median);
+    }
+}
+
+
 
 
 
