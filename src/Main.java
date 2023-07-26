@@ -2288,12 +2288,45 @@ class FindOccurance
 
     }
 
+    public static void findOccuranceWithoutMap(String str1)
+    {
+        str1 = str1.toLowerCase();
+        char [] strChar1 = str1.toCharArray();
+        int count = 1;
+        Arrays.sort(strChar1);
+        char currentChar = strChar1[0];
+        for (int i = 1; i <strChar1.length; i++) {
+
+            if(strChar1[i] == currentChar)
+            {
+                count++;
+            }else
+            {
+                System.out.println("The Character is  " + currentChar + "The times is coming"
+                        + count);
+                currentChar = strChar1[i];
+                count = 1;
+            }
+        }
+        System.out.println("The Character is  " + currentChar + "The times is coming"
+                + count);
+
+
+
+
+
+
+
+
+    }
+
 
 
     public static void main(String[] args) {
 
         String str1 = "Ahamdabad";
-        findOccurance(str1);
+//        findOccurance(str1);
+        findOccuranceWithoutMap(str1);
 
 
 
