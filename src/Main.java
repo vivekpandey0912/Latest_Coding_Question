@@ -2243,7 +2243,24 @@ class MedianFinder {
 
 class FindPower
 {
+    public static void findPower(int number, int squire)
+    {
+        int power = 1;
+        for (int i = 1; i <=squire; i++) {
 
+            power = power*number;
+        }
+        System.out.println("Total power value is " + power);
+    }
+
+
+
+    public static void main(String[] args) {
+
+
+
+        FindPower.findPower(2,8);
+    }
 
 
 }
