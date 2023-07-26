@@ -2217,9 +2217,7 @@ class FindNumberIsPerfectOrNot
     }
 }
 
-import java.util.Arrays;
-
-public class MedianFinder {
+class MedianFinder {
     public static double findMedian(int[] nums) {
         Arrays.sort(nums);
         int n = nums.length;
@@ -2241,6 +2239,13 @@ public class MedianFinder {
         double median = findMedian(arr);
         System.out.println("Median: " + median);
     }
+}
+
+class FindPower
+{
+
+
+
 }
 
 
