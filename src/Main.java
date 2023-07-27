@@ -2430,6 +2430,17 @@ class FindSumOfAllNumbersInArray
     }
 }
 
+class FindCommonElementInArray
+{
+
+
+    public static void main(String[] args) {
+
+
+
+    }
+}
+
 
 
 
