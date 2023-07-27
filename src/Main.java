@@ -2433,8 +2433,45 @@ class FindSumOfAllNumbersInArray
 class FindCommonElementInArray
 {
 
+    public static void findInter(int [] arr1, int [] arr2)
+    {
+        ArrayList <Integer> integers = new ArrayList<>();
+        HashSet <Integer> hashSet = new HashSet<>();
+//
+        for (Integer value:arr1) {
+             hashSet.add(value);
+        }
+        HashMap<Integer, Integer> integerHashMap = new HashMap<>();
+        int count = 0;
+        for (Integer value:arr2) {
+            if(hashSet.contains(value))
+            {
+                integerHashMap.put(value,integerHashMap.getOrDefault(value,count)+1);
+            }
+
+        }
+        var entries  = integerHashMap.entrySet();
+        for (var entry:entries) {
+
+            if(entry.getValue()>0)
+            {
+                System.out.println("The value is contains " + entry.getKey());
+            }
+        }
+
+
+
+
+    }
+
 
     public static void main(String[] args) {
+
+        int[] arr1 = {1, 2, 3, 4, 5};
+        int[] arr2 = {3, 4, 5, 6, 7};
+
+        findInter(arr1,arr2);
+
 
 
 
