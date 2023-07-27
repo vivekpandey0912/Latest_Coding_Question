@@ -2486,17 +2486,14 @@ class FindUnionInArray
         for (Integer value:arr1) {
             hashSet.add(value);
         }
-        HashSet <Integer> hashSet1 = new HashSet<>();
-        for (Integer value:arr2) {
-            if(hashSet.contains(value)) {
-                hashSet1.add(value);
-            }else
-            {
-                hashSet1.add(value);
-            }
-            }
+        System.out.println(hashSet);
 
-        for (Integer value: hashSet1
+        for (Integer value:arr2) {
+                hashSet.add(value);
+            }
+        System.out.println(hashSet);
+
+        for (Integer value: hashSet
              ) {
             System.out.println(value);
         }
