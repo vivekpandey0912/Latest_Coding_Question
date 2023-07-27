@@ -2408,16 +2408,22 @@ class FindNonRepeatedCharacter
             }
 
         }
+    }
+}
+class FindSumOfAllNumbersInArray
+{
+    public static void main(String[] args) {
 
+        int[] array = {10,20,45,68,4985,11,13,45};
+        int count = 0;
+        for (Integer value:array) {
+            if(value%2==0)
+            {
+                count = count+value;
+            }
 
-
-
-
-
-
-
-
-
+        }
+        System.out.println(count);
 
 
     }
