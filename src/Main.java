@@ -2384,6 +2384,18 @@ class FindFirstNonDuplicateChar {
     }
 }
 
+class FindNonRepeatedCharacter
+{
+
+    public static void main(String[] args) {
+
+
+
+
+
+    }
+}
+
 
 
 
