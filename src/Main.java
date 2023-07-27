@@ -2390,6 +2390,33 @@ class FindNonRepeatedCharacter
     public static void main(String[] args) {
 
 
+        String name = "ahamdabad";
+        int count = 0;
+        HashMap <Character, Integer> map = new HashMap<>();
+        for (int i = 0; i <name.length(); i++) {
+
+            char ch = name.charAt(i);
+            map.put(ch,map.getOrDefault(ch,count)+1);
+        }
+
+        var entries = map.entrySet();
+        System.out.println(entries);
+        for (var entry:entries) {
+            if (entry.getValue()==1)
+            {
+                System.out.println("The Character are " + entry.getKey()+entry.getValue());
+            }
+
+        }
+
+
+
+
+
+
+
+
+
 
 
 
