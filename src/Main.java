@@ -2480,12 +2480,41 @@ class FindCommonElementInArray
 class FindUnionInArray
 {
 
+    public static void findUnionArray(int [] arr1, int [] arr2)
+    {
+        HashSet <Integer> hashSet = new HashSet<>();
+        for (Integer value:arr1) {
+            hashSet.add(value);
+        }
+        HashSet <Integer> hashSet1 = new HashSet<>();
+        for (Integer value:arr2) {
+            if(hashSet.contains(value)) {
+                hashSet1.add(value);
+            }else
+            {
+                hashSet1.add(value);
+            }
+            }
+
+        for (Integer value: hashSet1
+             ) {
+            System.out.println(value);
+        }
+
+
+
+
+
+    }
+
 
 
 
     public static void main(String[] args) {
 
-
+        int[] arr1 = {1, 2, 3, 4, 5};
+        int[] arr2 = {3, 4, 5, 6, 7};
+        findUnionArray(arr1,arr2);
 
     }
 }
