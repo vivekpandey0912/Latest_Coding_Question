@@ -2517,7 +2517,7 @@ class FindUnionInArray
 }
 
 
-public class PrimeNumbersWithStars {
+class PrimeNumbersWithStars {
     public static boolean isPrime(int num) {
         if (num <= 1) {
             return false;
@@ -2545,6 +2545,23 @@ public class PrimeNumbersWithStars {
                 System.out.println();
             }
         }
+    }
+}
+
+
+
+class CheckNumberIsPalindrom
+{
+
+
+    public static void main(String[] args) {
+
+
+
+
+
+
+
     }
 }
 
