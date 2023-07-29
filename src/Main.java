@@ -2553,11 +2553,30 @@ class PrimeNumbersWithStars {
 class CheckNumberIsPalindrom
 {
 
+    public static void checkNumber(int number) {
+        int newNumber = 0;
+        int number1 = number;
+        while (number != 0) {
+            int rem = number % 10;
+            newNumber = newNumber * 10 + rem;
+            number /= 10;
+        }
+
+        if (number1 == newNumber) {
+            System.out.println("The Number is Palindrom");
+        } else {
+            System.out.println("Number is not Palindrom");
+        }
+
+
+
+    }
+
 
     public static void main(String[] args) {
 
 
-
+        checkNumber(1451);
 
 
 
