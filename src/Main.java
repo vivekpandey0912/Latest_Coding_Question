@@ -2611,6 +2611,35 @@ class ReverseWordInStringArray
     }
 }
 
+class CheckEmailIsValidOrNot
+{
+
+
+    public static void main(String[] args) {
+
+        String email = "vivek@gmail.com";
+
+        for (int i = 0; i <email.length(); i++) {
+
+            if(email.contains("@") && email.contains(".com"))
+            {
+                System.out.println("the Given String is valid email address");
+            }else
+            {
+                System.out.println("Not Valid Email Address");
+            }
+
+        }
+
+
+
+
+
+
+    }
+
+}
+
 
 
 
