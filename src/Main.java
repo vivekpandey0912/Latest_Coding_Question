@@ -1,6 +1,8 @@
 import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Main {
     public static void main(String[] args) {
@@ -2611,37 +2613,87 @@ class ReverseWordInStringArray
     }
 }
 
-class CheckEmailIsValidOrNot
-{
-
+ class CheckEmailIsValidOrNot {
 
     public static void main(String[] args) {
-
         String email = "vivek@gmail.com";
 
-        for (int i = 0; i <email.length(); i++) {
-
-            if(email.contains("@") && email.contains(".com"))
-            {
-                System.out.println("the Given String is valid email address");
-            }else
-            {
-                System.out.println("Not Valid Email Address");
-            }
-
+        if (isValidEmail(email)) {
+            System.out.println("The Given String is a valid Email Id.");
+        } else {
+            System.out.println("The given String is not a valid Email Id.");
         }
-
-
-
-
-
-
     }
 
+    public static boolean isValidEmail(String email) {
+        // Regular expression for a valid email address
+        String emailRegex = "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}$";
+
+        // Compile the regex pattern
+        Pattern pattern = Pattern.compile(emailRegex, Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(email);
+
+        // Check if the email matches the pattern
+        return matcher.matches();
+    }
 }
 
+class FindCommonCharBetweenTwoString {
 
+    public static void main(String[] args) {
+        String str1 = "vivek";
+        String str2 = "alok";
+        char[] charArray = str1.toCharArray();
+        char[] chars = str2.toCharArray();
 
+        HashSet<Character> set1 = new HashSet<>();
+        HashSet<Character> set2 = new HashSet<>();
+        for (Character ch:str1.toCharArray()) {
+            set1.add(ch);
+
+        }
+        for (Character ch:str2.toCharArray()) {
+            set2.add(ch);
+
+        }
+        set1.retainAll(set2);
+
+        for (Character ch:set1)
+        {
+            System.out.println(ch);
+        }
+
+        // Step 1: Find the common characters by intersecting the two sets
+        set1.retainAll(set2);
+        System.out.println(set1);
+
+        // Step 2: Create a HashMap to store the count of each common character
+        Map<Character, Integer> charCountMap = new HashMap<>();
+
+        // Step 3: Iterate through one of the sets and count the occurrences
+        for (char c : set1) {
+            int count = countOccurrences(str1, c) + countOccurrences(str2, c);
+            charCountMap.put(c, count);
+        }
+
+        // Display the common characters and their occurrences
+        for (char c : charCountMap.keySet()) {
+            int count = charCountMap.get(c);
+            System.out.println("Character: " + c + ", Count: " + count);
+        }
+    }
+
+    // Helper method to count occurrences of a character in a string
+    public static int countOccurrences(String str, char ch) {
+        int count = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == ch) {
+                count++;
+            }
+        }
+        return count;
+    }
+}
 
 
 
