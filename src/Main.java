@@ -2584,6 +2584,35 @@ class CheckNumberIsPalindrom
     }
 }
 
+class ReverseWordInStringArray
+{
+
+
+    public static void main(String[] args) {
+
+     String [] array   = {"vivek","alok","sachin","vipin"};
+
+
+        for (int i = 0; i <array.length; i++) {
+
+            String newValue = array[i];
+            for (int j = newValue.length()-1; j>=0; j--) {
+
+                System.out.print(newValue.charAt(j));
+
+            }
+            System.out.print(" ");
+        }
+
+
+
+
+
+    }
+}
+
+
+
 
 
 
