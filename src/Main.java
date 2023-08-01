@@ -2696,9 +2696,18 @@ class FindCommonCharBetweenTwoString {
 }
 
 
-class RemoveWhiteSpaces
-{
+class RemoveWhiteSpaces {
+    public static void main(String[] args) {
+        String str1 = "my name is Vivek pandey";
 
+        // Convert the string to lowercase
+        str1 = str1.toLowerCase();
+
+        // Remove white spaces from the string using regex pattern "\\s+"
+        str1 = str1.replaceAll("\\s+", "");
+
+        System.out.println("str1 = " + str1);
+    }
 }
 
 
