@@ -2696,6 +2696,12 @@ class FindCommonCharBetweenTwoString {
 }
 
 
+class RemoveWhiteSpaces
+{
+
+}
+
+
 
 
 
