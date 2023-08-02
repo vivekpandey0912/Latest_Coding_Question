@@ -2798,6 +2798,40 @@ class TwoCharacterCountInString {
         return count;
     }
 }
+class FindNonRepeatedCharInString
+{
+    public static void main(String[] args) {
+
+
+        int count = 0;
+        Map<Character, Integer> map = new HashMap<>();
+        String name = "vivek";
+        for (int i = 0; i <name.length(); i++) {
+
+            char currentChar = name.charAt(i);
+            map.put(currentChar,map.getOrDefault(currentChar,count)+1);
+
+        }
+        System.out.println(map);
+
+        var entries = map.entrySet();
+        for (var entry:entries) {
+            if(entry.getValue()==1)
+            {
+                System.out.println("The Non Repeated Character is " + entry.getKey());
+                break;
+            }
+
+        }
+
+
+
+
+
+
+
+    }
+}
 
 
 
