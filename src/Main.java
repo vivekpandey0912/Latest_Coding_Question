@@ -2396,7 +2396,6 @@ class FindNonRepeatedCharacter
         int count = 0;
         HashMap <Character, Integer> map = new HashMap<>();
         for (int i = 0; i <name.length(); i++) {
-
             char ch = name.charAt(i);
             map.put(ch,map.getOrDefault(ch,count)+1);
         }
@@ -2709,6 +2708,99 @@ class RemoveWhiteSpaces {
         System.out.println("str1 = " + str1);
     }
 }
+
+class FindDuplicateChar
+{
+
+
+    public static void main(String[] args) {
+
+        String str = "ahamdabad";
+        str = str.toLowerCase();
+        int count = 1;
+        char [] chars = str.toCharArray();
+        Arrays.sort(chars);
+        char currentChar = chars[0];
+        for (int i = 1; i <chars.length; i++) {
+
+            if(chars[i]==currentChar)
+            {
+                count++;
+            }else
+            {
+                System.out.println("The Duplicate elements is " + currentChar + count);
+
+                currentChar = chars[i];
+                count = 1;
+            }
+
+        }
+
+            System.out.println("The Duplicate elements is " + currentChar + count);
+
+    }
+}
+
+class Scratch {
+    static void occuranceOfAlphabets(String word){
+        String word1=word.toLowerCase();
+        HashMap<Character,Integer> wordmap=new HashMap<>();
+
+        for(int i=0;i<word1.length();i++){
+            char c=word1.charAt(i);
+            if(wordmap.containsKey(c)){
+                wordmap.put(c, wordmap.get(c)+1);
+            }
+            else {
+                wordmap.put(c, 1);
+            }
+        }
+        for(Map.Entry<Character,Integer> nos:wordmap.entrySet()){
+            System.out.println(nos.getKey()+ " Occurs "+nos.getValue());
+        }
+    }
+    public static void main(String[] args) {
+        occuranceOfAlphabets("ahamadabad");
+}
+}
+class TwoCharacterCountInString {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the string: ");
+        String inputString = scanner.nextLine();
+
+        System.out.print("Enter the first character: ");
+        char firstChar = scanner.next().charAt(0);
+
+        System.out.print("Enter the second character: ");
+        char secondChar = scanner.next().charAt(0);
+
+        scanner.close();
+
+        int firstCharCount = countCharacterOccurrences(inputString, firstChar);
+        int secondCharCount = countCharacterOccurrences(inputString, secondChar);
+
+        System.out.println("Occurrences of '" + firstChar + "' in the string: " + firstCharCount);
+        System.out.println("Occurrences of '" + secondChar + "' in the string: " + secondCharCount);
+    }
+
+    private static int countCharacterOccurrences(String inputString, char targetChar) {
+        int count = 0;
+        for (char c : inputString.toCharArray()) {
+            if (c == targetChar) {
+                count++;
+            }else
+            {
+                return  -1;
+            }
+        }
+        return count;
+    }
+}
+
+
+
 
 
 
