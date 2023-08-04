@@ -3017,6 +3017,28 @@ class FindSumOfFactorial
     }
 }
 
+class FindRemoveAllDupicateChar
+{
+
+    public static void main(String[] args) {
+        String str = "vivek";
+        char [] strArray = str.toCharArray();
+        HashSet<Character> hashSet = new HashSet<>();
+        for (char ch:strArray) {
+            System.out.println("hashSet.add(ch) = " + hashSet.add(ch));
+        }
+
+
+
+
+
+    }
+
+
+
+
+}
+
 
 
 
