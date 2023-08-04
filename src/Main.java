@@ -2914,6 +2914,88 @@ class CommonCharacters {
 }
 
 
+class FindDuplicationChar
+{
+
+    public static void checkDuplicateWithTwoString(String str1, String str2)
+    {
+          str1 = str1.toLowerCase();
+          char [] str1Array = str1.toCharArray();
+          Arrays.sort(str1Array);
+          char [] str2Array = str2.toCharArray();
+          Arrays.sort(str2Array);
+          HashSet<Character> duplicateChar = new HashSet<>();
+        for (Character ch:str1Array) {
+
+            for (Character ch1 :str2Array) {
+
+                if(ch==ch1)
+                {
+                    duplicateChar.add(ch);
+                }
+
+            }
+
+        }
+        for (char ch: duplicateChar) {
+
+            System.out.println(ch);
+        }
+
+
+
+
+
+    }
+
+
+    public static void findIntValue(int num1, int num2)
+    {
+        String num3 = String.valueOf(num1);
+        String num4 = String.valueOf(num2);
+
+        char [] str1Array = num3.toCharArray();
+        Arrays.sort(str1Array);
+        char [] str2Array = num4.toCharArray();
+        Arrays.sort(str2Array);
+        HashSet<Character> duplicateChar = new HashSet<>();
+        for (Character ch:str1Array) {
+
+            for (Character ch1 :str2Array) {
+
+                if(ch==ch1)
+                {
+                    duplicateChar.add(ch);
+                }
+
+            }
+
+        }
+        for (char ch: duplicateChar) {
+
+            System.out.println(ch);
+        }
+
+
+
+    }
+
+
+
+
+
+    public static void main(String[] args) {
+
+        checkDuplicateWithTwoString("vivekasfda","alokasdf");
+        findIntValue(469875841,458624758);
+
+
+
+
+    }
+}
+
+
 
 
 
