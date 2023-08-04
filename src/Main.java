@@ -2986,10 +2986,32 @@ class FindDuplicationChar
 
     public static void main(String[] args) {
 
-        checkDuplicateWithTwoString("vivekasfda","alokasdf");
-        findIntValue(469875841,458624758);
+        checkDuplicateWithTwoString("ak","aak");
+//        findIntValue(469875841,458624758);
 
 
+
+
+    }
+}
+
+class FindSumOfFactorial
+{
+
+
+    public static void main(String[] args) {
+
+        int number = 5;
+        int newNumber = 1;
+        int sum = 0;
+        for (int i = number; i>0 ; i--) {
+
+            newNumber= newNumber*i;
+            sum = sum+i;
+
+        }
+        System.out.println(newNumber);
+        System.out.println("The sum of the Digit = " + sum);
 
 
     }
