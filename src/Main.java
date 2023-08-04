@@ -2833,6 +2833,50 @@ class FindNonRepeatedCharInString
     }
 }
 
+class ReverseStringWords
+{
+
+    public static void main(String[] args) {
+
+
+        String sentence = "suresh is a good not a bod boy";
+        String [] sentenceArray  = sentence.split(",");
+        for (String str:sentenceArray) {
+            for (int i = str.length()-1; i>=0; i--) {
+                System.out.print(str.charAt(i));
+            }
+            System.out.println(" ");
+        }
+
+
+
+    }
+
+
+}
+
+class CommonCharacters {
+
+    public static Set<Character> findCommonCharacters(String str1, String str2) {
+        Set<Character> commonChars = new HashSet<>();
+
+        for (char ch : str1.toCharArray()) {
+            if (str2.indexOf(ch) != -1) {
+                commonChars.add(ch);
+            }
+        }
+
+        return commonChars;
+    }
+
+    public static void main(String[] args) {
+        String string1 = "hello";
+        String string2 = "world";
+
+        Set<Character> result = findCommonCharacters(string1, string2);
+        System.out.println(result); // Output: [o, l]
+    }
+}
 
 
 
