@@ -3039,6 +3039,32 @@ class FindRemoveAllDupicateChar
 
 }
 
+class DiagonalSum {
+
+    public static int findDiagonalSum(int[][] matrix) {
+        int sum = 0;
+        int n = matrix.length; // Assuming it's a square matrix
+
+        for (int i = 0; i < n; i++) {
+            sum += matrix[i][i]; // Sum the elements from top-left to bottom-right diagonal
+        }
+
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        int[][] matrix = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        };
+
+        int diagonalSum = findDiagonalSum(matrix);
+        System.out.println("Sum of diagonal elements: " + diagonalSum);
+    }
+}
+
+
 
 
 
