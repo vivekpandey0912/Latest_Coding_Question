@@ -2881,6 +2881,39 @@ class CommonCharacters {
 
 
 
+ class CommonNumbers {
+
+    public static Set<Integer> findCommonNumbers(int num1, int num2) {
+        Set<Integer> commonNumbers = new HashSet<>();
+
+        while (num1 != 0) {
+            int digit = num1 % 10;
+            int temp = num2;
+
+            while (temp != 0) {
+                if (temp % 10 == digit) {
+                    commonNumbers.add(digit);
+                    break;
+                }
+                temp /= 10;
+            }
+
+            num1 /= 10;
+        }
+
+        return commonNumbers;
+    }
+
+    public static void main(String[] args) {
+        int num1 = 123456;
+        int num2 = 789012;
+
+        Set<Integer> result = findCommonNumbers(num1, num2);
+        System.out.println(result); // Output: [9]
+    }
+}
+
+
 
 
 
