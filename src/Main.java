@@ -2874,7 +2874,7 @@ class CommonCharacters {
         String string2 = "world";
 
         Set<Character> result = findCommonCharacters(string1, string2);
-        System.out.println(result); // Output: [o, l]
+        System.out.println(result);
     }
 }
 
