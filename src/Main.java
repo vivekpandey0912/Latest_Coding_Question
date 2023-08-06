@@ -3211,6 +3211,61 @@ class SumOfAllPrimeNumberInRange
     }
 }
 
+class CountWordInString
+{
+
+
+    public static void main(String[] args) {
+
+        String str1 = "My name is Vivek Kumar Pandey";
+       str1 =  str1.toLowerCase();
+        int count = 0;
+        String [] array = str1.split("\\s+");
+        for (int i = 0; i <array.length; i++) {
+
+            count = count+1;
+            System.out.println(count);
+        }
+
+        System.out.println("The Count of words in the String is " + count);
+
+
+
+
+    }
+}
+
+class FindEvenOddInArray
+{
+
+
+    public static void main(String[] args) {
+
+
+        int [] array = {10,15,30,45,11,17};
+
+        for (Integer value:array) {
+
+            if(value%2==0)
+            {
+                System.out.println("The Even Number is " + value);
+            }else
+            {
+                System.out.println("The Odd Number is " + value);
+            }
+
+        }
+
+
+
+
+
+
+
+
+    }
+}
+
 
 
 
