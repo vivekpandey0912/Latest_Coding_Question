@@ -3160,6 +3160,57 @@ class StrongNumber {
     }
 }
 
+class SumOfAllPrimeNumberInRange
+{
+
+
+    public static boolean getPrime(int number)
+    {
+        if(number<=1)
+        {
+            return false;
+        }else
+        {
+            for (int i = 2; i<number; i++) {
+                if(number%i==0)
+                {
+                    return false;
+                }
+
+            }
+            return true;
+        }
+    }
+
+    public static void findSumOfRangePrimeNumber(int num1, int num2)
+    {
+
+        int sum = 0;
+
+        for (int i = num1; i <num2; i++) {
+
+            if(getPrime(i))
+            {
+                sum = sum+i;
+            }
+        }
+
+        System.out.println("total sum of range prime number : " + sum);
+    }
+
+
+
+    public static void main(String[] args) {
+
+
+        int number1= 2;
+        int number2 = 10;
+        findSumOfRangePrimeNumber(number1, number2);
+
+
+    }
+}
+
 
 
 
