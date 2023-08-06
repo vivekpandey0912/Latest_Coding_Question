@@ -3266,6 +3266,30 @@ class FindEvenOddInArray
     }
 }
 
+class RemoveWhiteSpaceWithStars
+{
+
+
+
+    public static void main(String[] args) {
+
+        String str1 = "my name is Vivek Kumar pandey";
+        str1 = str1.toLowerCase();
+        char [] charArray = str1.toCharArray();
+        String str = "";
+        for (int i = 0; i <charArray.length; i++) {
+            if(charArray[i] == ' ')
+            {
+                charArray[i] = '*';
+            }
+        }
+        str1 = new String(charArray);
+        System.out.println(str1);
+
+
+
+    }
+}
 
 
 
