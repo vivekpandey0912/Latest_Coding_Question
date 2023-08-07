@@ -3314,6 +3314,44 @@ class ExampleOfStreamAPI
 }
 
 
+class PracticeFindGCD
+{
+
+    public static int findGCD(int number1, int number2)
+    {
+        while (number1%number2 !=0)
+        {
+            int rem = number1%number2;
+            number1 = number2;
+            number2 = rem;
+
+        }
+
+        return number2;
+
+    }
+    public static void findLCM(int number1, int number2)
+    {
+        int lcm = (number1*number2)/(findGCD(number1,number2));
+        System.out.println("lcm = " + lcm);
+
+    }
+
+    public static void main(String[] args) {
+
+
+        System.out.println(findGCD(36,24));
+        findLCM(36,24);
+
+    }
+}
+
+
+
+
+
+
+
 
 
 
