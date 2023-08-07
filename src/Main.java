@@ -3291,6 +3291,28 @@ class RemoveWhiteSpaceWithStars
     }
 }
 
+class ExampleOfStreamAPI
+{
+    public static void main(String[] args) {
+
+
+
+
+
+        List<String> stringList = Arrays.asList("Shiv","Ram","shiva","Aman");
+        stringList.stream().filter(name -> name.startsWith("A")).forEach(System.out::println);
+
+
+        List<Integer> integerList = Arrays.asList(10,15,30,40,20);
+        integerList.stream().map(i -> i*5).forEach(System.out::println);
+
+
+
+
+    }
+
+}
+
 
 
 
