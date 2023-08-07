@@ -3346,6 +3346,37 @@ class PracticeFindGCD
     }
 }
 
+class FindSumOfAllOddDigit
+{
+
+
+    public static void main(String[] args) {
+
+
+
+        int count = 0;
+        int number = 24587963;
+        while (number!=0)
+        {
+            int rem = number%10;
+            if(rem%2==0)
+            {
+                continue;
+            }else
+            {
+                count = count+rem;
+            }
+
+            number /= 10;
+
+        }
+        System.out.println("The total sum of Odd number in a numbers count = " + count);
+
+
+    }
+
+}
+
 
 
 
