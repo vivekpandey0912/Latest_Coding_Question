@@ -1,3 +1,4 @@
+import javax.print.attribute.HashPrintJobAttributeSet;
 import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.util.*;
@@ -3452,6 +3453,74 @@ class CheckStringIsPalindrom1
 
 
     }
+}
+class CheckAnagramStrings
+{
+    public static void checkString(String str1, String str2)
+    {
+        char [] str1Array = str1.toCharArray();
+        char [] str2Array = str2.toCharArray();
+        Arrays.sort(str2Array);
+        Arrays.sort(str1Array);
+        if(Arrays.equals(str1Array,str2Array))
+        {
+            System.out.println("The  String is Anagrams ");
+        }else
+        {
+            System.out.println("The String is not Anagrams");
+        }
+
+    }
+
+    public static void main(String[] args) {
+
+
+
+
+        checkString("silent","listen");
+
+
+    }
+
+}
+
+class FindMajorityOfElementInArray
+{
+    public static void main(String[] args) {
+
+        int [] value = {10,15,20,11,10,3,4,10,15};
+        int count = 0;
+        TreeMap<Integer, Integer> valueInteger = new TreeMap<>();
+        for (Integer value1: value)
+        {
+            valueInteger.put(value1,valueInteger.getOrDefault(value1,count)+1);
+        }
+
+        int highestMajority = 0;
+        int majorityElement = 0;
+        var entries = valueInteger.entrySet();
+        for (var entry : entries) {
+            if (entry.getValue() > highestMajority) {
+                highestMajority = entry.getValue();
+                majorityElement = entry.getKey();
+            }
+        }
+
+        System.out.println("Highest Majority Element: " + majorityElement + " with count: " + highestMajority);
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
 }
 
 
