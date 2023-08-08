@@ -3425,6 +3425,35 @@ class ConvertArrayListToArray
     }
 }
 
+class CheckStringIsPalindrom1
+{
+
+    public static void main(String[] args) {
+
+        String name = "civic";
+        String originalString = name;
+        char [] array = name.toCharArray();
+        String newString = "";
+        for (int i =array.length-1; i>=0; i--) {
+            newString = newString + array[i];
+        }
+
+        System.out.println(newString);
+        if(newString.equals(originalString))
+        {
+            System.out.println("The String is Palindrom String");
+        }else
+        {
+            System.out.println("The String is not palindrom");
+        }
+
+
+
+
+
+    }
+}
+
 
 
 
