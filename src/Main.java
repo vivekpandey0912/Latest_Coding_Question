@@ -3359,15 +3359,14 @@ class FindSumOfAllOddDigit
         while (number!=0)
         {
             int rem = number%10;
-            if(rem%2==0)
+            if(rem%2!=0)
             {
-                continue;
-            }else
-            {
+                System.out.println(rem);
                 count = count+rem;
+                System.out.println(count);
             }
 
-            number /= 10;
+            number = number/10;
 
         }
         System.out.println("The total sum of Odd number in a numbers count = " + count);
@@ -3376,6 +3375,42 @@ class FindSumOfAllOddDigit
     }
 
 }
+class RemoveParticularElementFromArray
+{
+
+
+
+
+    public static void main(String[] args) {
+      int element = 10;
+      int [] array = {10,20,30,45,11,15};
+      int index = 0;
+      int [] newArray = new int[array.length-1];
+
+        for (int i = 0; i <array.length; i++) {
+            if(array[i] != element)
+            {
+                newArray[index] = array[i];
+                index++;
+            }
+        }
+
+        for (Integer value:newArray) {
+
+
+            System.out.println(value);
+
+        }
+
+
+
+
+
+    }
+}
+
+
+
 
 
 
