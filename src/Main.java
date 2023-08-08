@@ -3401,6 +3401,22 @@ class RemoveParticularElementFromArray
             System.out.println(value);
 
         }
+    }
+}
+class ConvertArrayListToArray
+{
+
+
+    public static void main(String[] args) {
+
+        List<Integer> integerList = Arrays.asList(10,15,30,45,30,20);
+        Integer [] array = integerList.toArray(new Integer[integerList.size()]);
+
+        for (Integer value:array) {
+
+            System.out.println(value);
+
+        }
 
 
 
@@ -3408,6 +3424,14 @@ class RemoveParticularElementFromArray
 
     }
 }
+
+
+
+
+
+
+
+
 
 
 
