@@ -3549,6 +3549,33 @@ class ProgramSortNameInArray{
                 }
 
 
+class PangramChecker {
+
+    public static boolean isPangram(String str) {
+        str = str.toLowerCase(); // Convert the string to lowercase
+
+        for (char c = 'a'; c <= 'z'; c++) {
+            if (str.indexOf(c) == -1) {
+                return false; // If any letter is missing, it's not a pangram
+            }
+        }
+
+        return true; // All letters are present, it's a pangram
+    }
+
+    public static void main(String[] args) {
+        String sentence = "The quick brown fox jumps over a lazy dog.";
+        boolean result = isPangram(sentence);
+
+        if (result) {
+            System.out.println("The sentence is a pangram.");
+        } else {
+            System.out.println("The sentence is not a pangram.");
+        }
+    }
+}
+
+
 
 
 
