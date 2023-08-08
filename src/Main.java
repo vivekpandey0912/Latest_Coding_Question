@@ -3508,7 +3508,32 @@ class FindMajorityOfElementInArray
 
         System.out.println("Highest Majority Element: " + majorityElement + " with count: " + highestMajority);
 
+    }
 
+
+
+
+
+
+}
+class ProgramSortNameInArray{
+
+
+    public static void main(String[] args) {
+
+
+        String []  array = {"vivek","alok","aman","rishi"};
+        TreeSet<String> treeSet = new TreeSet<>();
+        for (int i = 0; i<array.length; i++) {
+
+            treeSet.add(array[i]);
+        }
+
+        for (String str:treeSet) {
+
+            System.out.println(str);
+
+        }
 
 
 
@@ -3521,7 +3546,7 @@ class FindMajorityOfElementInArray
 
 
 
-}
+                }
 
 
 
