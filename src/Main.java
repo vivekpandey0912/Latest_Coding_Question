@@ -3575,6 +3575,20 @@ class PangramChecker {
     }
 }
 
+// create Thread extending Thread class
+
+class Bike extends Thread
+{
+    @Override
+    public void run()
+    {
+        System.out.println("The Bike is runing");
+    }
+
+
+}
+
+
 
 
 
