@@ -3582,7 +3582,19 @@ class Bike extends Thread
     @Override
     public void run()
     {
-        System.out.println("The Bike is runing");
+        System.out.println("The Bike is running");
+    }
+
+    public static void main(String[] args) {
+
+        Bike bike = new Bike();
+        bike.start();
+
+
+
+
+
+
     }
 
 
