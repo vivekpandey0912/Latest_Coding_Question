@@ -3600,21 +3600,27 @@ class Thread1 implements Runnable
     @Override
     public void run()
     {
-        System.out.println("The Thread is running");
+        System.out.println("The Thread 1 is running");
     }
 
-    public static void main(String[] args) {
 
-
-        Thread1 thread1 = new Thread1();
-        Thread thread = new Thread(thread1);
-        thread.start();
-
-
-
-
+}
+class Thread2 implements Runnable
+{
+    @Override
+    public void run()
+    {
+        System.out.println("The Thread 2  is running");
     }
+}
 
+class Thread3 implements Runnable
+{
+    @Override
+    public void run()
+    {
+        System.out.println("The Thread 3  is running");
+    }
 }
 
 
