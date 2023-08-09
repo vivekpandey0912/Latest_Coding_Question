@@ -3595,7 +3595,7 @@ class Bike extends Thread
 
 
 }
-class Thread1 implements Runnable
+class Thread1 extends Thread
 {
     @Override
     public void run()
@@ -3605,7 +3605,7 @@ class Thread1 implements Runnable
 
 
 }
-class Thread2 implements Runnable
+class Thread2 extends Thread
 {
     @Override
     public void run()
@@ -3614,7 +3614,7 @@ class Thread2 implements Runnable
     }
 }
 
-class Thread3 implements Runnable
+class Thread3 extends Thread
 {
     @Override
     public void run()
@@ -3623,6 +3623,31 @@ class Thread3 implements Runnable
     }
 }
 
+class MultipleThreadWithMultipleTask
+{
+
+
+    public static void main(String[] args) {
+
+        Bike bike = new Bike();
+        bike.start();
+        Thread1 thread1 = new Thread1();
+        thread1.start();
+        Thread2 thread2 = new Thread2();
+        thread2.start();
+        Thread3 thread3 = new Thread3();
+        thread3.start();
+
+
+
+
+
+    }
+
+
+
+
+}
 
 
 
