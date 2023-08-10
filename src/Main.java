@@ -3655,7 +3655,8 @@ class FindReferenceOfCurrentThread
     public static void main(String[] args) {
 
 
-        System.out.println();
+        System.out.println("The current Thread reference is " + Thread.currentThread());
+        System.out.println("The current Thread name is " + Thread.currentThread().getName());
 
 
 
