@@ -3670,7 +3670,7 @@ class ThreadPrograms implements Runnable
 
     @Override
     public void run() {
-
+        System.out.println(Thread.currentThread().isAlive());
         System.out.println(Thread.currentThread().getName());
         System.out.println("The Run Method is here");
 
@@ -3685,14 +3685,35 @@ class ThreadPrograms implements Runnable
         Thread thread = new Thread(threadPrograms);
         Thread thread1 = new Thread(threadPrograms1);
         thread.start();thread1.start();
-
-
+//        System.out.println("thread1.isAlive() = " + thread1.isAlive());
+        System.out.println("thread.isAlive() = " + thread.isAlive() +thread1.isAlive());
 
 
 
     }
 }
+// Creating Daemon Thread
 
+class DaemonThread implements Runnable{
+
+
+    public static void main(String[] args) {
+
+        DaemonThread daemonThread = new DaemonThread();
+        Thread thread = new Thread(daemonThread);
+        thread.setDaemon(true);
+        thread.start();
+
+
+
+    }
+
+    @Override
+    public void run() {
+
+        System.out.println("The thread is daemon Thread ");
+    }
+}
 
 
 
