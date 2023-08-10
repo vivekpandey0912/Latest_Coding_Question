@@ -3662,10 +3662,34 @@ class FindReferenceOfCurrentThread
 
 
 
+    }
+}
+class ThreadPrograms implements Runnable
+{
+
+
+    @Override
+    public void run() {
+
+        System.out.println(Thread.currentThread().getName());
+        System.out.println("The Run Method is here");
+
+    }
+
+    public static void main(String[] args) {
+
+
+
+        ThreadPrograms threadPrograms = new ThreadPrograms();
+        Thread thread = new Thread(threadPrograms);
+        thread.start();
+        System.out.println(Thread.currentThread().getName());
+
+
+
 
     }
 }
-
 
 
 
