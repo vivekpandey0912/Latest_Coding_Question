@@ -3772,6 +3772,27 @@ class FindFirstChar
 
     }
 }
+class FindSubString
+{
+
+    public static void main(String[] args)
+    {
+        String value = "abc";
+        for (int i = 0; i <value.length(); i++) {
+
+            for (int j = i+1; j <=value.length() ; j++) {
+
+                System.out.println(value.substring(i,j));
+            }
+        }
+
+
+
+
+
+
+    }
+}
 
 
 
