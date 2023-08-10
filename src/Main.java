@@ -3681,9 +3681,11 @@ class ThreadPrograms implements Runnable
 
 
         ThreadPrograms threadPrograms = new ThreadPrograms();
+        ThreadPrograms threadPrograms1 = new ThreadPrograms();
         Thread thread = new Thread(threadPrograms);
-        thread.start();
-        System.out.println(Thread.currentThread().getName());
+        Thread thread1 = new Thread(threadPrograms1);
+        thread.start();thread1.start();
+
 
 
 
