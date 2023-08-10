@@ -3712,7 +3712,36 @@ class DaemonThread extends Thread {
         }
     }
 }
+class PrintIntersectionElement {
 
+    public static int[] getSortedArray(int[] array) {
+        Arrays.sort(array);
+        return array;
+    }
+
+    public static void findIntersectionElement(int[] array1, int[] array2) {
+        array1 = getSortedArray(array1);
+        array2 = getSortedArray(array2);
+        Set<Integer> hashSet = new HashSet<>();
+
+        for (int value1 : array1) {
+            for (int value2 : array2) {
+                if (value1 == value2) {
+                    hashSet.add(value1);
+                    break; // Break to avoid adding the same element multiple times
+                }
+            }
+        }
+
+        hashSet.forEach(System.out::println);
+    }
+
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 68, 10, 11, 12};
+        int[] array1 = {11, 12, 13, 14, 68, 10, 11, 12};
+        findIntersectionElement(array, array1);
+    }
+}
 
 
 
