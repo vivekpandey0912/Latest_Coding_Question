@@ -3712,36 +3712,48 @@ class DaemonThread extends Thread {
         }
     }
 }
-class PrintIntersectionElement {
+class PrintInterSectionElement
+{
 
-    public static int[] getSortedArray(int[] array) {
+    public static int [] getSortedArray(int [] array)
+    {
         Arrays.sort(array);
         return array;
     }
-
-    public static void findIntersectionElement(int[] array1, int[] array2) {
+    public static void FindIntersectionElement(int [] array1, int [] array2)
+    {
         array1 = getSortedArray(array1);
         array2 = getSortedArray(array2);
-        Set<Integer> hashSet = new HashSet<>();
+        HashSet<Integer> hashSet  = new HashSet<>();
+        for (int value1:array1) {
 
-        for (int value1 : array1) {
-            for (int value2 : array2) {
-                if (value1 == value2) {
+            for (int value2:array2) {
+
+                if(value1 == value2) {
                     hashSet.add(value1);
-                    break; // Break to avoid adding the same element multiple times
+                    break;
                 }
             }
-        }
 
-        hashSet.forEach(System.out::println);
+        }
+        hashSet.stream().forEach(System.out::println);
     }
+
+
 
     public static void main(String[] args) {
-        int[] array = {1, 2, 3, 4, 68, 10, 11, 12};
-        int[] array1 = {11, 12, 13, 14, 68, 10, 11, 12};
-        findIntersectionElement(array, array1);
+
+
+        int [] array = {1,2,3,4,68,10,11,12};
+        int [] array1 = {11,12,13,14,68,10,11,12};
+        FindIntersectionElement(array,array1);
+
+
     }
+
+
 }
+
 
 
 
