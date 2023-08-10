@@ -3638,9 +3638,6 @@ class MultipleThreadWithMultipleTask
         Thread3 thread3 = new Thread3();
         thread3.start();
 
-
-
-
     }
 
 
@@ -3648,7 +3645,23 @@ class MultipleThreadWithMultipleTask
 
 }
 
+// How to find current thread reference and name
 
+
+class FindReferenceOfCurrentThread
+{
+
+
+    public static void main(String[] args) {
+
+
+        System.out.println();
+
+
+
+
+    }
+}
 
 
 
