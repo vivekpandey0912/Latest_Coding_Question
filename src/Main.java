@@ -3754,6 +3754,25 @@ class PrintInterSectionElement
 
 }
 
+class FindFirstChar
+{
+
+
+    public static void main(String[] args) {
+
+        String name = "My name is Vivek Pandey";
+        String [] array = name.split(" ");
+        for (int i = 0; i <array.length; i++) {
+            for (char ch:array[i].toCharArray()) {
+                System.out.println(ch);
+                break;
+            }
+        }
+
+
+    }
+}
+
 
 
 
