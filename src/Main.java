@@ -3694,24 +3694,22 @@ class ThreadPrograms implements Runnable
 }
 // Creating Daemon Thread
 
-class DaemonThread implements Runnable{
-
-
+class DaemonThread extends Thread {
     public static void main(String[] args) {
-
+        System.out.println("The is main Thread");
         DaemonThread daemonThread = new DaemonThread();
-        Thread thread = new Thread(daemonThread);
-        thread.setDaemon(true);
-        thread.start();
-
-
-
+        daemonThread.setDaemon(true);
+        daemonThread.start();
     }
 
     @Override
     public void run() {
-
-        System.out.println("The thread is daemon Thread ");
+        if (Thread.currentThread().isDaemon()) {
+            System.out.println("The thread is daemon Thread ");
+            System.out.println("the is another statement");
+        } else {
+            System.out.println("Not Daemon Thread");
+        }
     }
 }
 
