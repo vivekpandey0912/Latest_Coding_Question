@@ -3774,6 +3774,7 @@ class FindFirstChar
 }
 class FindSubString
 {
+    int value;
 
     public static void main(String[] args)
     {
@@ -3786,10 +3787,80 @@ class FindSubString
             }
         }
 
+        FindSubString obj= new FindSubString();
+        obj.value = 10;
 
 
 
 
+
+
+    }
+}
+class CheckNumberIsPrim
+{
+
+    public static boolean checkNumber(int number)
+    {
+        if(number<=1)
+        {
+            return false;
+        }
+        for (int i = 2; i <number; i++) {
+            if(number%i==0)
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+
+
+    public static void main(String[] args) {
+
+        System.out.println("checkNumber(7) = " + checkNumber(7));
+        int start = 10;
+        int end = 30;
+
+        for (int i = start; i <end; i++) {
+            if(checkNumber(i))
+            {
+                System.out.println("the Number is prime " + i);
+            }else
+            {
+                System.out.println("the Number is not Prime " + i);
+            }
+        }
+
+
+
+    }
+}
+
+class FindGreatestCommonFactor
+{
+
+    public static int findGCD(int number1,int number2)
+    {
+           while (number1%number2!=0)
+           {
+              int rem =  number1%number2;
+               number1 = number2;
+              number2 = rem;
+           }
+        System.out.println("The GCD is "  + number2);
+           return number2;
+    }
+
+    public static void main(String[] args) {
+
+        int number1 = 36;
+        int number2 = 24;
+        System.out.println("findGCD(36,12) = " + findGCD(number1, number2));
+        int lcm =  (number2*number1)/findGCD(number2, number1);
+        System.out.println("number3 = " + lcm);
 
     }
 }
