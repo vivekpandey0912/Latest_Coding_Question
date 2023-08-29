@@ -3866,6 +3866,33 @@ class FindGreatestCommonFactor
 }
 
 
+class Solution9 {
+    public static int funcEnergy(int initialEnergy, int rate, int time) {
+        // Energy produced = Initial Energy + (Rate * Time)
+        return initialEnergy + (rate * (time - 1));
+    }
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        // Input for initialEnergy
+        int initialEnergy = in.nextInt();
+
+        // Input for rate
+        int rate = in.nextInt();
+
+        // Input for time
+        int n = in.nextInt(); // nth second
+
+        // Calculate energy produced in the nth second
+        int energyProduced = funcEnergy(initialEnergy, rate, n);
+
+        // Print the energy produced in the nth second
+        System.out.print(energyProduced);
+    }
+}
+
+
 
 
 
