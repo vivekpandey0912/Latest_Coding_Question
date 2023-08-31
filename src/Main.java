@@ -3891,8 +3891,99 @@ class Solution9 {
         System.out.print(energyProduced);
     }
 }
+// Sleep method program in Multithreading
+
+class SleepMethod
+{
+
+    public static void main(String[] args)
+    {
 
 
+        for (int i = 1; i <=5; i++) {
+
+            try {
+                System.out.println(i);
+                Thread.sleep(1000);
+            }catch (Exception ex)
+            {
+                System.out.println(ex.getMessage());
+            }
+
+
+        }
+
+
+    }
+}
+// create multiple thread and call thread concurrently
+
+
+class CreateMultipleThread implements Runnable
+{
+    public void run()
+    {
+        System.out.println("The is first thread ");
+    }
+
+
+    public static void main(String[] args) {
+
+        CreateMultipleThread createMultipleThread = new CreateMultipleThread();
+        Thread thread = new Thread(createMultipleThread);
+
+    }
+}
+
+class DeleteParticularElementFromArray
+{
+
+
+    public static void methodToRemoveElementFromArray(int [] array,int element)
+    {
+
+        List <Integer> arraylist = new ArrayList<>();
+        for (int value:array) {
+            arraylist.add(value);
+        }
+        Iterator <Integer> iterator = arraylist.iterator();
+        while (iterator.hasNext())
+        {
+            Integer number = iterator.next();
+            if(number == element) {
+                iterator.remove();
+            }
+        }
+
+
+     arraylist.stream().forEach(System.out::println);
+
+
+
+
+
+    }
+
+
+
+    public static void main(String[] args) {
+
+
+        int[] numbers = new int[5]; // Creates an array of size 5
+
+        // Initializing the array elements
+        numbers[0] = 10;
+        numbers[1] = 20;
+        numbers[2] = 30;
+        numbers[3] = 40;
+        numbers[4] = 50;
+        methodToRemoveElementFromArray(numbers,20);
+
+
+
+
+    }
+}
 
 
 
