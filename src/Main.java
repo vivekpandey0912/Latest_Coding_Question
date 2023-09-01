@@ -4106,8 +4106,13 @@ class DeepComparisonAndShallowComparative
 
 
 
+//  Yield method in java
+class YieldMethod
+{
 
 
+
+}
 
 
 
