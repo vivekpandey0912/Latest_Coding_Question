@@ -1,4 +1,3 @@
-import javax.print.attribute.HashPrintJobAttributeSet;
 import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.util.*;
@@ -4087,6 +4086,19 @@ class Details
                 "name='" + name + '\'' +
                 ", address='" + address + '\'' +
                 '}';
+    }
+}
+
+class DeepComparisonAndShallowComparative
+{
+    public static void main(String[] args) {
+
+
+
+        Details details = new Details("Vivek","Delhi");
+        Details details1 = new Details("Vivek","Delhi");
+        System.out.println("Shallow Comparison " + (details == details1));
+        System.out.println("Deep Comparison " + (details.equals(details1)));
     }
 }
 
