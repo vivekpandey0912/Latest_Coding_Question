@@ -4011,6 +4011,30 @@ class CallByValue
     }
 }
 
+// Pass By Reference
+
+class PassByReference
+{
+
+    public static StringBuilder checkString(StringBuilder stringBuilder)
+    {
+        StringBuilder stringBuilder1 = new StringBuilder("Pandey");
+        stringBuilder.append(stringBuilder1);
+        return stringBuilder;
+    }
+
+
+
+    public static void main(String[] args) {
+
+         StringBuilder stringBuilder = new StringBuilder("Vivek");
+
+        System.out.println("checkString(stringBuilder) = " + checkString(stringBuilder));
+        System.out.println("stringBuilder = " + stringBuilder);
+
+    }
+}
+
 
 
 
