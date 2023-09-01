@@ -4137,7 +4137,33 @@ class YieldMethod extends Thread
 }
 
 
+// Majority of Element in Array
 
+class FindMajorityOfElement
+{
+
+    public static void main(String[] args) {
+
+        int [] array = {10,1,2,6,4,10,12};
+        int count = 0;
+        Map<Integer, Integer> getValueMajority = new HashMap<>();
+        for (Integer value:array) {
+
+            getValueMajority.put(value, getValueMajority.getOrDefault(value,count)+1);
+        }
+
+        var entries = getValueMajority.entrySet();
+        for (var entry:entries) {
+
+            System.out.println(entry.getKey() + "value ' " + entry.getValue());
+
+        }
+
+
+
+
+    }
+}
 
 
 
