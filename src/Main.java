@@ -4107,8 +4107,30 @@ class DeepComparisonAndShallowComparative
 
 
 //  Yield method in java
-class YieldMethod
+class YieldMethod extends Thread
 {
+    @Override
+   public void run()
+   {
+       for (int i = 0; i <5; i++) {
+           System.out.println("This is 0th Thread " + Thread.currentThread().getName());
+       }
+   }
+
+    public static void main(String[] args) {
+
+        YieldMethod yieldMethod = new YieldMethod();
+        yieldMethod.start();
+
+        for (int i = 0; i <5; i++) {
+            System.out.println("main Thread " + Thread.currentThread().getName());
+        }
+
+
+
+
+    }
+
 
 
 
