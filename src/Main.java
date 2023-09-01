@@ -4036,8 +4036,59 @@ class PassByReference
 }
 
 
+// Hash code and Equals Methods
+// Shallow and Deep Comparision
 
+class Details
+{
+    private String name;
+    private String address;
 
+    public Details(String name, String address) {
+        this.name = name;
+        this.address = address;
+    }
+
+    public Details() {
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Details details = (Details) o;
+        return Objects.equals(name, details.name) && Objects.equals(address, details.address);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, address);
+    }
+
+    @Override
+    public String toString() {
+        return "Details{" +
+                "name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                '}';
+    }
+}
 
 
 
