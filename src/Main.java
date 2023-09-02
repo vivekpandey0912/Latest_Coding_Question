@@ -3,6 +3,7 @@ import java.time.LocalDate;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.function.BiConsumer;
 
 public class Main {
     public static void main(String[] args) {
@@ -4172,8 +4173,14 @@ class FindMajorityOfElement
 }
 
 
+// Example of BiConsumer
 
-
+class Main10{
+    public static void main(String[] args) {
+        BiConsumer<Integer, Integer> bioConsumer = (a, b) -> System.out.println(a + b);
+        bioConsumer.accept(5, 10);
+    }
+}
 
 
 
