@@ -1,6 +1,7 @@
 import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.util.*;
+import java.util.function.Predicate;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.function.BiConsumer;
@@ -4181,6 +4182,93 @@ class Main10{
         bioConsumer.accept(5, 10);
     }
 }
+// Example of Abstract method
+
+
+abstract class Squire
+{
+
+
+    public abstract int value(int value, int value2);
+}
+class Squire1 extends Squire
+{
+
+    @Override
+    public int value(int value, int value2) {
+        return value+value2;
+    }
+
+    public static void main(String[] args) {
+        Squire1 squire1 = new Squire1();
+        System.out.println("squire1.value(10,20) = " + squire1.value(10, 20));
+
+
+    }
+}
+// Predicate funcational interface
+
+
+class ExampleofPradicate
+{
+
+
+    public static void main(String[] args) {
+
+        String str = "ve";
+
+        Predicate<String> pre = s -> s.length() >= 5;
+        System.out.println(pre.test(str));
+
+
+
+    }
+
+}
+// Bubble sort
+
+class BubbleSort
+{
+
+    public static void main(String[] args) {
+
+        int [] array = {1,15,62,40,50};
+
+        for (int i = 0; i <array.length; i++) {
+
+            for (int j = 0; j <array.length-1; j++) {
+
+                if(array[j]>array[j+1])
+                {
+                    int temp = array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = temp;
+                }
+            }
+        }
+        System.out.println(array.toString());
+
+
+        for (Integer value:array) {
+
+            System.out.println(value);
+        }
+
+
+
+    }
+
+
+
+
+
+
+
+}
+
+// Insertation Sort
+
+
 
 
 
