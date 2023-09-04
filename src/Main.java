@@ -4268,6 +4268,36 @@ class BubbleSort
 
 // Insertation Sort
 
+class InsertainSort
+{
+
+    public static void main(String[] args) {
+
+        int[] array = {1, 15, 62, 40, 50};
+
+        for (int i = 0; i < array.length; i++) {
+
+            int keyValue = array[i];
+            int j  = i-1;
+
+            while (j >= 0 && array[j] > keyValue) {
+                array[j + 1] = array[j];
+                j--;
+            }
+
+            array[j + 1] = keyValue;
+        }
+
+        for (Integer value : array) {
+
+            System.out.println(value);
+        }
+
+    }
+
+    }
+
+
 
 
 
