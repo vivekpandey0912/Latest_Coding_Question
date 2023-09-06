@@ -4340,7 +4340,36 @@ class SelectionSort {
     }
 }
 
+// Find  GCD of NUmber
 
+class FindGCD
+{
+
+    public static int findGCD(int number1, int number2)
+    {
+         while(number1%number2 != 0)
+         {
+             int rem = number1%number2;
+             number1 = number2;
+             number2 = rem;
+         }
+        return number2;
+
+
+    }
+
+    public static void main(String[] args) {
+
+        int number1 = 12;
+        int number2 = 24;
+        int number = FindGCD.findGCD(24,12);
+        System.out.println(" GCD is  = " + number);
+        int lcmNumberIs = (number1*number2)/number;
+        System.out.println("lcmNumberIs = " + lcmNumberIs);
+
+
+    }
+}
 
 
 
