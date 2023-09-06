@@ -4370,7 +4370,42 @@ class FindGCD
 
     }
 }
+ class FindOccurrenceOfChar
+ {
+     public static void findOccuranceWithMap(String str)
+     {
+         Map <Character, Integer> integerMap = new HashMap<>();
+         int count = 0;
+         for (char ch:str.toCharArray()) {
 
+             integerMap.put(ch,integerMap.getOrDefault(ch,count)+1);
+         }
+         var entries = integerMap.entrySet();
+         for (var entry:entries) {
+             System.out.println("Value is = " + entry.getKey() + " : " +"Occurance is " + entry.getValue());
+
+         }
+
+
+
+
+
+     }
+
+
+
+
+     public static void main(String[] args) {
+
+         String str = "vivekkumarpandey";
+         FindOccurrenceOfChar.findOccuranceWithMap(str);
+
+     }
+
+
+
+
+ }
 
 
 
