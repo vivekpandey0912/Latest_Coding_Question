@@ -4480,7 +4480,35 @@ class FindGCD
      }
 
  }
+class PalindromNumber1
+{
 
+
+    public static void main(String[] args) {
+
+        int value = 1441;
+        int value1 = value;
+        int newValue = 0;
+        while (value!=0)
+        {
+            int rem = value%10;
+            newValue = newValue*10+rem;
+                    value /= 10;
+        }
+        System.out.println(newValue);
+
+
+        if(value1== newValue)
+        {
+            System.out.println("The number is Palindrom number");
+        }
+        else
+        {
+            System.out.println("Number is not Plaindrom Number");
+        }
+
+    }
+}
 
 
 
