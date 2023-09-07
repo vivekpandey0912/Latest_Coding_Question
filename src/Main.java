@@ -4392,6 +4392,35 @@ class FindGCD
 
      }
 
+     public static void findOccuranceWithoutMap(String str)
+     {
+         int count = 1;
+         char [] array = str.toCharArray();
+         char ch = array[0];
+         Arrays.sort(array);
+         for (int i = 1; i <array.length; i++) {
+
+             if(ch == array[i])
+             {
+                 count++;
+             }else
+             {
+                 System.out.println("The char is " + ch + "the count is  is " +count);
+                 count = 1;
+                 ch = array[i];
+             }
+         }
+         System.out.println("The char is " + ch + "the count is  is " +count);
+
+     }
+
+
+
+
+
+
+
+
 
 
 
@@ -4400,12 +4429,49 @@ class FindGCD
          String str = "vivekkumarpandey";
          FindOccurrenceOfChar.findOccuranceWithMap(str);
 
+         FindOccurrenceOfChar.findOccuranceWithoutMap(str);
+
      }
 
 
 
 
  }
+
+
+
+ class ArmStrongNumber
+ {
+
+
+     public static void main(String[] args) {
+
+
+         int value = 370;
+         int value1 = value;
+         int value2 = value;
+         int length = 0;
+
+         while (value!=0)
+         {
+             length = length+1;
+
+         }
+
+
+
+
+
+
+
+
+
+
+
+     }
+
+ }
+
 
 
 
