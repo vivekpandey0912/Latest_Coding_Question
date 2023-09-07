@@ -4440,7 +4440,7 @@ class FindGCD
 
 
 
- class ArmStrongNumber
+ class ArmStrongNumber1
  {
 
 
@@ -4450,22 +4450,31 @@ class FindGCD
          int value = 370;
          int value1 = value;
          int value2 = value;
+         int newValue1 = 0;
          int length = 0;
 
          while (value!=0)
          {
              length = length+1;
+             value /= 10;
 
          }
+         System.out.println(length);
 
+         while(value1!=0)
+         {
+             int rem = value1%10;
+             int newValue = 1;
 
+             for (int i = 0; i <length; i++) {
+                 newValue = rem*newValue;
+                 System.out.println("newValue = " + newValue);
+             }
+             newValue1 = newValue1+newValue;
+             value1 /= 10;
+         }
 
-
-
-
-
-
-
+         System.out.println("newValue1 = " + newValue1);
 
 
      }
