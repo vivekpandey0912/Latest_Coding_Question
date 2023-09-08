@@ -4559,7 +4559,7 @@ class MapMethod
 class CheckNumberIsPrime1
 {
 
-    public static boolean checkNubmerIsPrime(int number)
+    public static boolean checkNumberIsPrime(int number)
     {
         if(number <= 1)
         {
@@ -4579,6 +4579,15 @@ class CheckNumberIsPrime1
     public static void findPrimeInRange(int start, int end)
     {
 
+        for (int i = start; i <end; i++) {
+            if(CheckNumberIsPrime1.checkNumberIsPrime(i))
+            {
+
+            }
+        }
+
+
+
     }
 
 
@@ -4587,7 +4596,7 @@ class CheckNumberIsPrime1
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number to Check number is Prime of not");
         int number = sc.nextInt();
-        if(CheckNumberIsPrime1.checkNubmerIsPrime(number))
+        if(CheckNumberIsPrime1.checkNumberIsPrime(number))
         {
             System.out.println("The Number is Prime" + number);
         }
