@@ -4572,15 +4572,24 @@ class CheckNumberIsPrime1
             }
 
         }
-        return false;
+        return true;
 
     }
 
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number to Check number is Prime of not");
         int number = sc.nextInt();
-
+        if(CheckNumberIsPrime1.checkNubmerIsPrime(number))
+        {
+            System.out.println("The Number is Prime" + number);
+        }
+        else {
+            System.out.println("number is not prime = " + number);
+        }
+        System.out.println("************************************");
+        System.out.println("Number is in Range to find");
 
 
 
