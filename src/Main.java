@@ -4556,6 +4556,35 @@ class MapMethod
 
 // Prime Number is Series
 
+class CheckNumberIsPrime1
+{
+
+    public static boolean checkNubmerIsPrime(int number)
+    {
+        if(number <= 1)
+        {
+            return false;
+        }
+        for (int i = 2; i <number; i++) {
+            if(number%i==0)
+            {
+                return false;
+            }
+
+        }
+        return false;
+
+    }
+
+    public static void main(String[] args) {
+
+
+
+
+
+    }
+}
+
 
 
 
