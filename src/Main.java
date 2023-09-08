@@ -4578,15 +4578,20 @@ class CheckNumberIsPrime1
 
     public static void findPrimeInRange(int start, int end)
     {
+        int count = 0;
+        int total = 0;
 
         for (int i = start; i <end; i++) {
             if(CheckNumberIsPrime1.checkNumberIsPrime(i))
             {
-
+                System.out.println("The Number is Prime" + i);
+                    total = total+i;
+                    count++;
             }
         }
+        System.out.println("total of prime numbers is : ----    " + total);
 
-
+        System.out.println("TotalCountOfPrimeNumber :    *   ---" + count);
 
     }
 
@@ -4605,7 +4610,11 @@ class CheckNumberIsPrime1
         }
         System.out.println("************************************");
         System.out.println("Number is in Range to find");
-
+        System.out.println("Enter First Value");
+        int value1 = sc.nextInt();
+        System.out.println("Enter the Second Value");
+        int value2 = sc.nextInt();
+        CheckNumberIsPrime1.findPrimeInRange(value1,value2);
 
 
 
@@ -4616,8 +4625,26 @@ class CheckNumberIsPrime1
     }
 }
 
+class LeapYearChecker {
 
+    public static void main(String[] args) {
+        int year = 2024; // Change this to the year you want to check
 
+        if(isLeapYear(year)) {
+            System.out.println(year + " is a leap year.");
+        } else {
+            System.out.println(year + " is not a leap year.");
+        }
+    }
+
+    public static boolean isLeapYear(int year) {
+        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
 
 
 
