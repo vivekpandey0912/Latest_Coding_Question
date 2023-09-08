@@ -4529,10 +4529,32 @@ class FindFirstChar1
     }
 }
 
+// Map method in Stream
+
+class MapMethod
+{
+
+
+    public static void main(String[] args) {
+
+        List <Integer> list = new ArrayList<>();
+        list.add(2); // Adding an example element
+        list.add(3); // Adding another example element
+        list.add(4); // Adding one more example element
+
+
+        list.stream().map(i -> i*i).forEach(System.out::println);
+        list.stream().filter(i -> i%2==0).forEach(System.out::println);
 
 
 
 
+
+    }
+}
+
+
+// Prime Number is Series
 
 
 
