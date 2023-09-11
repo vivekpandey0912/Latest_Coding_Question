@@ -4648,7 +4648,40 @@ class LeapYearChecker {
 
 
 }
+class RotateStringWithTwoValue
+{
 
+    public static void roateStringWithTwoValue(String str)
+    {
+        String str1 = str;
+        StringBuilder stringBuilder = new StringBuilder(str);
+        StringBuilder stringBuilder1 = new StringBuilder();
+        int j = 0;
+        for (int i = 2; i <stringBuilder.length()-2; i++) {
+            stringBuilder1 = stringBuilder.append(stringBuilder.charAt(i));
+        }
+        for (int i = 0; i <2; i++) {
+            stringBuilder1.append(str1.charAt(i));
+        }
+        System.out.println(stringBuilder1);
+
+    }
+
+
+    public static void main(String[] args) {
+
+        RotateStringWithTwoValue.roateStringWithTwoValue("vivekpandey");
+
+
+
+
+
+
+
+
+
+    }
+}
 
 
 
