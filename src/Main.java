@@ -4668,6 +4668,32 @@ class LeapYearChecker {
         RotateStringWithTwoValue.rotateStringWithTwoValue("vivekpandey");
     }
 }
+// Program of SubString
+
+
+// Write a program to change rotate string with clockwise or anti-clockwise
+class ProgramOfSubString
+{
+
+    public static void rotateString(String str)
+    {
+        String str1 = str.substring(2) + str.substring(0,2);
+        System.out.println("The final value of Converted String = " + str1);
+    }
+
+
+    public static void main(String[] args) {
+
+        // String id Decode and covert in to codede
+
+
+
+
+
+
+
+    }
+}
 
 
 
