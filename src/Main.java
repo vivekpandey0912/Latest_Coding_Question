@@ -4825,6 +4825,98 @@ class FindOcc
     }
 }
 
+// implementing comparator and Comparable
+class StudentDetails implements Comparable<StudentDetails>
+{
+    String name;
+    int marks;
+    String address;
+
+    public StudentDetails(String name, int marks, String address) {
+        this.name = name;
+        this.marks = marks;
+        this.address = address;
+    }
+
+    public StudentDetails() {
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getMarks() {
+        return marks;
+    }
+
+    public void setMarks(int marks) {
+        this.marks = marks;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    @Override
+    public String toString() {
+        return "StudentDetails{" +
+                "name='" + name + '\'' +
+                ", marks=" + marks +
+                ", address='" + address + '\'' +
+                '}';
+    }
+
+    @Override
+    public int compareTo(StudentDetails o) {
+        return this.name.compareTo(o.getName());
+    }
+}
+class SortStudentByMarks implements Comparator<StudentDetails>
+{
+
+
+    @Override
+    public int compare(StudentDetails o1, StudentDetails o2) {
+        return Integer.compare(o1.getMarks(),o2.getMarks());
+    }
+}
+class StudentDetailsImpl
+{
+    public static void printList(ArrayList<StudentDetails> studentDetails)
+    {
+        studentDetails.stream().forEach(System.out::println);
+    }
+
+
+
+    public static void main(String[] args) {
+
+        // Adding 5 student details
+        ArrayList <StudentDetails> studentList = new ArrayList<>();
+        studentList.add(new StudentDetails("John Doe", 85, "123 Main St"));
+        studentList.add(new StudentDetails("Jane Smith", 90, "456 Elm St"));
+        studentList.add(new StudentDetails("Bob Johnson", 75, "789 Oak St"));
+        studentList.add(new StudentDetails("Sarah Davis", 95, "101 Pine St"));
+        studentList.add(new StudentDetails("Michael Brown", 80, "202 Maple St"));
+        Collections.sort(studentList);
+        System.out.println("After sorting with name");
+        printList(studentList);
+        System.out.println("|Sorting with Marks");
+        Collections.sort(studentList,new SortStudentByMarks());
+        printList(studentList);
+
+    }
+}
+
+
 
 
 
