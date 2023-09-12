@@ -4697,7 +4697,22 @@ class ProgramOfSubString
 
 
 
+// Question of Template Litrals and new keyword creating String
+class StringProgramForCreating
+{
 
+
+    public static void main(String[] args) {
+
+
+        String str = "code";
+
+
+
+
+
+    }
+}
 
 
 
