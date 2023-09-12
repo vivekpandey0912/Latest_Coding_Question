@@ -5011,7 +5011,40 @@ class SortNamesInArray
     }
 }
 
-//
+// Find common element between two array
+
+
+class FindIntersectionElement
+{
+
+    public static  void findElement(int [] array,int [] array1)
+    {
+         HashSet<Integer>value = new HashSet<>();
+        for (int i = 0; i <array.length; i++) {
+            for (int j = 0; j <array1.length; j++) {
+                if(array[i]==array1[j])
+                {
+                    value.add(array[i]);
+                }
+            }
+        }
+        value.forEach(System.out::println);
+
+
+
+    }
+
+
+    public static void main(String[] args) {
+
+
+        int[] array = {10,15,30,11,10,45,78,78,50,51};
+        int[] array1 = {10,15,19,31,100,200,30,11,10};
+        FindIntersectionElement.findElement(array,array1);
+
+
+    }
+}
 
 
 
