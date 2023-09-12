@@ -4804,20 +4804,20 @@ class FindOcc
             {
                 System.out.println("The value is " +currentChar + "occ" + count);
                 count = 1;
-                currentChar = array[i]
+                currentChar = array[i];
             }
         }
         System.out.println("The value is " +currentChar + "occ" + count);
 
 
 
-        
+
 
     }
 
     public static void main(String[] args) {
 
-
+        FindOcc.findOcc("ahamdabad");
 
 
 
