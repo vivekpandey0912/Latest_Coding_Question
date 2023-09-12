@@ -4685,7 +4685,7 @@ class ProgramOfSubString
     public static void main(String[] args) {
 
         // String id Decode and covert in to codede
-
+        ProgramOfSubString.rotateString("decode");
 
 
 
