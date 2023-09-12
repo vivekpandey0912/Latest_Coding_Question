@@ -4706,6 +4706,18 @@ class StringProgramForCreating
 
 
         String str = "code";
+        String str1 = "code";
+        System.out.println("The Both are equals because they stored in pool area who is the part " +
+                "of heap memory " + (str == str1));
+
+        // The above string are reference one to other on the same location in string constant pool
+
+        String str2 = new String("code");
+        // The Above string will create new object every time it will not reference to another
+        System.out.println("Check two Strings one is create with litrals and one is create" +
+                "with new keyword" + (str2 == str1));
+
+
 
 
 
@@ -4714,7 +4726,29 @@ class StringProgramForCreating
     }
 }
 
+// Intern method in string
+class InternMethod{
 
+public static void main(String[]args){
+
+
+    // The intern method is doing goto string constant pool and check
+    // if there is same value in string pool then will also store
+    //in the next variable where you are string with intern method
+    String str = "vivek";
+    String str3 = str.intern();
+    System.out.println(str3);
+    System.out.println(str3==str);
+
+
+
+
+        }
+
+
+
+
+}
 
 
 
