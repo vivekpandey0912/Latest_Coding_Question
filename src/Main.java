@@ -4971,7 +4971,45 @@ class PrintCharInDescendingOrder
 
     }
 }
-//
+// write program to sort names in array with traditional ways
+
+class SortNamesInArray
+{
+    public static void printArrayInSorted(String [] str)
+    {
+        for (int i = 0; i <str.length; i++) {
+            for (int j = i+1; j < str.length; j++) {
+
+                if(str[i].compareTo(str[j])>0)
+                {
+                    String temp = str[i];
+                    str[i] = str[j];
+                    str[j] = temp;
+                }
+
+            }
+        }
+        Arrays.stream(str).forEach(System.out::println);
+
+    }
+
+
+    public static void main(String[] args) {
+
+        String[] fruits = new String[3];
+        fruits[1] = "Banana";
+        fruits[2] = "Cherry";
+        fruits[0] = "Apple";
+
+        SortNamesInArray.printArrayInSorted(fruits);
+
+
+
+
+
+
+    }
+}
 
 
 
