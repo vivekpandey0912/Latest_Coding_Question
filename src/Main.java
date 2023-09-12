@@ -4947,7 +4947,30 @@ class PrintVowels
 
 }
 
+// Program to print char in Decending Order
 
+class PrintCharInDescendingOrder
+{
+    public static void printChar(String str)
+    {
+        String st1 = str;
+        char [] array = st1.toCharArray();
+        Arrays.sort(array);
+        for (int i = array.length-1; i>=0 ; i--) {
+
+            System.out.println(array[i]);
+        }
+
+    }
+
+
+
+    public static void main(String[] args) {
+        PrintCharInDescendingOrder.printChar("vivekkumarpandey");
+
+
+    }
+}
 
 
 
