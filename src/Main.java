@@ -4997,9 +4997,9 @@ class SortNamesInArray
     public static void main(String[] args) {
 
         String[] fruits = new String[3];
-        fruits[1] = "Banana";
-        fruits[2] = "Cherry";
-        fruits[0] = "Apple";
+        fruits[0] = "Banana";
+        fruits[1] = "Cherry";
+        fruits[2] = "Apple";
 
         SortNamesInArray.printArrayInSorted(fruits);
 
@@ -5011,7 +5011,7 @@ class SortNamesInArray
     }
 }
 
-
+//
 
 
 
