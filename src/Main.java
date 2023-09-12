@@ -4785,7 +4785,45 @@ class FindDuplicateElementInList
     }
 }
 
+// Find Occurance of Char in String
 
+class FindOcc
+{
+
+    public static void findOcc(String str)
+    {
+        char [] array = str.toCharArray();
+        Arrays.sort(array);
+        char currentChar = array[0];
+        int count = 1;
+        for (int i = 1; i <array.length; i++) {
+            if(array[i]==currentChar)
+            {
+                count++;
+            }else
+            {
+                System.out.println("The value is " +currentChar + "occ" + count);
+                count = 1;
+                currentChar = array[i]
+            }
+        }
+        System.out.println("The value is " +currentChar + "occ" + count);
+
+
+
+        
+
+    }
+
+    public static void main(String[] args) {
+
+
+
+
+
+
+    }
+}
 
 
 
