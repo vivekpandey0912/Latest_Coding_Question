@@ -4782,10 +4782,6 @@ class FindDuplicateElementInList
     public static void main(String[] args) {
         ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1, 10, 8, 9, 1, 10, 8, 9));
         FindDuplicateElementInList.checkNumber(list);
-
-
-
-
     }
 }
 
