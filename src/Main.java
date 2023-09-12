@@ -4919,7 +4919,33 @@ class StudentDetailsImpl
 
     }
 }
+// Write Program to print vowels from one String
 
+
+class PrintVowels
+{
+    public static void printVowels(String str)
+    {
+        for (char ch:str.toCharArray()) {
+
+            if(ch=='a' || ch=='e' || ch =='i' || ch == 'o' || ch =='u')
+            {
+                System.out.println("The vowels is " + ch);
+            }
+        }
+
+    }
+
+    public static void main(String[] args) {
+
+        String str = "vivekpandey";
+        PrintVowels.printVowels(str);
+
+
+    }
+
+
+}
 
 
 
