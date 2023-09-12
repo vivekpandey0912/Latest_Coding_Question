@@ -5046,6 +5046,22 @@ class FindIntersectionElement
     }
 }
 // write a program to find out sorted array program with squire
+class FindSquire
+{
+     public static void findSquireOfArrayElements(int [] array)
+     {
+         Arrays.stream(array).map(i -> i*i).forEach(System.out::println);
+     }
+
+
+    public static void main(String[] args) {
+        int[] array = {10,15,30,11,10,45,78,78,50,51};
+        FindSquire.findSquireOfArrayElements(array);
+
+
+
+    }
+}
 
 
 
