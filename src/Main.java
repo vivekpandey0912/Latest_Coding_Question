@@ -5055,7 +5055,7 @@ class FindSquire
 
 
     public static void main(String[] args) {
-        int[] array = {10,15,30,11,10,45,78,78,50,51};
+        int[] array = {10,15,30,-11,-10,-45,78,78,50,51};
         FindSquire.findSquireOfArrayElements(array);
 
 
