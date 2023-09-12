@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.util.*;
@@ -4752,7 +4753,41 @@ public static void main(String[]args){
 // Find duplicate element in java
 
 
+class FindDuplicateElementInList
+{
 
+    public static void checkNumber(ArrayList <Integer> list)
+    {
+        int count = 0;
+
+        Map<Integer,Integer> getValue = new HashMap<>();
+        for (Integer value:list) {
+             getValue.put(value,getValue.getOrDefault(value,count)+1);
+        }
+        var entries = getValue.entrySet();
+
+        for (var entry:entries) {
+
+            if(entry.getValue()>1)
+            {
+                System.out.println("The Value is :::--" + entry.getKey() + "The Occurance is ---" +
+                        " " +entry.getValue() );
+            }
+        }
+
+
+    }
+
+
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1, 10, 8, 9, 1, 10, 8, 9));
+        FindDuplicateElementInList.checkNumber(list);
+
+
+
+
+    }
+}
 
 
 
