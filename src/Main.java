@@ -5133,6 +5133,41 @@ class CheckPrimeNumber
 
     }
 }
+// Abstract class definition
+abstract class Shape {
+    // Abstract method (to be implemented by subclasses)
+    abstract double calculateArea();
+}
+
+// Child class inheriting from Shape
+class Circle extends Shape {
+    private double radius;
+
+    // Constructor
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    // Implementation of the abstract method
+    @Override
+    double calculateArea() {
+        return Math.PI * Math.pow(radius, 2);
+    }
+}
+
+ class Main3 {
+    public static void main(String[] args) {
+        // Instantiate the child class
+        Circle circle = new Circle(5);
+
+        // Calculate the area
+        double area = circle.calculateArea();
+
+        // Print the result
+        System.out.println("The area of the circle is: " + area);
+    }
+}
+
 
 
 
