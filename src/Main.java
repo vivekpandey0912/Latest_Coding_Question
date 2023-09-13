@@ -5080,10 +5080,17 @@ class SingltonClass
         return singltonClass;
     }
 
-
     public static void main(String[] args) {
 
 
+           SingltonClass singltonClass1 = new SingltonClass();
+           SingltonClass singltonClass2 = new SingltonClass();
+
+        System.out.println("The Both Instance are the same" +
+                (singltonClass1.getInstance()==singltonClass2.getInstance()));
+
+        System.out.println(singltonClass1.getInstance().hashCode());
+        System.out.println(singltonClass2.getInstance().hashCode());
 
 
     }
