@@ -5096,7 +5096,43 @@ class SingltonClass
     }
 
 }
+class CheckPrimeNumber
+{
+    public static boolean checkPrimeNumber(int number)
+    {
 
+        if(number<=1)
+        {
+            return false;
+        }
+        for (int i = 2; i <number; i++) {
+
+            if(number%i==0)
+            {
+                return false;
+            }
+
+        }
+        return true;
+
+    }
+
+    public static void main(String[] args) {
+
+
+        boolean value = checkPrimeNumber(19);
+        if(value)
+        {
+            System.out.println("the Number is prime");
+        }else
+        {
+            System.out.println("The Number is not prime");
+        }
+
+
+
+    }
+}
 
 
 
