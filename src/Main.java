@@ -5063,7 +5063,32 @@ class FindSquire
     }
 }
 
+class SingltonClass
+{
+    public static SingltonClass singltonClass;
 
+    private SingltonClass()
+    {
+
+    }
+    public static SingltonClass getInstance()
+    {
+        if(singltonClass==null)
+        {
+            singltonClass = new SingltonClass();
+        }
+        return singltonClass;
+    }
+
+
+    public static void main(String[] args) {
+
+
+
+
+    }
+
+}
 
 
 
