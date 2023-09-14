@@ -5234,6 +5234,52 @@ class CreateThreadWithRunnableInterface implements Runnable
 
     }
 }
+// Swapping Program with third variable and without third variable
+
+class SwappingProgram
+{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
