@@ -5350,7 +5350,7 @@ class Persons implements Serializable {
         }
     }
 }
-
+// created nested class in java
 
 
 
