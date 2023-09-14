@@ -5215,7 +5215,25 @@ class CreateThread extends Thread
 
     }
 }
+// Creating thread with Runnable interface
 
+class CreateThreadWithRunnableInterface implements Runnable
+{
+    @Override
+    public void run()
+    {
+        System.out.println("The Program for suitable to implement runnable interface");
+    }
+
+    public static void main(String[] args) {
+
+
+        CreateThreadWithRunnableInterface createThreadWithRunnableInterface = new CreateThreadWithRunnableInterface();
+        Thread thread = new Thread(createThreadWithRunnableInterface);
+        thread.start();
+
+    }
+}
 
 
 
