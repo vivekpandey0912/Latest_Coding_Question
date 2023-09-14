@@ -5267,6 +5267,28 @@ class SwappingProgram
 }
 
 // Implementing deman thread in java
+ class DemonThreadExample {
+    public static void main(String[] args) {
+        Thread demonThread = new Thread(new DemonTask());
+        demonThread.setDaemon(true); // Set the thread as a demon thread
+        demonThread.start();
+
+        System.out.println("Main thread exiting.");
+    }
+}
+
+class DemonTask implements Runnable {
+    public void run() {
+        while (true) {
+            System.out.println("Demon thread is running.");
+            try {
+                Thread.sleep(1000); // Simulate some work
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
 
 
 
