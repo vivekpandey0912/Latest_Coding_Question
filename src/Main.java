@@ -5188,6 +5188,34 @@ final class Person {
 }
 // Creating thread and using sleep method with extending thread class
 
+class CreateThread extends Thread
+ { @Override
+   public void run()
+   {
+
+       for (int i = 0; i <5; i++) {
+           try {
+               Thread.sleep(2000);
+               System.out.println("hii thread is running check it");
+           } catch (Exception ex) {
+               System.out.println(ex.getMessage());
+           }
+       }
+
+
+   }
+
+    public static void main(String[] args) {
+
+
+        CreateThread createThread = new CreateThread();
+        createThread.start();
+
+
+
+    }
+}
+
 
 
 
