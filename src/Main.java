@@ -5351,6 +5351,26 @@ class Persons implements Serializable {
     }
 }
 // created nested class in java
+ class OuterClass {
+    private int outerData;
+
+    // Constructor and methods for OuterClass
+
+    class InnerClass {
+        void display() {
+            System.out.println("Data from outer class: " + outerData);
+        }
+    }
+
+    public static void main(String[] args) {
+        OuterClass outer = new OuterClass();
+        outer.outerData = 10;
+
+        OuterClass.InnerClass inner = outer.new InnerClass();
+        inner.display();
+    }
+}
+
 
 
 
