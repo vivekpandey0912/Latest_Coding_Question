@@ -1,4 +1,4 @@
-import java.lang.reflect.Array;
+import java.io.*;
 import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.util.*;
@@ -5292,9 +5292,64 @@ class DemonTask implements Runnable {
 
 // Generate Random Integer Number
 
+class GenerateInteger
+{
+    public static void main(String[] args) {
+
+        Random random = new Random();
+        int value = random.nextInt();
+        System.out.println("the Value is" + value);
+
+
+    }
+}
 
 
 
+class Persons implements Serializable {
+    private String name;
+    private int age;
+
+    public Persons(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public void display() {
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+}
+ class SerializationExample {
+    public static void main(String[] args) {
+        // Create a Person object
+        Persons persons = new Persons("John Doe", 30);
+
+        // Serialization
+        try {
+            FileOutputStream fileOut = new FileOutputStream("person.ser");
+            ObjectOutputStream out = new ObjectOutputStream(fileOut);
+            out.writeObject(persons);
+            out.close();
+            fileOut.close();
+            System.out.println("Object serialized and saved to person.ser");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // Deserialization
+        try {
+            FileInputStream fileIn = new FileInputStream("person.ser");
+            ObjectInputStream in = new ObjectInputStream(fileIn);
+            Persons deserializedPersons = (Persons) in.readObject();
+            in.close();
+            fileIn.close();
+            System.out.println("Object deserialized from person.ser");
+            deserializedPersons.display(); // Display the deserialized object
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+}
 
 
 
