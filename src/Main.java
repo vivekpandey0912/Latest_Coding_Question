@@ -5245,11 +5245,18 @@ class SwappingProgram
         // Thrid Variable
         int a  = 5;
         int b = 10;
-        int c = a;
-        a = b;
-        b = c;
+//        int c = a;
+//        a = b;
+//        b = c;
+
+        a = a+b;
+        b = a-b;
+         a = a-b;
+
         System.out.println(a);
         System.out.println(b);
+
+
 
 
 
