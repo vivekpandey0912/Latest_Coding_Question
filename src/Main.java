@@ -5438,10 +5438,41 @@ class RemoveWhiteSpace1
     }
 
 
-
-
 }
+// Palindrom Number
 
+class PalindromNumber5
+{
+
+    public static void checkPalindromNumber(int number)
+    {
+        int number1 = number;
+        int newNumber = 0;
+        while(number!=0)
+        {
+            int rem = number%10;
+            newNumber  = newNumber*10+rem;
+            number /= 10;
+        }
+        if(number1 == newNumber)
+        {
+            System.out.println("the Number is palindrom Number");
+        }else
+        {
+            System.out.println("the Number is not palindrom Number");
+        }
+
+
+    }
+
+
+
+    public static void main(String[] args) {
+
+        checkPalindromNumber(1441);
+
+    }
+}
 
 
 
