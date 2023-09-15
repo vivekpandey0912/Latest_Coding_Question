@@ -5493,8 +5493,31 @@ class PrimeNumberSeries1
         return true;
     }
 
+    public static void findPrimeNumberSeries(int start, int end)
+    {
+        int count = 0;
+        for (int i = start; i <end; i++) {
+
+            if(PrimeNumberSeries1.primeNumber(i))
+            {
+                System.out.println("This number is prime");
+                count = count+i;
+            }
+        }
+        System.out.println("the Total of Prime number is " + count);
 
 
+
+    }
+
+    public static void main(String[] args) {
+
+
+
+        PrimeNumberSeries1.findPrimeNumberSeries(10,20);
+
+
+    }
 
 
 
