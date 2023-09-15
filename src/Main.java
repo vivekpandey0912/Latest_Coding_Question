@@ -5469,11 +5469,36 @@ class PalindromNumber5
 
     public static void main(String[] args) {
 
-        checkPalindromNumber(1441);
+        checkPalindromNumber(1444);
 
     }
 }
 
+class PrimeNumberSeries1
+{
+    public static boolean primeNumber(int number)
+    {
+        if(number<=1)
+        {
+            return false;
+        }
+        for (int i = 2; i <number; i++) {
+
+            if(number%i==0)
+            {
+                return false;
+            }
+
+        }
+        return true;
+    }
+
+
+
+
+
+
+}
 
 
 
