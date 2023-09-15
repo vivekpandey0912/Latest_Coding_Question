@@ -5549,10 +5549,28 @@ class OccuranceOfChar1
 
     }
 
+    public static void findOcc(String str)
+    {
+        int count = 0;
+        HashMap<Character,Integer> map = new HashMap<>();
+        for (Character ch:str.toCharArray()) {
+            map.put(ch,map.getOrDefault(ch,count)+1);
+        }
+        var entries = map.entrySet();
+        for (var entry:entries) {
+            System.out.println(entry.getKey() + "value" + entry.getValue());
+
+        }
+
+
+    }
+
 
 
     public static void main(String[] args) {
         findOccuranceOfChar("ahamdabad");
+        System.out.println("with map");
+        findOcc("ahamdabad");
 
 
 
