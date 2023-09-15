@@ -5573,11 +5573,56 @@ class OccuranceOfChar1
         findOcc("ahamdabad");
 
 
+    }
+}
 
+class ArmStrongNumber10
+{
 
+    public static void findArmStrongNumber(int number)
+    {
+        int number1 = number;
+        int num = number;
+        int newNumber = 0;
+        int length = 0;
+        while (number!=0)
+        {
+            length = length+1;
+            number /= 10;
+        }
+
+        while (number1!=0)
+        {
+            int rem = number%10;
+            int mul = 1;
+            for (int i = 1; i <=length; i++) {
+                 mul = mul*rem;
+            }
+            newNumber = newNumber + mul;
+            number /= 10;
+        }
+
+        if(num == newNumber)
+        {
+            System.out.println("The Number is Arm Strong number");
+        }else
+        {
+            System.out.println("The Number is not arm strong number");
+        }
 
 
     }
+
+    public static void main(String[] args) {
+
+
+        findArmStrongNumber(370);
+
+
+    }
+
+
+
 }
 
 
