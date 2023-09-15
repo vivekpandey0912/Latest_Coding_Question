@@ -5524,6 +5524,44 @@ class PrimeNumberSeries1
 }
 
 
+class OccuranceOfChar1
+{
+    public static void findOccuranceOfChar(String str)
+    {
+        char [] array = str.toCharArray();
+        Arrays.sort(array);
+        char ch = array[0];
+        int count = 1;
+        for (int i = 1; i <array.length; i++) {
+
+            if(ch==array[i])
+            {
+                count++;
+            }
+            else
+            {
+                System.out.println("The char is " + ch + "the count is " + count);
+                count = 1;
+                ch = array[i];
+            }
+        }
+        System.out.println("The char is " + ch + "the count is " + count);
+
+    }
+
+
+
+    public static void main(String[] args) {
+        findOccuranceOfChar("ahamdabad");
+
+
+
+
+
+
+    }
+}
+
 
 
 
