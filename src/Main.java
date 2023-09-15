@@ -5590,17 +5590,22 @@ class ArmStrongNumber10
             length = length+1;
             number /= 10;
         }
+        System.out.println("length = " + length);
 
         while (number1!=0)
         {
-            int rem = number%10;
+            int rem = number1%10;
             int mul = 1;
             for (int i = 1; i <=length; i++) {
                  mul = mul*rem;
+                System.out.println("rem = " + rem);
+                System.out.println("mul" + mul);
             }
             newNumber = newNumber + mul;
-            number /= 10;
+            System.out.println("newNumber = " + newNumber);
+            number1 /= 10;
         }
+        System.out.println("newNumber = " + newNumber);
 
         if(num == newNumber)
         {
