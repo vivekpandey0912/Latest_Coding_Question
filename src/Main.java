@@ -5639,7 +5639,7 @@ class LeapYear1
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter year");
         int year = sc.nextInt();
-        if(year%4 == 0  && year%100 !=0 || year%400 ==100 )
+        if((year%4 == 0  && year%100 !=0) || (year%400 == 0))
         {
             System.out.println("The year is leap year");
         }
@@ -5654,9 +5654,34 @@ class LeapYear1
     }
 }
 
+// find Occurance of Number In Number
+
+class OccuranceOfNumber
+{
+    public static void getOcc(int number)
+    {
+        int count = 0;
+        HashMap<Integer, Integer> map = new HashMap<>();
+        while (number!=0)
+        {
+            int rem = number%10;
+            map.put(rem,map.getOrDefault(rem,count)+1);
+            number /= 10;
+        }
+        var entries = map.entrySet();
+        entries.stream().forEach(System.out::println);
+    }
 
 
 
+    public static void main(String[] args) {
+
+        getOcc(468479);
+
+
+
+    }
+}
 
 
 
