@@ -5817,7 +5817,12 @@ class RemoveSecondElement
 
 
 }
+// Check Number is prime or not
 
+class CheckNumberIsPrime
+{
+
+}
 
 
 
