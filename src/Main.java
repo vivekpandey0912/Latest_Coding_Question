@@ -5783,7 +5783,37 @@ class StudentDetails1Impl
 // Remove Second element from array
 class RemoveSecondElement
 {
+    public static void removeElementFromArray(int [] array)
+    {
+        for (int i = 0; i <array.length; i++) {
 
+            if(i==2)
+            {
+            }
+            else
+            {
+                System.out.println(array[i]);
+            }
+        }
+
+
+
+    }
+
+    public static void main(String[] args) {
+
+  int d = 'd';
+  char i = 97;
+  int a = 10+15;
+  byte byte1 = 1+100;
+
+  double value1 = 10L;
+  double value2 = 20L;
+  double final1 = value1+value2;
+        System.out.println("final1 = " + final1);
+
+
+    }
 
 
 }
