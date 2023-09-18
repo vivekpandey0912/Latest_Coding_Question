@@ -5780,7 +5780,13 @@ class StudentDetails1Impl
 
 }
 
+// Remove Second element from array
+class RemoveSecondElement
+{
 
+
+
+}
 
 
 
