@@ -5867,7 +5867,14 @@ class CheckNumberIsPrime12
     public static void main(String[] args) {
 
 
-
+        boolean bool = CheckNumberIsPrime12.checkNumberIsPrime(21);
+        if(bool)
+        {
+            System.out.println("The Number is prime Number");
+        }else
+        {
+            System.out.println("The Number is not prime");
+        }
 
     }
 }
