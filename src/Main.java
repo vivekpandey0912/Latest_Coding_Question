@@ -5728,6 +5728,15 @@ class StudentDetails1 implements Comparable<StudentDetails1>
     public int compareTo(StudentDetails1 o) {
         return Integer.compare(this.age,o.getAge());
     }
+
+    @Override
+    public String toString() {
+        return "StudentDetails1{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", address='" + address + '\'' +
+                '}';
+    }
 }
 class SortByAddress implements Comparator<StudentDetails1>
 {
@@ -5736,6 +5745,7 @@ class SortByAddress implements Comparator<StudentDetails1>
     public int compare(StudentDetails1 o1, StudentDetails1 o2) {
         return o1.getAddress().compareTo(o2.getAddress());
     }
+
 }
 
 class StudentDetails1Impl
@@ -5762,6 +5772,7 @@ class StudentDetails1Impl
         list.stream().forEach(System.out::println);
         System.out.println("Sorting with name without stream ");
         list.forEach(System.out::println);
+
 
 
 
