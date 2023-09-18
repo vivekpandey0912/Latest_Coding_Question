@@ -5817,9 +5817,28 @@ class RemoveSecondElement
 
 
 }
+
+
+// Storing Hindi variable in int
+class StoringHindiVariable
+{
+
+    public static void main(String[] args) {
+
+        int value = 'ए';
+        System.out.println("value = " + value);
+
+
+    }
+}
+
+
+
 // Check Number is prime or not
 
-class CheckNumberIsPrime
+
+
+class CheckNumberIsPrime12
 {
 
 }
