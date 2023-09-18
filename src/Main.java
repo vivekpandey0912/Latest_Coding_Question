@@ -5836,11 +5836,40 @@ class StoringHindiVariable
 
 // Check Number is prime or not
 
+class Main5 {
+    public static void main(String[] args) {
+        String vivekInHindi = "\u0935\u093F\u0935\u0947\u0915"; // This represents the Hindi word "विवेक"
+        System.out.println(vivekInHindi);
+    }
+}
+
+
 
 
 class CheckNumberIsPrime12
 {
 
+        public static boolean checkNumberIsPrime(int number)
+        {
+            if(number<=1)
+            {
+                return false;
+            }
+            for (int i = 2; i <number; i++) {
+                if(number%i==0)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+    public static void main(String[] args) {
+
+
+
+
+    }
 }
 
 
