@@ -5768,11 +5768,12 @@ class StudentDetails1Impl
                 return o1.getName().compareTo(o1.getName());
             }
         });
-        System.out.println("This is printing with stream sorting with name");
-        list.stream().forEach(System.out::println);
-        System.out.println("Sorting with name without stream ");
+//        System.out.println("This is printing with stream sorting with name");
+//        list.stream().forEach(System.out::println);
+//        System.out.println("Sorting with name without stream ");
+//        list.forEach(System.out::println);
+        Collections.sort(list,new SortByAddress());
         list.forEach(System.out::println);
-
 
 
 
@@ -5904,7 +5905,14 @@ class CheckNumberIsPrime12
 
     }
 }
+// Find Factorial of Number
+class FindFactorialOfNumber
+{
 
+
+
+
+}
 
 
 
