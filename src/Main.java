@@ -5890,6 +5890,18 @@ class CheckNumberIsPrime12
         myMap.put("Three", 3);
 
 
+        for (Map.Entry<String, Integer> entry : myMap.entrySet()) {
+
+            System.out.println(entry.getKey() +" value is "+ entry.getValue());
+        }
+
+        System.out.println("The Value is printing with var");
+
+        for (var entries:myMap.entrySet()) {
+            System.out.println(entries.getKey() + " value is with var " + entries.getValue());
+
+        }
+
     }
 }
 
