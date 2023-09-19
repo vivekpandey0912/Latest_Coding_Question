@@ -5908,7 +5908,23 @@ class CheckNumberIsPrime12
 // Find Factorial of Number
 class FindFactorialOfNumber
 {
+  public static void findFactOfNumber(int number)
+  {
+      int mul = 1;
+      for (int i = number; i>0; i--) {
 
+          mul = mul*i;
+      }
+      System.out.println(mul);
+  }
+
+    public static void main(String[] args) {
+
+        FindFactorialOfNumber.findFactOfNumber(10);
+
+
+
+    }
 
 
 
