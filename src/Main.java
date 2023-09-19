@@ -5949,6 +5949,19 @@ class ReverseOfString1
     }
 }
 
+class CheckStringIsPallindrom
+{
+
+    public static void checkStringIsPalindrom(String str)
+    {
+
+    }
+    public static void main(String[] args) {
+
+
+
+    }
+}
 
 
 
