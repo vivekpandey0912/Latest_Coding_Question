@@ -5881,6 +5881,17 @@ class CheckNumberIsPrime12
 
 
 
+ class Main6 {
+    public static void main(String[] args) {
+        // Create a Map
+        Map<String, Integer> myMap = new HashMap<>();
+        myMap.put("One", 1);
+        myMap.put("Two", 2);
+        myMap.put("Three", 3);
+
+
+    }
+}
 
 
 
