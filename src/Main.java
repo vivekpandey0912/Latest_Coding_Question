@@ -5949,7 +5949,7 @@ class ReverseOfString1
     }
 }
 
-class CheckStringIsPallindrom
+class CheckStringIsPalindrom
 {
 
     public static void checkStringIsPalindrom(String str)
