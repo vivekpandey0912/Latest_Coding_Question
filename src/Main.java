@@ -5954,12 +5954,22 @@ class CheckStringIsPallindrom
 
     public static void checkStringIsPalindrom(String str)
     {
-
+         String str1 = "";
+        for (int i = str.length()-1; i >=0 ; i--) {
+            str1 = str1+str.charAt(i);
+        }
+        if(str1.equals(str))
+        {
+            System.out.println("the String is Palindrom");
+        }else
+        {
+            System.out.println("The String is not Palindrom");
+        }
     }
     public static void main(String[] args) {
 
-
-
+String str = "akka";
+        checkStringIsPalindrom(str);
     }
 }
 
