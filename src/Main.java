@@ -5977,6 +5977,38 @@ String str = "akka";
 
 class FibnocciSeries
 {
+    public static void printFibSeries(int till1)
+    {
+        int a = 0;
+        int b = 1;
+        System.out.println(a);
+        System.out.println(b);
+
+        for (int i = 0; i <till1; i++) {
+            int c = a+b;
+            System.out.println(c);
+            a = b;
+            b = c;
+
+        }
+
+
+    }
+
+
+    public static void main(String[] args) {
+
+        printFibSeries(10);
+
+
+
+    }
+}
+// Store value in java start from 0
+
+class StoreValueStartFromZero
+{
+
 
 
 
@@ -5985,10 +6017,8 @@ class FibnocciSeries
 
 
 
-
     }
 }
-
 
 
 
