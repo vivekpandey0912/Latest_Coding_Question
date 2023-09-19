@@ -5973,7 +5973,21 @@ String str = "akka";
     }
 }
 
+// Fibnocci Series
 
+class FibnocciSeries
+{
+
+
+
+    public static void main(String[] args) {
+
+
+
+
+
+    }
+}
 
 
 
