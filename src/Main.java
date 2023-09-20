@@ -6149,6 +6149,36 @@ class FindMaxAndMinElement
 //        10. Write a program to check if two strings are anagrams.
 
 
+class CheckStringAnagram
+{
+    public static char [] findArrayOfSorted(String str1)
+    {
+        char [] charsArray = str1.toCharArray();
+        Arrays.sort(charsArray);
+        return charsArray;
+    }
+    public static void checkStringAnagram(String str1, String str2)
+    {
+        boolean bool = Arrays.equals(findArrayOfSorted(str1),findArrayOfSorted(str2));
+        if(bool)
+        {
+            System.out.println("The String is Anagram");
+        }else
+        {
+            System.out.println("The String is not Anagram");
+        }
+    }
+
+    public static void main(String[] args) {
+
+
+
+        checkStringAnagram("silents","listen");
+    }
+
+}
+
+
 
 
 
