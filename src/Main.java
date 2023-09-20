@@ -6014,11 +6014,31 @@ class StoreValueStartFromZero
 
     public static void main(String[] args) {
 
+        int i = 026;
+        System.out.println(i);
+        // you cannot store above and 028 and 029
+//        In your code, int i = 027; assigns the octal value 27
+//        to the variable i. In decimal, 27 is
+//        equivalent to 2 * 8^1 + 7 * 8^0, which results in 23.
+//        int i1 = 028;
+//        System.out.println("i1 = " + i1);
 
+
+        int $ = 10;
+        System.out.println("$ = " + $);
+        // \u000d  System.out.println("hi my name is vivek");
+//        int String = 10;
+//        System.out.println(String);
+        String Integer = "Vivek";
+        String String = "shiva";
 
 
     }
 }
+
+// Sort Array of Integers
+
+
 
 
 
