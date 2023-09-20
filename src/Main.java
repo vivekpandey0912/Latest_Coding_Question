@@ -6061,12 +6061,21 @@ class SortArray
 
 
     }
+    public static void sortElementWithCollection(int [] array)
+    {
+        TreeSet<Integer> treeSet = new TreeSet<>();
+        for (Integer value:array) {
+            treeSet.add(value);
+        }
+        treeSet.forEach(System.out::println);
+    }
 
 
     public static void main(String[] args) {
 
         int [] array = {31,10,28,15,52,20};
-        sortArray(array);
+//        sortArray(array);
+        sortElementWithCollection(array);
 
     }
 }
