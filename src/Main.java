@@ -6080,8 +6080,40 @@ class SortArray
     }
 }
 // Remove Duplicate Elements from Array
-class RemoveDeplicateElementsArray
+class RemoveDuplicateElementsArray
 {
+    public static void removeDuplicateElement(int [] array)
+    {
+        HashSet<Integer> hashSet = new HashSet<>();
+        Arrays.stream(array).forEach(i -> hashSet.add(i));
+        hashSet.forEach(System.out::println);
+    }
+
+
+    public static void removeElementWithMap(int [] array)
+    {
+        HashMap<Integer, Integer> hashMap = new HashMap<>();
+        int count = 0;
+        for (Integer value:array) {
+            hashMap.put(value,hashMap.getOrDefault(value,count)+1);
+        }
+
+        for (Map.Entry <Integer, Integer> value : hashMap.entrySet()) {
+            System.out.println(value.getKey() + ":::"+ value.getValue());
+        }
+
+
+    }
+
+    public static void main(String[] args) {
+
+        int [] array = {31,10,28,15,52,20,31,10,28};
+//        removeDuplicateElement(array);
+        removeElementWithMap(array);
+
+
+
+    }
 
 }
 
