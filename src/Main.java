@@ -6177,7 +6177,22 @@ class CheckStringAnagram
     }
 
 }
+// Program to covert string to int
+class ConvertStringToInt
+{
 
+    public static void main(String[] args) {
+
+        String str = "123";
+        int value = Integer.parseInt(str);
+        String str1 = (String.valueOf(value));
+
+
+
+    }
+}
+
+//
 
 
 
