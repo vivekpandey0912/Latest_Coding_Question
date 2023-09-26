@@ -6253,13 +6253,35 @@ class CountVowels
 
 // Reverse a Number
 
-class ReverseNumber
+class ReverseNumber1
 {
 
-
+public static void reverseNumber(int number)
+{
+    int newNumber = 0;
+    while(number!=0)
+    {
+        int rem = number%10;
+        newNumber = newNumber*10+rem;
+        number /= 10;
+    }
+    System.out.println("The reverse newNumber = " + newNumber);
 
 
 }
+
+    public static void main(String[] args) {
+
+    int number = 9915095;
+        ReverseNumber1.reverseNumber(number);
+
+
+
+    }
+
+
+}
+//14. Write a program to check if a number is an Armstrong number.
 
 
 
