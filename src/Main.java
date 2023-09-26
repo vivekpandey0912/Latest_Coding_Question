@@ -6283,6 +6283,55 @@ public static void reverseNumber(int number)
 }
 //14. Write a program to check if a number is an Armstrong number.
 
+class ArmStrongNumber7
+{
+     public static void checkArmStrongNumber(int number)
+     {
+        int value1 = number;
+        int value2 = number;
+        int newNumber = 0;
+        int length = 0;
+        while (number!=0)
+        {
+            length = length+1;
+            number /= 10;
+        }
+
+        while (value1!=0)
+        {
+            int rem = value1%10;
+            int mul = 1;
+            for (int i = 1; i <=length; i++) {
+
+                mul = mul*rem;
+
+            }
+            newNumber = newNumber+mul;
+            value1 /=10;
+        }
+        if(value2==newNumber)
+        {
+            System.out.println("The Given Number is Arm Strong Number");
+        }else
+        {
+            System.out.println("The Given Number is Not Arm Strong");
+        }
+
+
+
+
+
+     }
+
+
+    public static void main(String[] args) {
+
+        checkArmStrongNumber(372);
+
+
+    }
+}
+
 
 
 
