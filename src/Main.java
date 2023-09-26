@@ -6332,7 +6332,24 @@ class ArmStrongNumber7
     }
 }
 
+class SecondLargestNumber
+{
 
+    public static void findSecondLargest(int [] array)
+    {
+        for (int i = 0; i <array.length; i++) {
+
+        }
+    }
+
+
+
+    public static void main(String[] args) {
+
+
+
+    }
+}
 
 
 
