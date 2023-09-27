@@ -6381,7 +6381,11 @@ class Subject
 
 class RemoveElement
 {
+    public static void removeSpecificElement(int [] array)
+    {
 
+
+    }
 
     public static void main(String[] args) {
 
