@@ -6366,6 +6366,33 @@ class SecondLargestNumber
 }
 
 
+class Subject
+{
+
+
+
+
+
+    public static void main(String[] args) {
+
+    }
+}
+// Write a Program specific element from array
+
+class RemoveElement
+{
+
+
+    public static void main(String[] args) {
+
+
+
+
+    }
+}
+
+
+
 
 
 
