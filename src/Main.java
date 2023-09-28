@@ -6381,14 +6381,29 @@ class Subject
 
 class RemoveElement
 {
-    public static void removeSpecificElement(int [] array)
+    public static void removeSpecificElement(int [] array, int target)
     {
+
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        for (int i = 0; i <array.length; i++) {
+            if(array[i]==target)
+            {
+
+            }else {
+                arrayList.add(array[i]);
+            }
+
+        }
+
+        arrayList.forEach(System.out::print);
 
 
     }
 
     public static void main(String[] args) {
-
+        int [] array = {10,15,30,40,20,17,18};
+        int target = 45;
+        removeSpecificElement(array,target);
 
 
 
