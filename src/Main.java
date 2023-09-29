@@ -6463,6 +6463,31 @@ class SumOfArrayElements
     }
 }
 
+// Write a program to check if string contains only Number
+class CheckStringContainNumber
+{
+
+
+    public static boolean containsOnlyDigits(String str) {
+        for (char c : str.toCharArray()) {
+            if (!Character.isDigit(c)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        String str1 = "12345";
+        String str2 = "abc123";
+        String str3 = "98765xyz";
+
+        System.out.println("str1 contains only digits: " + containsOnlyDigits(str1));
+        System.out.println("str2 contains only digits: " + containsOnlyDigits(str2));
+        System.out.println("str3 contains only digits: " + containsOnlyDigits(str3));
+    }
+}
+
 
 
 
