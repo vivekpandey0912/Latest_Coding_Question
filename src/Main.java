@@ -6444,7 +6444,24 @@ class FindCommonElementBetweenTwoArray
 
     }
 }
+class SumOfArrayElements
+{
+    public static void sumOfArrayElement(int [] array)
+    {
+        int sum = 0;
+        sum = Arrays.stream(array).sum();
+        System.out.println(sum);
+    }
 
+
+    public static void main(String[] args) {
+        int[] array1 = {1, 2, 3, 4, 5};
+        sumOfArrayElement(array1);
+
+
+
+    }
+}
 
 
 
