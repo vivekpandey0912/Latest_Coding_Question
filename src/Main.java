@@ -6513,6 +6513,8 @@ class CheckStringContainNumber
         System.out.println("Length of longest increasing subarray in arr2: " + longestIncreasingSubarray(arr2));
         System.out.println("Length of longest increasing subarray in arr3: " + longestIncreasingSubarray(arr3));
     }
+
+
 }
 
 
