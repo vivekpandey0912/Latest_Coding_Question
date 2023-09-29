@@ -6487,6 +6487,35 @@ class CheckStringContainNumber
         System.out.println("str3 contains only digits: " + containsOnlyDigits(str3));
     }
 }
+ class LongestIncreasingSubarray1 {
+    public static int longestIncreasingSubarray(int[] arr) {
+        int maxLength = 1;
+        int currentLength = 1;
+
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > arr[i - 1]) {
+                currentLength++;
+            } else {
+                maxLength = Math.max(maxLength, currentLength);
+                currentLength = 1;
+            }
+        }
+
+        return Math.max(maxLength, currentLength);
+    }
+
+    public static void main(String[] args) {
+        int[] arr1 = {1, 2, 3, 2, 3, 4, 5, 6, 1, 2};
+        int[] arr2 = {1, 2, 3, 4, 5};
+        int[] arr3 = {5, 4, 3, 2, 1};
+
+        System.out.println("Length of longest increasing subarray in arr1: " + longestIncreasingSubarray(arr1));
+        System.out.println("Length of longest increasing subarray in arr2: " + longestIncreasingSubarray(arr2));
+        System.out.println("Length of longest increasing subarray in arr3: " + longestIncreasingSubarray(arr3));
+    }
+}
+
+
 
 
 
