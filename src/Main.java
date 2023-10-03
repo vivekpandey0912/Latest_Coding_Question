@@ -6542,6 +6542,7 @@ class FindGCDOfNumbers
 
     }
 }
+// Write a program to count count of each element in the Array
 
 
 
