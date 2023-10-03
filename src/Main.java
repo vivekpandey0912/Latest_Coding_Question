@@ -6523,7 +6523,7 @@ class CheckStringContainNumber
 class FindGCDOfNumbers
 {
 
-    public static void findGCD(int number1, int number2)
+    public static int findGCD(int number1, int number2)
     {
         while(number1%number2!=0)
         {
@@ -6532,11 +6532,13 @@ class FindGCDOfNumbers
             number2 = rem;
         }
         System.out.println("The GCD of two Numbers is " + number2);
-
+            return number2;
     }
 
     public static void main(String[] args) {
-        FindGCDOfNumbers.findGCD(48,18);
+        System.out.println("FindGCDOfNumbers.findGCD(48,18) = " + FindGCDOfNumbers.findGCD(48, 18));
+        System.out.println("(48*18)/FindGCDOfNumbers.findGCD(48,18) = " + (48 * 18) / FindGCDOfNumbers.findGCD(48, 18));
+
 
     }
 }
