@@ -6579,7 +6579,47 @@ class CountEachElementInArray
 
     }
 }
+// Get Occurance of Char in Array
+class OccOfChar
+{
 
+    public static void getOcc(String str)
+    {
+
+        str = str.toLowerCase();
+        char [] charArray = str.toCharArray();
+        Arrays.sort(charArray);
+        char currentChar = charArray[0];
+        int count = 1;
+        for (int i = 1; i <charArray.length; i++) {
+
+            if(currentChar==charArray[i])
+            {
+                count++;
+            }else
+            {
+                System.out.println("The current Char is " + currentChar + "Occ is " + count);
+                count =1;
+                currentChar = charArray[i];
+            }
+
+        }
+        System.out.println("The current Char is " + currentChar + "Occ is " + count);
+
+
+
+
+    }
+
+    public static void main(String[] args) {
+
+
+        getOcc("Ahadabad");
+
+    }
+
+
+}
 
 
 
