@@ -6542,7 +6542,40 @@ class FindGCDOfNumbers
 
     }
 }
-// Write a program to count count of each element in the Array
+// Write a program to count  of each element in the Array
+class CountEachElementInArray
+{
+    public static void countWithString(int [] array)
+    {
+        int count = 0;
+        Map<Integer, Integer> integerMap = new HashMap<>();
+        for (int i = 0; i <array.length; i++) {
+            integerMap.put(array[i],integerMap.getOrDefault(array[i],count)+1);
+        }
+        for (var entry:integerMap.entrySet()) {
+            System.out.println("The Value is " + entry.getKey() + "The Occurance is:::" + entry.getValue());
+        }
+
+
+    }
+    public static void main(String[] args) {
+
+   int [] array = {10,15,20,15,10,41};
+        countWithString(array);
+
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
