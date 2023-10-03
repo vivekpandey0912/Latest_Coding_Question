@@ -6520,6 +6520,25 @@ class CheckStringContainNumber
 
 // Find GCD of Two Number
 
+class FindGCDOfNumbers
+{
+
+    public static void findGCD(int number1, int number2)
+    {
+
+
+
+
+    }
+
+
+
+    public static void main(String[] args) {
+
+
+    }
+}
+
 
 
 
