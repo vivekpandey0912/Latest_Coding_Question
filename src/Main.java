@@ -6558,15 +6558,27 @@ class CountEachElementInArray
 
 
     }
+    public static void getStringArray(String [] array)
+    {
+        int count = 0;
+        Map<String, Integer> integerMap = new HashMap<>();
+        for (int i = 0; i <array.length; i++) {
+            integerMap.put(array[i],integerMap.getOrDefault(array[i],count)+1);
+        }
+        for (var entry:integerMap.entrySet()) {
+            System.out.println("The Value is " + entry.getKey() + "The Occurance is:::" + entry.getValue());
+        }
+    }
     public static void main(String[] args) {
 
    int [] array = {10,15,20,15,10,41};
         countWithString(array);
+        String [] str = {"Apple", "apple","Banana","Apple","Banana"};
+        getStringArray(str);
 
 
     }
 }
-
 
 
 
