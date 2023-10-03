@@ -6525,16 +6525,18 @@ class FindGCDOfNumbers
 
     public static void findGCD(int number1, int number2)
     {
-
-
-
+        while(number1%number2!=0)
+        {
+            int rem = number1%number2;
+            number1 = number2;
+            number2 = rem;
+        }
+        System.out.println("The GCD of two Numbers is " + number2);
 
     }
 
-
-
     public static void main(String[] args) {
-
+        FindGCDOfNumbers.findGCD(48,18);
 
     }
 }
