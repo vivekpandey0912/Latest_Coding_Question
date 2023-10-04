@@ -6622,8 +6622,93 @@ class OccOfChar
 }
 
 
+class Test
+{
+    public static void main(String [] args)
+    {
+        int x=20;
+        String sup = (x < 15) ? "small" : (x < 22)? "tiny" : "huge";
+        System.out.println(sup);
+    }
+}
+
+class Test1
+{
+    public static void leftshift(int i, int j)
+    {
+        i <<= j;
+    }
+    public static void main(String args[])
+    {
+//        int i = 4, j = 2;
+//        leftshift(i, j);
+//        System.out.println(i);
 
 
+        int i = 1, j = -1;
+        switch (i)
+        {
+            case 0, 1: j = 1; /* Line 4 */
+            case 2: j = 2;
+            default: j = 0;
+        }
+        System.out.println("j = " + j);
+    }
+}
+
+class X
+{
+    public static void main(String [] args)
+    {
+
+        Object obj = new Object()
+        {
+            public int hashCode()
+            {
+                return 42;
+            }
+        };
+        System.out.println(obj.hashCode());
+
+
+
+        try
+        {
+            badMethod();
+            System.out.print("A");
+        }
+        catch (RuntimeException ex) /* Line 10 */
+        {
+            System.out.print("B");
+        }
+        catch (Exception ex1)
+        {
+            System.out.print("C");
+        }
+        finally
+        {
+            System.out.print("D");
+        }
+        System.out.print("E");
+    }
+    public static void badMethod()
+    {
+        throw new RuntimeException();
+    }
+
+
+}
+class Test4
+{
+    private static float[] f = new float[2];
+    public static void main (String[] args)
+    {
+        System.out.println("f[0] = " + f[0]);
+        String x = new String("xyz");
+        String y = "abc";
+        x = x + y;
+    }
+}
 
 
 
