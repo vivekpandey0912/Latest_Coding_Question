@@ -6711,6 +6711,26 @@ class Test4
 }
 
 
+ class MissingNumber {
+
+    static int findMissingNumber(int[] arr) {
+        int n = arr.length;
+        int totalSum = (n + 1) * (n + 2) / 2; // Sum of n natural numbers formula
+
+        int arrSum = 0;
+        for (int num : arr) {
+            arrSum += num;
+        }
+
+        return totalSum - arrSum;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 5, 6, 7, 8}; // Example array with one missing number
+        int missingNumber = findMissingNumber(arr);
+        System.out.println("The missing number is: " + missingNumber);
+    }
+}
 
 
 
