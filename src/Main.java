@@ -6731,6 +6731,9 @@ class Test4
         System.out.println("The missing number is: " + missingNumber);
     }
 }
+// Find the sumof Digits
+
+class 
 
 
 
