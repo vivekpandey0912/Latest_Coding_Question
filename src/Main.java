@@ -6731,10 +6731,39 @@ class Test4
         System.out.println("The missing number is: " + missingNumber);
     }
 }
-// Find the sumof Digits
+// Find the sum of Digits
 
-class 
+class FindSumOfDigit1
+{
 
+
+    public static void findSumOfDigit(int number)
+    {
+        int sum = 0;
+
+        while(number!=0)
+        {
+            int rem = number%10;
+            sum = sum+rem;
+            number /= 10;
+
+        }
+        System.out.println("sum = " + sum);
+
+    }
+
+
+    public static void main(String[] args) {
+
+
+        findSumOfDigit(5987468);
+
+
+    }
+}
+// Write a program constructor chaninging
+
+class
 
 
 
