@@ -6761,9 +6761,49 @@ class FindSumOfDigit1
 
     }
 }
-// Write a program constructor chaninging
+// Write a program constructor Chaining
 
-class
+class ConstructorChaining
+{
+
+    private String name;
+    private String address;
+    private int age;
+
+    ConstructorChaining(String name)
+    {
+        this.name = name;
+    }
+    ConstructorChaining()
+    {
+
+    }
+    ConstructorChaining(String name,String address)
+    {
+
+        this(name);
+        this.address = address;
+    }
+    ConstructorChaining(String name,String address, int age)
+    {
+        this(name,address);
+        this.age = age;
+    }
+public void print()
+{
+    System.out.println("name = " + name);
+    System.out.println("address = " + address);
+    System.out.println("age = " + age);
+}
+
+    public static void main(String[] args) {
+
+        ConstructorChaining obj = new ConstructorChaining();
+        obj.print();
+
+    }
+
+}
 
 
 
