@@ -6807,6 +6807,40 @@ public void print()
 
 
 
+// Don't access the method of parent class in child class
+
+
+
+class ParentClass
+{
+    private void display()
+    {
+        System.out.println("This is display method");
+    }
+
+
+}
+class ChildClass extends ParentClass
+{
+
+    public void display()
+    {
+        System.out.println("This is display method");
+    }
+}
+
+class Implementation1
+{
+    public static void main(String[] args) {
+
+        ParentClass obj1 = new ParentClass();
+//        obj1.display();
+        ChildClass obj2 = new ChildClass();
+        obj2.display();
+
+
+    }
+}
 
 
 
