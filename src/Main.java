@@ -6851,11 +6851,39 @@ class Implementation1
 
 
 // Check Palindrom String
-class PallindromString
+class PalindromString
 {
 
 
-    mainmain
+    public static void stringPalindrom(String str)
+    {
+        String str1 = str;
+        String strNew = "";
+        for (int i = str.length()-1; i >0; i++) {
+            strNew = strNew + str1.charAt(i);
+        }
+        if(strNew.equals(str1))
+        {
+            System.out.println("The String is palindrom");
+        }else
+
+        {
+            System.out.println("The String is not Palindrom");
+        }
+
+
+
+
+
+    }
+
+
+
+    public static void main(String[] args) {
+        String str = akka;
+
+        stringPalindrom(str);
+    }
 
 
 
