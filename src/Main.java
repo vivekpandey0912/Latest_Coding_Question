@@ -6859,7 +6859,7 @@ class PalindromString
     {
         String str1 = str;
         String strNew = "";
-        for (int i = str.length()-1; i >0; i++) {
+        for (int i = str.length()-1; i >=0; i--) {
             strNew = strNew + str1.charAt(i);
         }
         if(strNew.equals(str1))
@@ -6880,7 +6880,7 @@ class PalindromString
 
 
     public static void main(String[] args) {
-        String str = akka;
+        String str = "akka";
 
         stringPalindrom(str);
     }
