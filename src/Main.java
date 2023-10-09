@@ -6885,8 +6885,6 @@ class PalindromString
         stringPalindrom(str);
     }
 
-
-
 }
 
 
