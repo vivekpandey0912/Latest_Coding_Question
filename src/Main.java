@@ -6851,6 +6851,15 @@ class Implementation1
 
 
 // Check Palindrom String
+class PallindromString
+{
+
+
+    mainmain
+
+
+
+}
 
 
 
