@@ -6850,6 +6850,12 @@ class Implementation1
 
 
 
+// Check Palindrom String
+
+
+
+
+
 
 
 //        2. Write a program to check if a number is prime.
