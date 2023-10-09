@@ -6815,7 +6815,13 @@ class ParentClass
 {
     private void display()
     {
-        System.out.println("This is display method");
+        System.out.println("This is display method Parent");
+    }
+
+    public static void main(String[] args) {
+
+        ParentClass obj1 = new ParentClass();
+        obj1.display();
     }
 
 
