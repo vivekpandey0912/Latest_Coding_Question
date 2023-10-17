@@ -6924,6 +6924,31 @@ class PerfectNumber {
 
 
 
+// Find Occurance of character in String
+
+class FindOccuranceOfCharacter
+{
+
+  
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
