@@ -6928,8 +6928,16 @@ class PerfectNumber {
 
 class FindOccuranceOfCharacter
 {
+    public static void getOccurance(String str)
+    {
 
-  
+    }
+
+
+    public static void main(String[] args) {
+
+
+    }
 
 
 
@@ -6937,10 +6945,45 @@ class FindOccuranceOfCharacter
 
 }
 
-
-
-
-
+//
+//public class Result456 {
+//    public static List<Integer> rodOffCut(List<Integer> lengths) {
+//        List<Integer> rounds = new ArrayList<>();
+//
+//        while (!lengths.isEmpty()) {
+//            rounds.add(lengths.size());
+//
+//            // Find the shortest length
+//            int min = Integer.MAX_VALUE;
+//            for (int length : lengths) {
+//                min = Math.min(min, length);
+//            }
+//
+//            // Remove rods of the shortest length
+//            lengths.removeIf(length -> length == min);
+//
+//            // Cut off the shortest length from longer rods
+//            for (int i = 0; i < lengths.size(); i++) {
+//                lengths.set(i, lengths.get(i) - min);
+//            }
+//
+//            // Remove offcuts
+//            lengths.removeIf(length -> length == 0);
+//        }
+//
+//        return rounds;
+//    }
+//
+//    public static void main(String[] args) {
+//
+//
+//
+//    }
+//}
+//
+//
+//
+//
 
 
 
