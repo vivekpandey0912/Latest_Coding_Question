@@ -6936,6 +6936,11 @@ class FindOccuranceOfCharacter
 
     public static void main(String[] args) {
 
+        int x=3, y=5,  z=10;
+
+      int value =  ++z + y - y + z + x++;
+        System.out.println(value);
+
 
     }
 
@@ -6944,6 +6949,36 @@ class FindOccuranceOfCharacter
 
 
 }
+
+
+
+
+//    What will be the output of the following program?
+
+class Test101 {
+
+    public static void main(String[] args) {
+
+        int count = 1;
+
+        while (count <= 15) {
+
+            System.out.println(count % 2 == 1 ? "***" : "+++++");
+
+            ++count;
+
+        }      // end while
+
+
+        ArrayList<Integer> arrayli = new ArrayList<>();
+        System.out.println("arrayli.size() = " + arrayli.size());
+
+    }       // end main
+
+}
+
+
+
 
 //
 //public class Result456 {
