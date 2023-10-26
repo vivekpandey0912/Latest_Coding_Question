@@ -7021,6 +7021,28 @@ class Test101 {
 //
 
 
+enum Colors
+{
+    RED, GREEN,BLUE,BLACK;
+
+    private Colors()
+    {
+        System.out.println(this.toString());
+    }
+
+    public static void main(String[] args) {
+
+
+        for (Colors c:Colors.values()) {
+
+            System.out.println("c = " + c  + ":: At the Index of " + c.ordinal());
+
+        }
+    }
+
+
+}
+
 
 
 
@@ -7049,7 +7071,7 @@ class Test101 {
 //
 //        10. Write a program to check if two strings are anagrams.
 //
-//        11. Write a program to find the largest and smallest elements in an array.
+//        11. Write a program to find the largest and smallest elements in an a  rray.
 //
 //        12. Write a program to count the number of vowels and consonants in a string.
 //
