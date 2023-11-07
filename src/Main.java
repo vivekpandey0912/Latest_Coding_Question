@@ -7160,6 +7160,7 @@ class PrimeNumberSeries
         String str = "y";
         while(str.equalsIgnoreCase("y"))
         {
+
             System.out.println("Enter a number to Check Number is Prime or Not");
             Scanner sc = new Scanner(System.in);
             Scanner sc1 = new Scanner(System.in);
@@ -7192,14 +7193,30 @@ class FactorialNumber
 {
     public static void getFactorialOfNumber(int number)
     {
+        int number1 = 1;
+        for (int i = number; i >0 ; i--) {
 
-
+            number1 = i*number1;
+        }
+        System.out.println("The Factorial of  number is : " + number1);
 
     }
 
     public static void main(String[] args) {
 
+        Scanner sc = new Scanner(System.in);
+        Scanner sc1 = new Scanner(System.in);
 
+        String str = "y";
+        while (str.equalsIgnoreCase("y"))
+        {
+            System.out.println("Please Enter to get Factorial of a Number");
+            int number = sc.nextInt();
+            getFactorialOfNumber(number);
+            System.out.println("Are you want to continue please enter y");
+            str = sc1.nextLine();
+        }
+        System.out.println("*** Thanks For Visiting Website ***");
 
 
 
