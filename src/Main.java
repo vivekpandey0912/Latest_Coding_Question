@@ -7043,6 +7043,93 @@ enum Colors
 
 }
 
+// Example of Shollow comparisions
+class Person1 implements Cloneable {
+    String name;
+    int age;
+
+    public Person1(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+
+    public String toString() {
+        return "Name: " + name + ", Age: " + age;
+    }
+}
+
+ class Main09 {
+    public static void main(String[] args) throws CloneNotSupportedException {
+        Person1 originalPerson = new Person1("John", 30);
+
+        // Creating a shallow copy
+        Person1 shallowCopy = (Person1) originalPerson.clone();
+
+        // Modifying the shallow copy
+        shallowCopy.age = 40;
+
+        System.out.println("Original Person: " + originalPerson);
+        System.out.println("Shallow Copy: " + shallowCopy);
+    }
+}
+class Address {
+    String city;
+
+    public Address(String city) {
+        this.city = city;
+    }
+
+    public String toString() {
+        return "City: " + city;
+    }
+}
+
+class Person2 {
+    String name;
+    int age;
+    Address address;
+
+    public Person2(String name, int age, Address address) {
+        this.name = name;
+        this.age = age;
+        this.address = address;
+    }
+
+   public Person2 clone() {
+        Address newAddress = new Address(this.address.city);
+        return new Person2(this.name, this.age, newAddress);
+    }
+
+    public String toString() {
+        return "Name: " + name + ", Age: " + age + ", " + address;
+    }
+}
+ class Main12 {
+    public static void main(String[] args) {
+        Address address = new Address("New York");
+        Person2 originalPerson = new Person2("John", 30, address);
+
+        // Creating a deep copy
+        Person2 deepCopy = originalPerson.clone();
+
+        // Modifying the deep copy's address
+        deepCopy.address.city = "Los Angeles";
+
+        System.out.println("Original Person: " + originalPerson);
+        System.out.println("Deep Copy: " + deepCopy);
+    }
+}
+
+
+// Write a program to check number is prime of not
+
+
+
+s
 
 
 
