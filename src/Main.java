@@ -7264,12 +7264,16 @@ class ReverseOfStrings
 
 // Write a program to check given String is Palindrom or not
 
-class CheckGivenStringIsP
+class CheckGivenStringIsPali
 {
 
 
-    
-    
+    publ
+
+
+    public static void main(String[] args) {
+
+    }
 
 
 
