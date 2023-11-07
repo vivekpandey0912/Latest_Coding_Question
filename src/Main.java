@@ -7153,17 +7153,32 @@ class PrimeNumberSeries
 
     public static void main(String[] args) {
 
-        System.out.println("Enter a number to Check Number is Prime or Not");
-        Scanner sc = new Scanner(System.in);
-        int number = sc.nextInt();
-        boolean bool = checkGivenNumberIsPrime(number);
+
+        boolean bol = true;
+
+
+        String str = "y";
+        while(str.equalsIgnoreCase("y"))
+        {
+            System.out.println("Enter a number to Check Number is Prime or Not");
+            Scanner sc = new Scanner(System.in);
+            Scanner sc1 = new Scanner(System.in);
+            int number = sc.nextInt();
+            boolean bool = checkGivenNumberIsPrime(number);
         if(bool)
         {
             System.out.println("The Given is Number Prime");
+            System.out.println("Are you want to Continue Please enter y");
+            str = sc1.nextLine();
+
         }else
         {
             System.out.println("The Given Number is not Prime Number");
+            System.out.println("Are you want to Continue Please enter y");
+            str = sc1.nextLine();
         }
+        }
+        System.out.println("Thanks for Visiting");
 
 
 
