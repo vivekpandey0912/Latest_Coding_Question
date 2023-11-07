@@ -7262,7 +7262,19 @@ class ReverseOfStrings
     }
 }
 
-//
+// Write a program to check given String is Palindrom or not
+
+class CheckGivenStringIsP
+{
+
+
+    
+    
+
+
+
+    
+}
 
 
 
