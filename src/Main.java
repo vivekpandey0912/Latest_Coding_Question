@@ -7128,8 +7128,50 @@ class Person2 {
 // Write a program to check number is prime of not
 
 
+class PrimeNumberSeries
+{
 
-s
+
+
+    public static boolean checkGivenNumberIsPrime(int number)
+    {
+        if(number<=1)
+        {
+            return false;
+        }
+        for (int i = 2; i <number; i++) {
+
+            if(number%i==0)
+            {
+                return false;
+            }
+        }
+        return true;
+
+    }
+
+
+    public static void main(String[] args) {
+
+        System.out.println("Enter a number to Check Number is Prime or Not");
+        Scanner sc = new Scanner(System.in);
+        int number = sc.nextInt();
+        boolean bool = checkGivenNumberIsPrime(number);
+        if(bool)
+        {
+            System.out.println("The Given is Number Prime");
+        }else
+        {
+            System.out.println("The Given Number is not Prime Number");
+        }
+
+
+
+    }
+
+
+
+}
 
 
 
