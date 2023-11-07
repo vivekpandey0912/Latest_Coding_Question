@@ -7187,6 +7187,24 @@ class PrimeNumberSeries
 
 
 }
+// Write a Program to get factorial of a number
+class FactorialNumber
+{
+    public static void getFactorialOfNumber(int number)
+    {
+
+
+
+    }
+
+    public static void main(String[] args) {
+
+
+
+
+
+    }
+}
 
 
 
