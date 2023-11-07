@@ -7268,10 +7268,26 @@ class CheckGivenStringIsPali
 {
 
 
-    publ
+    public static void checkGivenStringIsPal(String str)
+    {
+        String str1 = "";
+        String str2 =str;
+        for (int i = str.length()-1; i>=0 ; i--) {
+            str1 = str1 + str.charAt(i);
+        }
+        System.out.println(str1);
+        if(str2.equals(str1))
+        {
+            System.out.println("The Given String is Palindrom");
+        }else {
+            System.out.println("The given String is not palindrom ");
+        }
+    }
 
 
     public static void main(String[] args) {
+
+        checkGivenStringIsPal("redivider");
 
     }
 
