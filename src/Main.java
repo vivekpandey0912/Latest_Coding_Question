@@ -7228,18 +7228,57 @@ class FactorialNumber
 class ReverseOfStrings
 {
 
-    public static void getReverseStringWithStringBuilder(String Str)
+    public static void getReverseStringWithStringBuilder(String str)
     {
-
+         StringBuilder stringBuilder = new StringBuilder(str);
+        System.out.println("The reverse String is "+ stringBuilder.reverse());
     }
+    public static void getReverseString(String str)
+    {
+        for (int i = str.length()-1; i >=0 ; i--) {
+
+            System.out.print(str.charAt(i));
+        }
+    }
+
 
 
 
     public static void main(String[] args) {
 
+        System.out.println("Reverse String with String Builder");
+        System.out.println("Enter String for Reverse");
+        Scanner sc = new Scanner(System.in);
+        String string = sc.nextLine();
+        getReverseStringWithStringBuilder(string);
+
+        System.out.println("Reverse String with looping concepts ");
+        System.out.println("Enter String for Reverse");
+        Scanner sc1 = new Scanner(System.in);
+        String string1 = sc1.nextLine();
+        getReverseString(string1);
+
 
     }
 }
+
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
