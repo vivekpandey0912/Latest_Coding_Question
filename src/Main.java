@@ -7299,10 +7299,41 @@ class CheckGivenStringIsPali
 
 // Palindrom Number of Numbers
 
-class
+class CheckPalindromWithNumber
+{
+
+    public static void checkPalindromWithNumber(int number)
+    {
+        int number1 = number;
+        int newNumber = 0;
+        while (number!=0)
+        {
+            int rem = number%10;
+            newNumber = newNumber*10+rem;
+            number/=10;
+        }
+        if(newNumber==number1)
+        {
+            System.out.println("The Given Number is Palindrom");
+        }else
+        {
+            System.out.println("The Given number is not Palindrom");
+        }
+
+    }
 
 
 
+    public static void main(String[] args) {
+
+int number = 1221;
+int number1 = 1223;
+        checkPalindromWithNumber(number);
+        checkPalindromWithNumber(number1);
+
+
+    }
+}
 
 
 
